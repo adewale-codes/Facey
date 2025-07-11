@@ -15,8 +15,10 @@ const primaryLinks: NavLink[] = [
   {
     name: 'TREATMENT',
     children: [
-      { name: 'Room Rentals', href: '/treatment/room-rentals' },
-      { name: 'Malala Fund Charity', href: '/treatment/malala-fund-charity' },
+      { name: 'Concerns', href: '/concerns' },
+      { name: 'Face', href: '/face' },
+      { name: 'Hair', href: '/hair' },
+      { name: 'Body', href: '/body' },
     ],
   },
   {
