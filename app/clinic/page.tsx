@@ -1,5 +1,6 @@
 import ClinicHero from "./components/ClinicHero";
 import WellnessSection from "./components/WellnessSection";
+import MapSection from "./components/MapSection";
 
 export default function clinic() {
   return (
@@ -10,6 +11,7 @@ export default function clinic() {
         imageSrc="/images/11.webp"
       />
       <WellnessSection />
+      <MapSection />
     </>
   );
 }
