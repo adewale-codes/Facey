@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Hero } from './components/Hero'
 import TreatmentSection from './components/Treatment'
+import LogoSlider from './components/LogoSlider'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <Hero />
       <TreatmentSection />
+      <LogoSlider />
     </div>
   )
 }
