@@ -3,6 +3,7 @@ import { Hero } from './components/Hero'
 import TreatmentSection from './components/Treatment'
 import LogoSlider from './components/LogoSlider'
 import FindSection from './components/FindSection'
+import WellnessSection from './components/Wellness'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TreatmentSection />
       <LogoSlider />
       <FindSection />
+      <WellnessSection />
     </div>
   )
 }
