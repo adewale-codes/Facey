@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Hero } from './components/Hero'
+import TreatmentSection from './components/Treatment'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <meta property="og:title" content="Facey official website" key="title" />
       </Head>
       <Hero />
+      <TreatmentSection />
     </div>
   )
 }
