@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Hero } from './components/Hero'
 import TreatmentSection from './components/Treatment'
 import LogoSlider from './components/LogoSlider'
+import FindSection from './components/FindSection'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <TreatmentSection />
       <LogoSlider />
+      <FindSection />
     </div>
   )
 }
