@@ -17,7 +17,7 @@ const topCards: Card[] = [
 ];
 const bottomCards: Card[] = [
   { title: 'AquaGold', subtitle: 'Treatment', image: '/images/8.jpg', href: '/blog/aquagold' },
-  { title: 'Sunday’s Self-Care Agenda', image: '/images/9.jpg', href: '/blog/self-care' },
+  { title: 'Sundays Self-Care Agenda', image: '/images/9.jpg', href: '/blog/self-care' },
 ];
 
 const CommunitySection: React.FC = () => (
