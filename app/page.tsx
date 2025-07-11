@@ -5,6 +5,7 @@ import LogoSlider from './components/LogoSlider'
 import FindSection from './components/FindSection'
 import WellnessSection from './components/Wellness'
 import AppointmentSection from './components/Appointment'
+import CommunitySection from './components/Community'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <FindSection />
       <WellnessSection />
       <AppointmentSection />
+      <CommunitySection />
     </div>
   )
 }
