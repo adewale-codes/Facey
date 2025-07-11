@@ -4,6 +4,7 @@ import TreatmentSection from './components/Treatment'
 import LogoSlider from './components/LogoSlider'
 import FindSection from './components/FindSection'
 import WellnessSection from './components/Wellness'
+import AppointmentSection from './components/Appointment'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <LogoSlider />
       <FindSection />
       <WellnessSection />
+      <AppointmentSection />
     </div>
   )
 }
