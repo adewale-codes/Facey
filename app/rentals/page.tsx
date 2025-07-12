@@ -1,4 +1,5 @@
 import RentalHero from "./components/RentalHero";
+import LookSection from "./components/Look";
 
 export default function rentals() {
   return (
@@ -7,6 +8,7 @@ export default function rentals() {
         title="Room Rentals"
         imageSrc="/images/14.webp"
       />
+      <LookSection />
     </>
   );
 }
