@@ -26,7 +26,7 @@ const primaryLinks: NavLink[] = [
     children: [
       { name: 'About Us', href: '/about' },
       { name: 'Room Rentals', href: '/rentals' },
-      { name: 'Malala Fund Charity', href: '/about/malala-fund-charity' },
+      { name: 'Malala Fund Charity', href: '/charity' },
     ],
   },
 ];
