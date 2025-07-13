@@ -1,8 +1,10 @@
+// components/Navbar.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { useCart } from '@/app/context/CartContext'; // adjust path to your CartContext
 
 interface NavLink {
   name: string;
@@ -39,6 +41,10 @@ const secondaryLinks: NavLink[] = [
 const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const { cart } = useCart();
+
+  // calculate total items in cart
+  const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,15 +67,15 @@ const Navbar: React.FC = () => {
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href || '#'}
-                  className={`px-6 py-4 text-sm font-medium uppercase text-white hover:bg-white hover:bg-opacity-20 transition border-r border-white border-opacity-40 ${link.name === 'ABOUT' ? 'border-r border-white border-opacity-40' : ''}`}
+                  className={`px-6 py-4 text-sm font-medium uppercase text-white hover:bg-white hover:bg-opacity-20 transition border-r border-white border-opacity-40 ${
+                    link.name === 'ABOUT' ? 'border-r border-white border-opacity-40' : ''
+                  }`}
                 >
                   {link.name}
-                  {link.children && (
-                    <FiChevronDown className="inline-block ml-1 text-white" />
-                  )}
+                  {link.children && <FiChevronDown className="inline-block ml-1 text-white" />}
                 </Link>
                 {link.children && (
-                  <div className="absolute left-0 mt-1 w-48 bg-white text-gray-800 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity ">
+                  <div className="absolute left-0 mt-1 w-48 bg-white text-gray-800 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
                     {link.children.map((child) => (
                       <Link
                         key={child.name}
@@ -86,7 +92,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Logo Center */}
-          <div className="flex-shrink-0 ">
+          <div className="flex-shrink-0">
             <Link
               href="/"
               className="text-xl font-semibold uppercase text-white tracking-widest"
@@ -96,15 +102,13 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Right Nav */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center space-x-2">
             {secondaryLinks.map((link, idx) => (
               <Link
                 key={link.name}
                 href={link.href!}
                 className={`px-6 py-4 text-sm font-medium uppercase text-white hover:bg-white hover:bg-opacity-20 transition ${
-                  idx < secondaryLinks.length - 1
-                    ? 'border-r border-white border-opacity-40 border-l'
-                    : ''
+                  idx < secondaryLinks.length - 1 ? 'border-r border-white border-opacity-40 border-l' : ''
                 }`}
               >
                 {link.name}
@@ -114,7 +118,7 @@ const Navbar: React.FC = () => {
               href="/cart"
               className="px-6 py-4 text-sm font-medium uppercase text-white border-l border-white border-opacity-40"
             >
-              CART
+              CART{totalItems > 0 && `(${totalItems})`}
             </Link>
           </div>
 
@@ -124,17 +128,13 @@ const Navbar: React.FC = () => {
               href="/cart"
               className="px-3 py-2 bg-green-700 text-white text-sm font-medium rounded"
             >
-              CART
+              CART{totalItems > 0 && `(${totalItems})`}
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 focus:outline-none"
             >
-              {mobileOpen ? (
-                <FiX size={24} className="text-white" />
-              ) : (
-                <FiMenu size={24} className="text-white" />
-              )}
+              {mobileOpen ? <FiX size={24} className="text-white" /> : <FiMenu size={24} className="text-white" />}
             </button>
           </div>
         </div>
@@ -158,9 +158,7 @@ const Navbar: React.FC = () => {
                     </Link>
                     {hasChildren && (
                       <button
-                        onClick={() =>
-                          setOpenDropdown(isOpen ? null : link.name)
-                        }
+                        onClick={() => setOpenDropdown(isOpen ? null : link.name)}
                         className="py-3 text-gray-800 uppercase text-sm"
                       >
                         {isOpen ? 'SEE LESS' : 'SEE MORE'}
