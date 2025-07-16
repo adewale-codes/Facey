@@ -5,6 +5,7 @@ import { useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/app/context/CartContext';
+
 interface Product {
   id: string;
   title: string;
@@ -53,6 +54,20 @@ export default function ProductPage() {
   const id = params?.id as string;
 
   const product = useMemo(() => PRODUCTS.find((p) => p.id === id), [id]);
+
+  // All hooks lifted above any early returns:
+  const [currentImage, setCurrentImage] = useState(0);
+  const [openKey, setOpenKey] = useState(false);
+  const [openUse, setOpenUse] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (!showToast) return;
+    const t = setTimeout(() => setShowToast(false), 2000);
+    return () => clearTimeout(t);
+  }, [showToast]);
+
+  // Early return if product not found:
   if (!product) {
     return (
       <div className="p-8 text-center">
@@ -64,29 +79,18 @@ export default function ProductPage() {
     );
   }
 
-  const [currentImage, setCurrentImage] = useState(0);
+  // Handlers and derived callbacks:
   const goToImage = (i: number) => setCurrentImage(i);
-
-  const [openKey, setOpenKey] = useState(false);
-  const [openUse, setOpenUse] = useState(false);
-
-  const [showToast, setShowToast] = useState(false);
 
   const handleAdd = () => {
     addToCart(product.id);
     setShowToast(true);
   };
+
   const handleBuyNow = () => {
     addToCart(product.id);
     push('/cart');
   };
-
-  useEffect(() => {
-    if (showToast) {
-      const t = setTimeout(() => setShowToast(false), 2000);
-      return () => clearTimeout(t);
-    }
-  }, [showToast]);
 
   return (
     <>
