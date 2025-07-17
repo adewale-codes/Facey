@@ -10,8 +10,8 @@ export default function clinic() {
     <>
       <AboutHero
         title="Home of Beauty and Aesthetics"
-        subtitle="Dr Rasha's clinic is the home of beauty and aesthetics, offering a range of treatments to enhance your natural beauty."
-        imageSrc="/images/14.webp"
+        subtitle="Facey's clinic is the home of beauty and aesthetics, offering a range of treatments to enhance your natural beauty."
+        imageSrc="/images/clinic-background.jpg"
       />
       <WellnessSection />
       <Team />

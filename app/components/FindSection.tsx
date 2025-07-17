@@ -6,7 +6,7 @@ import Link from 'next/link';
 const FindSection: React.FC = () => (
   <section
     className="relative w-full h-screen bg-center bg-cover"
-    style={{ backgroundImage: "url('/images/clinic-background.webp')" }}
+    style={{ backgroundImage: "url('/images/clinic-background.jpg')" }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-40" />
 
@@ -15,9 +15,9 @@ const FindSection: React.FC = () => (
         Our Knightsbridge Clinic
       </h2>
       <p className="text-base md:text-lg text-white mb-4 leading-relaxed max-w-lg">
-        At Dr Rasha Clinic, we take great pride in introducing you to our
+        At Facey Clinic, we take great pride in introducing you to our
         exceptional team of professionals. Our dedicated and highly skilled team,
-        led by the renowned Dr. Rasha, is committed to providing you with the
+        led by the renowned Facey, is committed to providing you with the
         highest standard of care and aesthetic expertise.
       </p>
       <Link

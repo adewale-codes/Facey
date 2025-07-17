@@ -17,7 +17,7 @@ const WellnessSection: React.FC = () => (
           The Home of Aesthetics and Wellness
         </h2>
         <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-          Welcome to Dr Rasha Clinic, the best aesthetics clinic in London based in Knightsbridge. We are dedicated to seamlessly blending our profound medical expertise with an artistic touch, making our clinic a leading destination for non-surgical beauty treatments in London.
+          Welcome to Facey Clinic, the best aesthetics clinic in London based in Knightsbridge. We are dedicated to seamlessly blending our profound medical expertise with an artistic touch, making our clinic a leading destination for non-surgical beauty treatments in London.
         </p>
       </div>
     </div>

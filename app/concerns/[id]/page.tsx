@@ -20,7 +20,7 @@ const CONCERNS: Concern[] = [
     id: 'acne',
     title: 'Acne',
     description:
-      'Treat acne effectively with our specialised solutions. Achieve clearer skin through personalised care and advanced treatments at Dr Rasha Clinic.',
+      'Treat acne effectively with our specialised solutions. Achieve clearer skin through personalised care and advanced treatments at Facey Clinic.',
     image: '/concerns/1.webp',
   },
   {
@@ -166,7 +166,7 @@ export default function ConcernDetailPage() {
 
           <div>
             <h3 className="text-xl font-serif text-green-800 mb-2">
-              Treatment for {selected.title} at Dr Rasha Clinic
+              Treatment for {selected.title} at Facey Clinic
             </h3>
             <p className="text-gray-700">{detail.intro}</p>
           </div>

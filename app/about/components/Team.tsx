@@ -14,10 +14,10 @@ interface Block {
 
 const blocks: Block[] = [
   {
-    title: 'Dr Rasha',
+    title: 'Facey',
     paragraphs: [
-      'Dr Rasha Rahkshani, a highly esteemed cosmetic doctor in London, has established herself as a prominent figure in the world of aesthetics. Born in Kuwait and educated in both Australia and the UK, she brings a unique blend of cultural diversity and medical expertise to her practice.',
-      'Driven by her artistic sensibilities and a deep love of the arts, she found her true calling in aesthetic medicine, where she harmoniously combines her medical knowledge with an innate flair for beauty. Dr Rasha is not only recognised for her incredible results but also her dedication to helping patients achieve their beauty goals; earning her a global following with clients coming from across the world to see her.',
+      'Facey Rahkshani, a highly esteemed cosmetic doctor in London, has established herself as a prominent figure in the world of aesthetics. Born in Kuwait and educated in both Australia and the UK, she brings a unique blend of cultural diversity and medical expertise to her practice.',
+      'Driven by her artistic sensibilities and a deep love of the arts, she found her true calling in aesthetic medicine, where she harmoniously combines her medical knowledge with an innate flair for beauty. Facey is not only recognised for her incredible results but also her dedication to helping patients achieve their beauty goals; earning her a global following with clients coming from across the world to see her.',
     ],
     image: '/team/1.webp',
     alt: 'Wellness Treatment Room',

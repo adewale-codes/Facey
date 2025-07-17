@@ -1,13 +1,23 @@
-// components/Footer.tsx
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer: React.FC = () => (
   <footer className="bg-white text-gray-800">
     <div className='flex justify-center items-center text-center pt-8 border-t border-gray-200'>
-        <div className='text-bold text-2xl'>DR RASHA</div>
+        <div className='text-bold text-2xl'>
+          <Link href="/" className="text-green-700 hover:text-green-800">
+            <Image
+              src="/logos/logo.png"
+              alt="Facey Clinic Logo"
+              width={150}
+              height={40}
+              className="h-10 w-auto"
+            />
+          </Link>
+        </div>
     </div>
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
       {/* Top block */}
@@ -18,7 +28,7 @@ const Footer: React.FC = () => (
             <h3 className="text-xl text-green-800 mb-2">Join our mailing list</h3>
             <hr className="border-gray-200 mb-4" />
             <p className="text-sm text-gray-600">
-              At Dr. Rasha&apos;s Clinic in London, our most popular face treatment is our anti-wrinkle
+              At Facey&apos;s Clinic in London, our most popular face treatment is our anti-wrinkle
               injections which provide the ultimate solution for achieving naturally smooth, youthful skin.
             </p>
             <form className="mt-4 flex flex-col sm:flex-row gap-4">
@@ -64,9 +74,9 @@ const Footer: React.FC = () => (
             <h4 className="text-lg text-green-800 mb-2">Contact</h4>
             <hr className="border-gray-200 mb-4" />
             <ul className="space-y-2 text-sm">
-              <li>TEL: 0203 337 4410</li>
-              <li>WHATSAPP: +44 7511 107511</li>
-              <li>EMAIL: info@drrashaclinic.com</li>
+              <li>TEL: 01932 943044</li>
+              <li>WHATSAPP: 07368309335</li>
+              <li>EMAIL: info@faceweybridge.co.uk</li>
             </ul>
             <img
               src="/logos/10.png"
@@ -80,10 +90,10 @@ const Footer: React.FC = () => (
             <h4 className="text-lg text-green-800 mb-2">Location</h4>
             <hr className="border-gray-200 mb-4" />
             <address className="not-italic text-sm space-y-1">
-              161 BROMPTON ROAD<br />
-              KNIGHTSBRIDGE<br />
+              71 QUEENS ROAD<br />
+              WEYBRIDGE<br />
               LONDON<br />
-              SW3 1EX
+              KT13 9UQ
             </address>
           </div>
         </div>
@@ -119,7 +129,7 @@ const Footer: React.FC = () => (
           </li>
         </ul>
         <p className="text-gray-600">
-          Copyright 2024 Dr Rasha Clinic. All Rights Reserved.
+          Copyright 2024 Facey Clinic. All Rights Reserved.
         </p>
       </div>
     </div>

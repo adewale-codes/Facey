@@ -11,7 +11,7 @@ const AppointmentSection: React.FC = () => (
       </h2>
       <p className="text-base md:text-lg mb-8 leading-relaxed">
         Before your transformation begins, a crucial step awaits &ndash; your consultation. At
-        Dr Rasha Clinic, our expert practitioners and doctors conduct a comprehensive
+        Facey Clinic, our expert practitioners and doctors conduct a comprehensive
         skin assessment, dedicated to crafting a bespoke treatment plan exclusively for
         you. Book today to unleash your beauty&apos;s true potential and discover the art of
         aesthetics in the heart of Knightsbridge, London.

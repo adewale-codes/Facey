@@ -24,7 +24,7 @@ const PRODUCTS: Product[] = [
     subtitle: '60 Capsules',
     price: '£90.00',
     description:
-      'Dr Rasha signature hair supplements that help support healthy hair growth.',
+      'Facey signature hair supplements that help support healthy hair growth.',
     images: ['/products/a.webp', '/products/b.webp', '/products/c.webp', '/products/d.webp'],
     keyIngredients: ['Biotin', 'Zinc', 'Vitamin D', 'Collagen peptides'],
     howToUse: 'Take two capsules daily with food. Do not exceed recommended dose.',

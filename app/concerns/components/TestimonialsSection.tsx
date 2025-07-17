@@ -13,7 +13,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Nas A',
     rating: 5,
-    text: `I visited Dr. Rasha on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Dr. Rasha was very thorough and honest...`,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
   },
   {
     name: 'Mariam C',
@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Clariana T. M',
     rating: 5,
-    text: `I'm really satisfied with my treatment today. Dr. Rasha is very kind and knows the most suitable procedures...`,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },
 ];
 

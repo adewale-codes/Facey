@@ -1,10 +1,10 @@
-// components/Navbar.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import { useCart } from '@/app/context/CartContext'; // adjust path to your CartContext
+import { useCart } from '@/app/context/CartContext';
+import Image from 'next/image';
 
 interface NavLink {
   name: string;
@@ -97,7 +97,13 @@ const Navbar: React.FC = () => {
               href="/"
               className="text-xl font-semibold uppercase text-white tracking-widest"
             >
-              DR RASHA
+              <Image
+                src="/logos/logo.png"
+                alt="Facey Clinic Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 

@@ -25,7 +25,7 @@ const EmpowerSection: React.FC = () => (
         </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          At Dr. Rasha Clinic, we believe in enhancing beauty, confidence, and well-being in every way possible. As
+          At Facey Clinic, we believe in enhancing beauty, confidence, and well-being in every way possible. As
           the leading aesthetics clinic in London, located in the heart of Knightsbridge, we are committed to
           delivering the highest standards of medical expertise with an artistic touch. But beauty goes beyond the
           surface—it lies in empowering others, too.
@@ -34,7 +34,7 @@ const EmpowerSection: React.FC = () => (
         <h3 className="text-2xl font-serif text-green-800">Our Charity Partnership</h3>
 
         <p className="text-gray-700 leading-relaxed">
-          For every treatment you receive at Dr. Rasha Clinic, a portion of the proceeds will go directly to
+          For every treatment you receive at Facey Clinic, a portion of the proceeds will go directly to
           supporting Malala Fund&apos;s impactful work. By choosing us for your aesthetic needs, you’re helping to create a
           more equal world for girls, ensuring that they have access to education that will shape their futures.
         </p>

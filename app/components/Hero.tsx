@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const videos = [
   '/videos/1.mp4',
@@ -10,6 +10,7 @@ const videos = [
 
 const Hero: React.FC = () => {
   const [current, setCurrent] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +19,16 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // ensure the newly visible video starts playing
+  useEffect(() => {
+    if (videoRef.current) {
+      // play() returns a promise, you can catch errors if needed
+      videoRef.current.play().catch(() => {
+        /* autoplay still blocked? */
+      });
+    }
+  }, [current]);
+
   return (
     <section className="relative w-full h-[calc(100vh+4rem)] -mt-16 overflow-hidden">
       {/* Video slides */}
@@ -25,10 +36,15 @@ const Hero: React.FC = () => {
         {videos.map((src, idx) => (
           <video
             key={idx}
+            ref={idx === current ? videoRef : null}
             src={src}
             autoPlay
             muted
             loop
+            playsInline
+            // for older iOS:
+            webkit-playsinline="true"
+            preload="auto"
             className={
               `absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ` +
               (idx === current ? 'opacity-100' : 'opacity-0')
