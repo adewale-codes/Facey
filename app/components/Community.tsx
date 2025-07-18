@@ -41,7 +41,7 @@ const CommunitySection: React.FC = () => (
         <div className="text-center md:text-left">
           <h2 className="text-4xl font-serif text-green-800 mb-4">Join our community</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            Welcome to Facey Clinic based in Knightsbridge. We are here to seamlessly blend our profound medical expertise with an artistic touch; making our clinic a distinctive haven of aesthetic excellence in the capital.
+            Welcome to Facey Clinic based in Weybridge. We are here to seamlessly blend our profound medical expertise with an artistic touch; making our clinic a distinctive haven of aesthetic excellence in the capital.
           </p>
           <Link
             href="https://instagram.com/dr.rasha.clinic"

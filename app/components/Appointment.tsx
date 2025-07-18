@@ -14,7 +14,7 @@ const AppointmentSection: React.FC = () => (
         Facey Clinic, our expert practitioners and doctors conduct a comprehensive
         skin assessment, dedicated to crafting a bespoke treatment plan exclusively for
         you. Book today to unleash your beauty&apos;s true potential and discover the art of
-        aesthetics in the heart of Knightsbridge, London.
+        aesthetics in the heart of Weybridge, London.
       </p>
       <Link
         href="/book"

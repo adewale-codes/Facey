@@ -17,7 +17,7 @@ const primaryLinks: NavLink[] = [
   {
     name: 'TREATMENT',
     children: [
-      { name: 'Concerns', href: '/concerns' },
+      { name: 'Wellness', href: '/wellness' },
       { name: 'Face', href: '/face' },
       { name: 'Hair', href: '/hair' },
       { name: 'Body', href: '/body' },

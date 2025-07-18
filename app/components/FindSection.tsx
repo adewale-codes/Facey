@@ -12,7 +12,7 @@ const FindSection: React.FC = () => (
 
     <div className="relative z-10 flex flex-col justify-end items-start h-full  mx-auto px-4 md:px-8 pb-16">
       <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-2">
-        Our Knightsbridge Clinic
+        Our Weybridge Clinic
       </h2>
       <p className="text-base md:text-lg text-white mb-4 leading-relaxed max-w-lg">
         At Facey Clinic, we take great pride in introducing you to our

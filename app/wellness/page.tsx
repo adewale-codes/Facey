@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
-const DEFAULT_CONCERN_ID = 'acne';
+const DEFAULT_CONCERN_ID = 'Iv';
 
 export default function ConcernsIndexRedirect() {
-  redirect(`/concerns/${DEFAULT_CONCERN_ID}`);
+  redirect(`/wellness/${DEFAULT_CONCERN_ID}`);
 }
