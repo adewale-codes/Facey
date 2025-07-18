@@ -21,7 +21,7 @@ const blocks: Block[] = [
       'As a renowned aesthetic clinic in London, we stand out not only for our exceptional aesthetic treatments, designed to enhance your natural beauty and boost your confidence but also for the meaningful connections we build with our patients. Facey and her skilled team are more than practitioners; they become trusted partners on your aesthetic journey, ensuring a personalized, compassionate approach every step of the way.',
       'Discover why Facey Clinic is considered the best aesthetics clinic in London with our wide range of popular treatments that cater to your beauty needs.'
     ],
-    image: '/images/12.webp',
+    image: '/images/12.png',
     alt: 'Wellness Treatment Room',
     ctaHref: '/contact',
     ctaText: 'Enquire Today',

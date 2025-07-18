@@ -6,7 +6,7 @@ export default function rentals() {
     <>
       <RentalHero
         title="Room Rentals"
-        imageSrc="/images/14.webp"
+        imageSrc="/images/clinic-background.jpg"
       />
       <LookSection />
     </>

@@ -34,7 +34,7 @@ export default function LookSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         <div className="order-first md:order-last">
           <Image
-            src="/images/12.webp"
+            src="/images/12.png"
             alt="Room Rental Space"
             width={800}
             height={600}
