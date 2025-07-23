@@ -21,6 +21,8 @@ const primaryLinks: NavLink[] = [
       { name: 'Face', href: '/face' },
       { name: 'Hair', href: '/hair' },
       { name: 'Body', href: '/body' },
+      { name: 'Hand', href: '/hand' },
+      { name: 'Intimate Female Wellness', href: '/intimate' },
     ],
   },
   {
