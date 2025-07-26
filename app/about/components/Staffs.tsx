@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface StaffMember {
   name: string;
@@ -13,53 +13,53 @@ interface StaffMember {
 
 const staffMembers: StaffMember[] = [
   {
-    name: 'Georgina',
-    role: 'Operations Manager',
-    imageSrc: '/staffs/4.jpg',
-    buttonText: 'Email Georgina',
-    buttonHref: 'mailto:georgina@drrashaclinic.com',
+    name: "Georgina",
+    role: "Operations Manager",
+    imageSrc: "/staffs/4.jpg",
+    buttonText: "Email Georgina",
+    buttonHref: "mailto:georgina@drrashaclinic.com",
   },
   {
-    name: 'Juta',
-    role: 'Senior Aesthetic Practitioner',
-    imageSrc: '/staffs/5.jpg',
-    buttonText: 'Book Now',
-    buttonHref: '/book',
+    name: "Juta",
+    role: "Senior Aesthetic Practitioner",
+    imageSrc: "/staffs/5.jpg",
+    buttonText: "Book Now",
+    buttonHref: "/book",
   },
   {
-    name: 'Jennie',
-    role: 'Clinic Manager',
-    imageSrc: '/staffs/6.jpg',
-    buttonText: 'Email Jennie',
-    buttonHref: 'mailto:jennie@drrashaclinic.com',
+    name: "Jennie",
+    role: "Clinic Manager",
+    imageSrc: "/staffs/6.jpg",
+    buttonText: "Email Jennie",
+    buttonHref: "mailto:jennie@drrashaclinic.com",
   },
-    {
-    name: 'Karina',
-    role: 'Aesthetician',
-    imageSrc: '/staffs/1.webp',
-    buttonText: 'Whatsapp Us',
-    buttonHref: 'mailto:jennie@drrashaclinic.com',
+  {
+    name: "Karina",
+    role: "Aesthetician",
+    imageSrc: "/staffs/1.webp",
+    buttonText: "Whatsapp Us",
+    buttonHref: "mailto:jennie@drrashaclinic.com",
   },
-    {
-    name: 'Angelika',
-    role: 'Aesthetician',
-    imageSrc: '/staffs/2.webp',
-    buttonText: 'Whatsapp Us',
-    buttonHref: 'mailto:jennie@drrashaclinic.com',
+  {
+    name: "Angelika",
+    role: "Aesthetician",
+    imageSrc: "/staffs/2.webp",
+    buttonText: "Whatsapp Us",
+    buttonHref: "mailto:jennie@drrashaclinic.com",
   },
-    {
-    name: 'Ria',
-    role: 'Reception',
-    imageSrc: '/staffs/3.webp',
-    buttonText: 'Whatsapp Us',
-    buttonHref: 'mailto:jennie@drrashaclinic.com',
+  {
+    name: "Ria",
+    role: "Reception",
+    imageSrc: "/staffs/3.webp",
+    buttonText: "Whatsapp Us",
+    buttonHref: "mailto:jennie@drrashaclinic.com",
   },
-    {
-    name: 'Faye',
-    role: 'Reception',
-    imageSrc: '/staffs/7.webp',
-    buttonText: 'Whatsapp Us',
-    buttonHref: 'mailto:jennie@drrashaclinic.com',
+  {
+    name: "Faye",
+    role: "Reception",
+    imageSrc: "/staffs/7.webp",
+    buttonText: "Whatsapp Us",
+    buttonHref: "mailto:jennie@drrashaclinic.com",
   },
 ];
 
@@ -77,7 +77,9 @@ const StaffSection: React.FC = () => (
                 className="object-cover w-full h-full"
               />
             </div>
-            <h3 className="mt-4 text-xl font-serif text-green-800">{staff.name}</h3>
+            <h3 className="mt-4 text-xl font-serif text-green-800">
+              {staff.name}
+            </h3>
             <p className="text-gray-700 mb-4">{staff.role}</p>
             <Link
               href={staff.buttonHref}

@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import { useCart } from '@/app/context/CartContext';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import { useCart } from "@/app/context/CartContext";
+import Image from "next/image";
 
 interface NavLink {
   name: string;
@@ -13,31 +13,31 @@ interface NavLink {
 }
 
 const primaryLinks: NavLink[] = [
-  { name: 'CLINIC', href: '/clinic' },
+  { name: "CLINIC", href: "/clinic" },
   {
-    name: 'TREATMENT',
+    name: "TREATMENT",
     children: [
-      { name: 'Wellness', href: '/wellness' },
-      { name: 'Face', href: '/face' },
-      { name: 'Hair', href: '/hair' },
-      { name: 'Body', href: '/body' },
-      { name: 'Hand', href: '/hand' },
-      { name: 'Intimate Female Wellness', href: '/intimate' },
+      { name: "Wellness", href: "/wellness" },
+      { name: "Face", href: "/face" },
+      { name: "Hair", href: "/hair" },
+      { name: "Body", href: "/body" },
+      { name: "Hand", href: "/hand" },
+      { name: "Intimate Female Wellness", href: "/intimate" },
     ],
   },
   {
-    name: 'ABOUT',
+    name: "ABOUT",
     children: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Room Rentals', href: '/rentals' },
-      { name: 'Malala Fund Charity', href: '/charity' },
+      { name: "About Us", href: "/about" },
+      { name: "Room Rentals", href: "/rentals" },
+      { name: "Malala Fund Charity", href: "/charity" },
     ],
   },
 ];
 
 const secondaryLinks: NavLink[] = [
-  { name: 'SHOP', href: '/shop' },
-  { name: 'BOOK NOW', href: '/book' },
+  { name: "SHOP", href: "/shop" },
+  { name: "BOOK NOW", href: "/rentals" },
 ];
 
 const Navbar: React.FC = () => {
@@ -55,8 +55,8 @@ const Navbar: React.FC = () => {
         setOpenDropdown(null);
       }
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -68,13 +68,17 @@ const Navbar: React.FC = () => {
             {primaryLinks.map((link) => (
               <div key={link.name} className="relative group">
                 <Link
-                  href={link.href || '#'}
+                  href={link.href || "#"}
                   className={`px-6 py-4 text-sm font-medium uppercase text-white hover:bg-white hover:bg-opacity-20 transition border-r border-white border-opacity-40 ${
-                    link.name === 'ABOUT' ? 'border-r border-white border-opacity-40' : ''
+                    link.name === "ABOUT"
+                      ? "border-r border-white border-opacity-40"
+                      : ""
                   }`}
                 >
                   {link.name}
-                  {link.children && <FiChevronDown className="inline-block ml-1 text-white" />}
+                  {link.children && (
+                    <FiChevronDown className="inline-block ml-1 text-white" />
+                  )}
                 </Link>
                 {link.children && (
                   <div className="absolute left-0 mt-1 w-48 bg-white text-gray-800 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
@@ -116,7 +120,9 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href!}
                 className={`px-6 py-4 text-sm font-medium uppercase text-white hover:bg-white hover:bg-opacity-20 transition ${
-                  idx < secondaryLinks.length - 1 ? 'border-r border-white border-opacity-40 border-l' : ''
+                  idx < secondaryLinks.length - 1
+                    ? "border-r border-white border-opacity-40 border-l"
+                    : ""
                 }`}
               >
                 {link.name}
@@ -142,7 +148,11 @@ const Navbar: React.FC = () => {
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 focus:outline-none"
             >
-              {mobileOpen ? <FiX size={24} className="text-white" /> : <FiMenu size={24} className="text-white" />}
+              {mobileOpen ? (
+                <FiX size={24} className="text-white" />
+              ) : (
+                <FiMenu size={24} className="text-white" />
+              )}
             </button>
           </div>
         </div>
@@ -159,17 +169,19 @@ const Navbar: React.FC = () => {
                 <div key={link.name}>
                   <div className="flex justify-between items-center border-b border-gray-200">
                     <Link
-                      href={link.href || '#'}
+                      href={link.href || "#"}
                       className="py-3 text-gray-800 font-medium uppercase"
                     >
                       {link.name}
                     </Link>
                     {hasChildren && (
                       <button
-                        onClick={() => setOpenDropdown(isOpen ? null : link.name)}
+                        onClick={() =>
+                          setOpenDropdown(isOpen ? null : link.name)
+                        }
                         className="py-3 text-gray-800 uppercase text-sm"
                       >
-                        {isOpen ? 'SEE LESS' : 'SEE MORE'}
+                        {isOpen ? "SEE LESS" : "SEE MORE"}
                       </button>
                     )}
                   </div>

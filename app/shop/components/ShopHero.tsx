@@ -1,17 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface ShopHeroProps {
   title: string;
   imageSrc: string;
 }
 
-const ShopHero: React.FC<ShopHeroProps> = ({
-  title,
-  imageSrc,
-}) => (
+const ShopHero: React.FC<ShopHeroProps> = ({ title, imageSrc }) => (
   <section className="relative w-full h-screen -mt-16 overflow-hidden">
     <Image
       src={imageSrc}

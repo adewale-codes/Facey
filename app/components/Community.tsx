@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface Card {
   title: string;
@@ -11,12 +11,30 @@ interface Card {
 }
 
 const topCards: Card[] = [
-  { title: 'Must-Have Treatments', subtitle: 'Winter Edition', image: '/images/6.png', href: '/blog/must-have' },
-  { title: 'Effects of Caffeine', image: '/images/7.jpg', href: '/blog/caffeine' },
+  {
+    title: "Must-Have Treatments",
+    subtitle: "Winter Edition",
+    image: "/images/6.png",
+    href: "/blog/must-have",
+  },
+  {
+    title: "Effects of Caffeine",
+    image: "/images/7.jpg",
+    href: "/blog/caffeine",
+  },
 ];
 const bottomCards: Card[] = [
-  { title: 'AquaGold', subtitle: 'Treatment', image: '/images/8.jpg', href: '/blog/aquagold' },
-  { title: 'Sundays Self-Care Agenda', image: '/images/9.jpg', href: '/blog/self-care' },
+  {
+    title: "AquaGold",
+    subtitle: "Treatment",
+    image: "/images/8.jpg",
+    href: "/blog/aquagold",
+  },
+  {
+    title: "Sundays Self-Care Agenda",
+    image: "/images/9.jpg",
+    href: "/blog/self-care",
+  },
 ];
 
 const CommunitySection: React.FC = () => (
@@ -25,8 +43,16 @@ const CommunitySection: React.FC = () => (
       {/* Mobile: top swipe */}
       <div className="flex md:hidden overflow-x-auto space-x-4 mb-8">
         {topCards.map((c) => (
-          <Link key={c.title} href={c.href!} className="flex-shrink-0 w-64 h-64 rounded-lg overflow-hidden relative">
-            <img src={c.image} alt={c.title} className="w-full h-full object-cover" />
+          <Link
+            key={c.title}
+            href={c.href!}
+            className="flex-shrink-0 w-64 h-64 rounded-lg overflow-hidden relative"
+          >
+            <img
+              src={c.image}
+              alt={c.title}
+              className="w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-black bg-opacity-20" />
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="text-xl font-serif">{c.title}</h3>
@@ -39,9 +65,14 @@ const CommunitySection: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Column */}
         <div className="text-center md:text-left">
-          <h2 className="text-4xl font-serif text-green-800 mb-4">Join our community</h2>
+          <h2 className="text-4xl font-serif text-green-800 mb-4">
+            Join our community
+          </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            Welcome to Facey Clinic based in Weybridge. We are here to seamlessly blend our profound medical expertise with an artistic touch; making our clinic a distinctive haven of aesthetic excellence in the capital.
+            Welcome to Facey Clinic based in Weybridge. We are here to
+            seamlessly blend our profound medical expertise with an artistic
+            touch; making our clinic a distinctive haven of aesthetic excellence
+            in the capital.
           </p>
           <Link
             href="https://instagram.com/dr.rasha.clinic"
@@ -54,8 +85,16 @@ const CommunitySection: React.FC = () => (
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-4">
           {[...topCards, ...bottomCards].map((c) => (
-            <Link key={c.title} href={c.href!} className="relative rounded-lg overflow-hidden">
-              <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+            <Link
+              key={c.title}
+              href={c.href!}
+              className="relative rounded-lg overflow-hidden"
+            >
+              <img
+                src={c.image}
+                alt={c.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-20" />
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="text-xl font-serif">{c.title}</h3>
@@ -69,8 +108,16 @@ const CommunitySection: React.FC = () => (
       {/* Mobile: bottom swipe */}
       <div className="flex md:hidden overflow-x-auto space-x-4 mt-8">
         {bottomCards.map((c) => (
-          <Link key={c.title} href={c.href!} className="flex-shrink-0 w-64 h-64 rounded-lg overflow-hidden relative">
-            <img src={c.image} alt={c.title} className="w-full h-full object-cover" />
+          <Link
+            key={c.title}
+            href={c.href!}
+            className="flex-shrink-0 w-64 h-64 rounded-lg overflow-hidden relative"
+          >
+            <img
+              src={c.image}
+              alt={c.title}
+              className="w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-black bg-opacity-20" />
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="text-xl font-serif">{c.title}</h3>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const WellnessSection: React.FC = () => (
   <section id="wellness-section" className="py-16 px-4 md:px-8 lg:px-16">
@@ -17,7 +17,10 @@ const WellnessSection: React.FC = () => (
           The Home of Aesthetics and Wellness
         </h2>
         <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-          Welcome to Facey Clinic, the best aesthetics clinic in London based in Weybridge. We are dedicated to seamlessly blending our profound medical expertise with an artistic touch, making our clinic a leading destination for non-surgical beauty treatments in London.
+          Welcome to Facey Clinic, the best aesthetics clinic in London based in
+          Weybridge. We are dedicated to seamlessly blending our profound
+          medical expertise with an artistic touch, making our clinic a leading
+          destination for non-surgical beauty treatments in London.
         </p>
       </div>
     </div>

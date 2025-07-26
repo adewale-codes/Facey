@@ -1,17 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface CharityHeroProps {
   title: string;
   imageSrc: string;
 }
 
-const CharityHero: React.FC<CharityHeroProps> = ({
-  title,
-  imageSrc,
-}) => (
+const CharityHero: React.FC<CharityHeroProps> = ({ title, imageSrc }) => (
   <section className="relative w-full h-screen -mt-16 overflow-hidden">
     <Image
       src={imageSrc}

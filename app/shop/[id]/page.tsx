@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useMemo, useEffect } from 'react';
-import { useRouter, useParams } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useCart } from '@/app/context/CartContext';
+import { useState, useMemo, useEffect } from "react";
+import { useRouter, useParams } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/app/context/CartContext";
 
 interface Product {
   id: string;
@@ -19,31 +19,37 @@ interface Product {
 
 const PRODUCTS: Product[] = [
   {
-    id: 'hair-supplements',
-    title: 'Hair Supplements',
-    subtitle: '60 Capsules',
-    price: '£90.00',
+    id: "hair-supplements",
+    title: "Hair Supplements",
+    subtitle: "60 Capsules",
+    price: "£90.00",
     description:
-      'Facey signature hair supplements that help support healthy hair growth.',
-    images: ['/products/a.webp', '/products/b.webp', '/products/c.webp', '/products/d.webp'],
-    keyIngredients: ['Biotin', 'Zinc', 'Vitamin D', 'Collagen peptides'],
-    howToUse: 'Take two capsules daily with food. Do not exceed recommended dose.',
+      "Facey signature hair supplements that help support healthy hair growth.",
+    images: [
+      "/products/a.webp",
+      "/products/b.webp",
+      "/products/c.webp",
+      "/products/d.webp",
+    ],
+    keyIngredients: ["Biotin", "Zinc", "Vitamin D", "Collagen peptides"],
+    howToUse:
+      "Take two capsules daily with food. Do not exceed recommended dose.",
   },
   {
-    id: 'cellular-defence-spf50',
-    title: 'Cellular Defence SPF50 Moisturiser',
-    subtitle: '50 ml (1.6 fl oz)',
-    price: '£80.00',
+    id: "cellular-defence-spf50",
+    title: "Cellular Defence SPF50 Moisturiser",
+    subtitle: "50 ml (1.6 fl oz)",
+    price: "£80.00",
     description:
-      'Broad-spectrum SPF50 that shields skin from UVA/UVB while boosting cellular repair.',
+      "Broad-spectrum SPF50 that shields skin from UVA/UVB while boosting cellular repair.",
     images: [
-      '/images/products/spf50-1.jpg',
-      '/images/products/spf50-2.jpg',
-      '/images/products/spf50-3.jpg',
+      "/images/products/spf50-1.jpg",
+      "/images/products/spf50-2.jpg",
+      "/images/products/spf50-3.jpg",
     ],
-    keyIngredients: ['Hyaluronic acid', 'Vitamin E', 'Niacinamide'],
+    keyIngredients: ["Hyaluronic acid", "Vitamin E", "Niacinamide"],
     howToUse:
-      'Apply generously every morning as the last step in your skincare routine.',
+      "Apply generously every morning as the last step in your skincare routine.",
   },
 ];
 
@@ -72,7 +78,10 @@ export default function ProductPage() {
     return (
       <div className="p-8 text-center">
         <p>Product not found.</p>
-        <button onClick={() => back()} className="mt-4 text-green-700 underline">
+        <button
+          onClick={() => back()}
+          className="mt-4 text-green-700 underline"
+        >
           Go back
         </button>
       </div>
@@ -89,7 +98,7 @@ export default function ProductPage() {
 
   const handleBuyNow = () => {
     addToCart(product.id);
-    push('/cart');
+    push("/cart");
   };
 
   return (
@@ -122,7 +131,7 @@ export default function ProductPage() {
                   key={i}
                   onClick={() => goToImage(i)}
                   className={`w-3 h-3 rounded-full transition ${
-                    i === currentImage ? 'bg-green-700' : 'bg-gray-300'
+                    i === currentImage ? "bg-green-700" : "bg-gray-300"
                   }`}
                 />
               ))}
@@ -134,7 +143,7 @@ export default function ProductPage() {
                   key={i}
                   onClick={() => goToImage(i)}
                   className={`overflow-hidden rounded-lg ${
-                    i === currentImage ? 'ring-2 ring-green-700' : ''
+                    i === currentImage ? "ring-2 ring-green-700" : ""
                   }`}
                 >
                   <Image
@@ -150,9 +159,15 @@ export default function ProductPage() {
           </div>
 
           <div className="space-y-6 text-black">
-            <p className="text-sm uppercase text-gray-600">{product.subtitle}</p>
-            <h1 className="text-3xl font-serif text-green-800">{product.title}</h1>
-            <p className="text-xl font-medium text-green-800">{product.price}</p>
+            <p className="text-sm uppercase text-gray-600">
+              {product.subtitle}
+            </p>
+            <h1 className="text-3xl font-serif text-green-800">
+              {product.title}
+            </h1>
+            <p className="text-xl font-medium text-green-800">
+              {product.price}
+            </p>
             <p className="text-gray-700">{product.description}</p>
 
             <div className="space-y-4">
@@ -162,7 +177,7 @@ export default function ProductPage() {
                   className="w-full flex justify-between items-center border-b pb-2 text-gray-800"
                 >
                   Key Ingredients
-                  <span className="text-xl">{openKey ? '–' : '+'}</span>
+                  <span className="text-xl">{openKey ? "–" : "+"}</span>
                 </button>
                 {openKey && (
                   <ul className="mt-2 pl-4 list-disc text-gray-700 space-y-1">
@@ -179,21 +194,25 @@ export default function ProductPage() {
                   className="w-full flex justify-between items-center border-b pb-2 text-gray-800"
                 >
                   How to Use
-                  <span className="text-xl">{openUse ? '–' : '+'}</span>
+                  <span className="text-xl">{openUse ? "–" : "+"}</span>
                 </button>
-                {openUse && <p className="mt-2 pl-4 text-gray-700">{product.howToUse}</p>}
+                {openUse && (
+                  <p className="mt-2 pl-4 text-gray-700">{product.howToUse}</p>
+                )}
               </div>
             </div>
 
             <div className="space-y-2">
               <p className="font-semibold text-gray-800">Shipping Fees</p>
               <p className="text-gray-700 text-sm">
-                Free UK shipping over £150<br />
+                Free UK shipping over £150
+                <br />
                 UK: £6.50 · EU: £15.00 · Intl: £24.00 · ME: £40.00
               </p>
               <p className="font-semibold text-gray-800">Shipping Guidelines</p>
               <p className="text-gray-700 text-sm">
-                Parcels outside UK may incur customs duties/taxes by destination.
+                Parcels outside UK may incur customs duties/taxes by
+                destination.
               </p>
             </div>
 

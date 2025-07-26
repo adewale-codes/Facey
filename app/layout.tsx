@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
+import Tawk from "./components/Tawk";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </CartProvider>
-
+        <Tawk />
         <Footer />
       </body>
     </html>

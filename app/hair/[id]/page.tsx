@@ -14,9 +14,6 @@ interface Concerns {
   title: string;
   description: string;
   image: string;
-  // head: string;
-  // text: string;
-  // links: string;
 }
 
 const CONCERNS: Concerns[] = [
@@ -26,9 +23,6 @@ const CONCERNS: Concerns[] = [
     description:
       "Restore thicker, healthier, and stronger hair with PRP (Platelet-Rich Plasma) Hair Restoration at Face Weybridge. This innovative, non-surgical treatment uses your body’s own natural growth factors to stimulate hair follicles, promoting hair regrowth, improved thickness, and reduced hair shedding. Whether you’re experiencing thinning hair, hair loss, or weakened follicles, PRP therapy provides a safe, natural, and effective solution to rejuvenate your scalp and restore hair health.",
     image: "/face/16.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Hair",
@@ -36,9 +30,6 @@ const CONCERNS: Concerns[] = [
     description:
       "Revitalise and restore stronger, thicker, and healthier hair with Polynucleotide Therapy, the latest breakthrough in hair regeneration. This scientifically advanced treatment works by stimulating cellular repair, increasing blood flow, and nourishing the scalp to revive weakened hair follicles and promote natural hair growth. At Face Weybridge, we offer Hair Polynucleotide Therapy as a powerful, non-surgical solution for individuals experiencing hair thinning, excessive shedding, or early-stage hair loss.",
     image: "/face/16.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Hydrafacial",
@@ -46,9 +37,6 @@ const CONCERNS: Concerns[] = [
     description:
       "Just like your skin, your scalp needs proper care to maintain healthy, strong, and beautiful hair. Hydrafacial Keravive is a revolutionary scalp treatment designed to deeply cleanse, hydrate, and nourish your scalp, creating the perfect environment for thicker, fuller, and healthier hair growth. At Face Weybridge, we offer Hydrafacial Keravive to address dryness, clogged follicles, poor circulation, and weak hair strands, ensuring your hair gets the best possible foundation to grow.",
     image: "/face/17.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Exosomes",
@@ -56,9 +44,6 @@ const CONCERNS: Concerns[] = [
     description:
       "Revolutionise your hair growth journey with Hair Exosome Therapy, the latest breakthrough in hair restoration and scalp rejuvenation. This cutting-edge treatment uses exosomes—powerful cellular messengers derived from stem cells—to stimulate hair follicle regeneration, increase hair density, and reduce hair loss. At Face Weybridge, we offer Hair Exosome Therapy to promote stronger, thicker, and healthier hair without surgery or downtime.",
     image: "/face/18.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Mesotherapy",
@@ -66,9 +51,6 @@ const CONCERNS: Concerns[] = [
     description:
       "Give your hair the nourishment it needs with Mesotherapy for Hair, a powerful, non-surgical treatment designed to stimulate hair growth, strengthen follicles, and improve scalp health. This innovative procedure delivers a custom blend of vitamins, minerals, and growth factors directly into the scalp to revitalise weak hair, reduce hair loss, and promote thicker, healthier strands. At Face Weybridge, we offer expert Mesotherapy treatments tailored to your specific hair concerns, ensuring visible and long-lasting results.",
     image: "/face/18.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Laser",
@@ -76,21 +58,15 @@ const CONCERNS: Concerns[] = [
     description:
       "Say goodbye to the hassle of shaving, waxing, and plucking with Body Laser Hair Removal at Face Weybridge. Our advanced laser technology offers a long-lasting, safe, and effective solution for removing unwanted hair from various body areas. Whether you want to treat your legs, arms, underarms, back, or bikini area, our laser hair removal treatments provide permanent hair reduction, leaving your skin silky smooth and irritation-free.",
     image: "/face/19.jpg",
-    // head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
 ];
 
 type ConcernDetails = {
   intro: string;
   understanding: string;
-  // popularTreatments: { title: string; image: string; href: string }[];
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
-  // testimonials: {name: string; role?: string; rating: number; text: string}[]; 
-  // faq: {question: string; answer: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
@@ -99,68 +75,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we offer advanced PRP therapy tailored to your specific hair needs. Our skilled specialists use high-quality platelet concentration techniques to deliver maximum hair restoration benefits. With a personalised and results-driven approach, we ensure your treatment is safe, effective, and designed to help you regain thicker, healthier hair naturally.",
     understanding:
       "PRP (Platelet-Rich Plasma) therapy is a regenerative treatment that uses a patient’s own blood components—mainly platelets—to promote healing in various medical and cosmetic conditions. There are different types of PRP depending on how the blood is processed and what it's used for. The main types are Pure Platelet-Rich Plasma, Pure Platelet-Rich Fibrin, Leukocyte- and Platelet-Rich Fibrin and many more.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Hydrafacial Full Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "PRP (Platelet-Rich Plasma) is used as a treatment, not a disease. The main causes or conditions that lead people to seek PRP therapy include: Hair loss, Osteoarthritis, Aging skin, Delayed healing",
     types: [
@@ -176,7 +91,7 @@ const DETAILS: Record<string, ConcernDetails> = {
         heading: "Pure Platelet-Rich Fibrin (P-PRF)",
         text: "Platelets in a fibrin matrix, no white cells Used in wound healing and dental procedures",
       },
-        {
+      {
         heading: "Leukocyte- and Platelet-Rich Fibrin (L-PRF)",
         text: "Platelets and white blood cells in a fibrin gel, Helps in oral surgery and bone regeneration",
       },
@@ -189,73 +104,14 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we specialise in cutting-edge hair restoration treatments using the most advanced Polynucleotide Therapy for effective and long-lasting hair regrowth. Our highly skilled practitioners tailor each session to your specific hair needs, ensuring maximum follicle regeneration and hair health improvement. With a focus on scientific innovation and client satisfaction, we help you regain thicker, stronger, and healthier hair with confidence.",
     understanding:
       "Polynucleotides are DNA-derived molecules increasingly used in hair restoration treatments due to their regenerative and anti-inflammatory properties. Unlike PRP, which uses the patient’s blood, polynucleotides are often bioengineered from salmon DNA and work by stimulating cell repair, improving blood flow, and nourishing hair follicles.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Polynucleotides are used for hair to repair damaged follicles, stimulate new growth, and create a healthier scalp, especially for those experiencing thinning, balding, or post-treatment recovery.",
     types: [
       {
         heading: "Polynucleotide (PN)",
-        text: "Basic form of polynucleotides, typically extracted from salmon DNA, Supports cell regeneration, hydration, and scalp health, Used in early-stage hair thinning or for scalp revitalization."},
+        text: "Basic form of polynucleotides, typically extracted from salmon DNA, Supports cell regeneration, hydration, and scalp health, Used in early-stage hair thinning or for scalp revitalization.",
+      },
       {
         heading: "Polydeoxyribonucleotide (PDRN)",
         text: "A more biologically active form of PN, Has anti-inflammatory and tissue-repairing properties, Improves blood flow, repairs scalp micro-damage, and promotes hair regrowth.",
@@ -273,67 +129,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we specialise in advanced hair and scalp treatments that promote stronger, healthier hair. Our Hydrafacial Keravive therapy is tailored to your individual scalp needs, ensuring maximum hydration, cleansing, and follicle activation. With our expert team and cutting-edge technology, we help you achieve a revitalised scalp and fuller-looking hair with long-lasting benefits.",
     understanding:
       "HydraFacial Keravive is a specialized scalp treatment designed to cleanse, nourish, and hydrate the scalp—creating a healthier environment for natural hair growth. Unlike typical HydraFacial for skin, Keravive focuses entirely on scalp wellness. While there is only one standard Keravive protocol, it can be customized or paired with other treatments, creating different types or approaches depending on the individual’s needs. Though the core treatment is the same, HydraFacial Keravive can be tailored with PRP, microneedling, or used pre/post-transplant to suit individual scalp and hair restoration needs. It is non-invasive, relaxing, and safe for both men and women.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "HydraFacial Keravive are most often used to address  the underlying causes by Dry or Flaky Scalp, Clogged Hair Follicles, Thinning Hair / Hair Loss, Poor Scalp Circulation and Postpartum / Post-Transplant.",
     types: [
@@ -358,67 +154,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we are at the forefront of advanced hair restoration treatments, using the most innovative Exosome Therapy for maximum hair regrowth and follicle regeneration. Our skilled specialists tailor each treatment to your hair type and scalp needs, ensuring optimal, long-lasting results. With our commitment to scientific advancements and client satisfaction, we help you achieve fuller, thicker, and healthier hair with confidence.",
     understanding:
       "Exosomes are tiny extracellular vesicles (nano-sized messengers) released by cells that carry growth factors, proteins, and genetic material. In hair restoration, exosome therapy is an advanced, non-surgical treatment used to regenerate hair follicles, stimulate growth, and repair scalp damage—especially for people with thinning or early-stage hair loss. Different types of hair exosomes are defined by their cell source and formulation. The most effective are stem cell–derived, especially from umbilical cord or adipose tissue. They offer powerful, natural stimulation for hair regrowth and scalp repair, making them one of the most advanced options in modern hair restoration.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Hair exosomes are biological treatments  to address hair loss caused by genetics, inflammation, aging, stress, or medical conditions. Exosomes promote natural follicle regeneration, making them a powerful non-surgical option.",
     types: [
@@ -443,67 +179,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we are at the forefront of advanced hair restoration treatments, using the most innovative Exosome Therapy for maximum hair regrowth and follicle regeneration. Our skilled specialists tailor each treatment to your hair type and scalp needs, ensuring optimal, long-lasting results. With our commitment to scientific advancements and client satisfaction, we help you achieve fuller, thicker, and healthier hair with confidence.",
     understanding:
       "Mesotherapy is a non-surgical cosmetic procedure that involves injecting vitamins, enzymes, hormones, plant extracts, or medications into the mesoderm (middle layer of the skin). It's commonly used for hair restoration, skin rejuvenation, and fat reduction. The treatment type varies based on purpose and content of injection.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Mesotherapy is a cosmetic procedure for specific health or aesthetic reasons. Common causes include: Hair loss, Skin rejuvenation, Fat reduction, Cellulite treatment, Pain management.",
     types: [
@@ -528,67 +204,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we use state-of-the-art laser technology to provide safe, effective, and personalised treatments for long-lasting hair reduction. Our highly trained specialists ensure precision and comfort in every session, tailoring treatments to your skin type and hair growth pattern. With our expert approach and advanced equipment, you can achieve smooth, silky skin with confidence.",
     understanding:
       "Laser hair removal uses light energy to target and destroy hair follicles, reducing hair growth over time. The type of laser used matters greatly—it affects how well it works for your skin tone, hair type, and treatment area. Here are the main types of laser hair removal systems: Alexandrite Laser (755 nm), Diode Laser (800–810 nm), Nd:YAG Laser (1064 nm), Ruby Laser (694 nm), IPL (Intense Pulsed Light). Each type has its own wavelength and mechanism, making it suitable for different skin tones and hair types.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //     faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Laser Hair Removal is used to address unwanted hair growth caused by various factors, including hormonal imbalances, genetics, and lifestyle. It provides a long-term solution for those seeking to reduce or eliminate hair in areas such as the legs, arms, underarms, back, and bikini line.",
     types: [
@@ -610,33 +226,10 @@ const DETAILS: Record<string, ConcernDetails> = {
   },
 };
 
-// function StarRating({ count }: { count: number }) {
-//   return (
-//     <div className="flex space-x-1">
-//       {Array.from({ length: 5 }).map((_, i) => (
-//         <svg
-//           key={i}
-//           width="20" height="20"
-//           fill={i < count ? 'currentColor' : 'none'}
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           className="text-green-800"
-//           viewBox="0 0 24 24"
-//         >
-//           <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 9" />
-//         </svg>
-//       ))}
-//     </div>
-//   );
-// }
-
 export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
-
-      // const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
 
   const [search, setSearch] = useState("");
   const filtered = useMemo(
@@ -742,35 +335,7 @@ export default function ConcernDetailPage() {
           </div>
 
           <div>
-            {/* <h3 className="text-2xl font-serif text-green-800 mb-4">
-              Popular Treatments
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {detail.popularTreatments.map((t, i) => (
-                <a
-                  key={i}
-                  href={t.href}
-                  className="block overflow-hidden rounded-lg shadow hover:shadow-lg transition"
-                >
-                  <Image
-                    src={t.image}
-                    alt={t.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h4 className="font-medium text-green-800 mb-2">
-                      {t.title}
-                    </h4>
-                    <button className="bg-green-700 text-white text-xs uppercase px-3 py-1 rounded">
-                      Find Out More
-                    </button>
-                  </div>
-                </a>
-              ))}
-            </div> */}
-            <PopularTreatment/>
+            <PopularTreatment />
           </div>
 
           <div>
@@ -801,77 +366,11 @@ export default function ConcernDetailPage() {
           </div>
 
           <AppointmentSection />
-          
-           {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-serif mb-4">
-        {selected.head}
-      </h2>
-      <p className="text-base md:text-lg mb-8 leading-relaxed">
-{selected.text}
-      </p>
-      <button className="inline-block border border-white px-8 py-3 uppercase font-medium hover:bg-white hover:text-green-700 transition"
-      >
-        {selected.links}
-      </button>
-    </div>
-  </div> */}
+
           <LogoSlider />
           <FaqSection />
-          {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
-        <ul className="space-y-4">
-          {detail.faq.map((qa, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <li key={idx} className="border-b border-green-500 pb-4">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex justify-between items-center text-left"
-                >
-                  <span className="text-lg font-medium">{qa.question}</span>
-                  <span className="text-2xl">{isOpen ? '−' : '+'}</span>
-                </button>
-                {isOpen && (
-                  <p className="mt-2 text-green-100">{qa.answer}</p>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
 
-     
-    </div> */}
           <TestimonialsSection />
-           {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
-          What Our Customers Say
-        </h2>
-
-        <div className="flex md:hidden overflow-x-auto space-x-6 pb-4">
-          {detail.testimonials.map((t, i) => (
-            <div key={i} className="flex-shrink-0 w-80 p-4 border rounded-lg shadow">
-              <StarRating count={t.rating} />
-              <p className="mt-4 text-gray-700">{t.text}</p>
-              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="hidden md:grid grid-cols-3 gap-8">
-          {detail.testimonials.map((t, i) => (
-            <div key={i} className="p-6 border rounded-lg shadow-lg flex flex-col">
-              <StarRating count={t.rating} />
-              <p className="mt-4 text-gray-700 flex-1">{t.text}</p>
-              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div> */}
         </div>
       </div>
     </section>

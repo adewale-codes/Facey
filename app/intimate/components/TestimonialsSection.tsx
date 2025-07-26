@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface Testimonials {
   name: string;
@@ -11,17 +11,17 @@ interface Testimonials {
 
 const testimonials: Testimonials[] = [
   {
-    name: 'Nas A',
+    name: "Nas A",
     rating: 5,
     text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
   },
   {
-    name: 'Mariam C',
+    name: "Mariam C",
     rating: 5,
     text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
   },
   {
-    name: 'Clariana T. M',
+    name: "Clariana T. M",
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },
@@ -33,8 +33,9 @@ function StarRating({ count }: { count: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          width="20" height="20"
-          fill={i < count ? 'currentColor' : 'none'}
+          width="20"
+          height="20"
+          fill={i < count ? "currentColor" : "none"}
           stroke="currentColor"
           strokeWidth="2"
           className="text-green-800"
@@ -57,7 +58,10 @@ export default function TestimonialsSection() {
 
         <div className="flex md:hidden overflow-x-auto space-x-6 pb-4">
           {testimonials.map((t, i) => (
-            <div key={i} className="flex-shrink-0 w-80 p-4 border rounded-lg shadow">
+            <div
+              key={i}
+              className="flex-shrink-0 w-80 p-4 border rounded-lg shadow"
+            >
               <StarRating count={t.rating} />
               <p className="mt-4 text-gray-700">{t.text}</p>
               <p className="mt-4 font-semibold text-green-800">{t.name}</p>
@@ -67,7 +71,10 @@ export default function TestimonialsSection() {
 
         <div className="hidden md:grid grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="p-6 border rounded-lg shadow-lg flex flex-col">
+            <div
+              key={i}
+              className="p-6 border rounded-lg shadow-lg flex flex-col"
+            >
               <StarRating count={t.rating} />
               <p className="mt-4 text-gray-700 flex-1">{t.text}</p>
               <p className="mt-4 font-semibold text-green-800">{t.name}</p>

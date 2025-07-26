@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface AboutHeroProps {
   title: string;
@@ -9,11 +9,7 @@ interface AboutHeroProps {
   imageSrc: string;
 }
 
-const AboutHero: React.FC<AboutHeroProps> = ({
-  title,
-  subtitle,
-  imageSrc,
-}) => (
+const AboutHero: React.FC<AboutHeroProps> = ({ title, subtitle, imageSrc }) => (
   <section className="relative w-full h-screen -mt-16 overflow-hidden">
     <Image
       src={imageSrc}
@@ -30,9 +26,7 @@ const AboutHero: React.FC<AboutHeroProps> = ({
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-4">
           {title}
         </h1>
-        <p className="text-lg md:text-xl text-white max-w-2xl">
-          {subtitle}
-        </p>
+        <p className="text-lg md:text-xl text-white max-w-2xl">{subtitle}</p>
       </div>
     </div>
   </section>

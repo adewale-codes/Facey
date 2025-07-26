@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const FindSection: React.FC = () => (
   <section
@@ -16,8 +16,8 @@ const FindSection: React.FC = () => (
       </h2>
       <p className="text-base md:text-lg text-white mb-4 leading-relaxed max-w-lg">
         At Facey Clinic, we take great pride in introducing you to our
-        exceptional team of professionals. Our dedicated and highly skilled team,
-        led by the renowned Facey, is committed to providing you with the
+        exceptional team of professionals. Our dedicated and highly skilled
+        team, led by the renowned Facey, is committed to providing you with the
         highest standard of care and aesthetic expertise.
       </p>
       <Link

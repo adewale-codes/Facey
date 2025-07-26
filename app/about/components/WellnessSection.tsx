@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface Block {
   title: string;
@@ -14,16 +14,16 @@ interface Block {
 
 const blocks: Block[] = [
   {
-    title: 'Excellence is our passion',
+    title: "Excellence is our passion",
     paragraphs: [
-      'Facey Clinic proudly offers world-class aesthetic treatments in Knightsbridge, led by the highly respected Facey and her expert team. Rasha and her dedicated team endeavour to provide the highest standard of care and aesthetic experience in the heart of London, and are one of the best according to Forbes Magazine.',
-      'At Facey Clinic, we take great pride in introducing you to our exceptional team of professionals. Our dedicated and highly skilled team, led by the renowned Facey, is committed to providing you with the highest standard of care and aesthetic expertise with a comprehensive range of face, body and hair treatments.With a collective passion for enhancing natural beauty and ensuring patient satisfaction, the Facey Clinic team is here to guide you on your aesthetic journey in our beautiful custom-built Knightsbridge Clinic in London. Get to know the individuals who make every visit to our clinic a personalized and transformative experience below.Our dedicated and highly skilled team, led by the renowned Facey, is committed to providing you with the highest standard of care and aesthetic expertise.',
-      'With a collective passion for enhancing natural beauty, and ensuring patient satisfaction, the Facey Clinic team is here to guide you on your aesthetic journey in our beautiful custom-build Knightsbridge Clinic in London. Get to know the individuals who make every visit to our clinic a personalized and transformative experience below.',
+      "Facey Clinic proudly offers world-class aesthetic treatments in Knightsbridge, led by the highly respected Facey and her expert team. Rasha and her dedicated team endeavour to provide the highest standard of care and aesthetic experience in the heart of London, and are one of the best according to Forbes Magazine.",
+      "At Facey Clinic, we take great pride in introducing you to our exceptional team of professionals. Our dedicated and highly skilled team, led by the renowned Facey, is committed to providing you with the highest standard of care and aesthetic expertise with a comprehensive range of face, body and hair treatments.With a collective passion for enhancing natural beauty and ensuring patient satisfaction, the Facey Clinic team is here to guide you on your aesthetic journey in our beautiful custom-built Knightsbridge Clinic in London. Get to know the individuals who make every visit to our clinic a personalized and transformative experience below.Our dedicated and highly skilled team, led by the renowned Facey, is committed to providing you with the highest standard of care and aesthetic expertise.",
+      "With a collective passion for enhancing natural beauty, and ensuring patient satisfaction, the Facey Clinic team is here to guide you on your aesthetic journey in our beautiful custom-build Knightsbridge Clinic in London. Get to know the individuals who make every visit to our clinic a personalized and transformative experience below.",
     ],
-    image: '/images/15.webp',
-    alt: 'Wellness Treatment Room',
-    ctaHref: '/contact',
-    ctaText: 'Send us a whatsapp',
+    image: "/images/15.webp",
+    alt: "Wellness Treatment Room",
+    ctaHref: "/contact",
+    ctaText: "Send us a whatsapp",
   },
 ];
 

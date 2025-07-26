@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const AppointmentSection: React.FC = () => (
   <section className="bg-green-700 py-16 px-4 text-white text-center">
@@ -10,11 +10,12 @@ const AppointmentSection: React.FC = () => (
         Book Your Appointment
       </h2>
       <p className="text-base md:text-lg mb-8 leading-relaxed">
-        Before your transformation begins, a crucial step awaits &ndash; your consultation. At
-        Facey Clinic, our expert practitioners and doctors conduct a comprehensive
-        skin assessment, dedicated to crafting a bespoke treatment plan exclusively for
-        you. Book today to unleash your beauty&apos;s true potential and discover the art of
-        aesthetics in the heart of Weybridge, London.
+        Before your transformation begins, a crucial step awaits &ndash; your
+        consultation. At Facey Clinic, our expert practitioners and doctors
+        conduct a comprehensive skin assessment, dedicated to crafting a bespoke
+        treatment plan exclusively for you. Book today to unleash your
+        beauty&apos;s true potential and discover the art of aesthetics in the
+        heart of Weybridge, London.
       </p>
       <Link
         href="/book"

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, {
   createContext,
@@ -6,7 +6,7 @@ import React, {
   useState,
   ReactNode,
   useMemo,
-} from 'react';
+} from "react";
 
 type Cart = Record<string, number>;
 
@@ -49,6 +49,6 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
 
 export const useCart = (): CartContextType => {
   const ctx = useContext(CartContext);
-  if (!ctx) throw new Error('useCart must be used within a CartProvider');
+  if (!ctx) throw new Error("useCart must be used within a CartProvider");
   return ctx;
 };

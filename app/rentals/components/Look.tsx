@@ -1,18 +1,20 @@
-'use client';
+"use client";
 
-import React, { useRef, useState } from 'react';
-import Image from 'next/image';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 export default function LookSection() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
 
-    setStatus('sending');
+    setStatus("sending");
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -22,10 +24,10 @@ export default function LookSection() {
       )
       .then(
         () => {
-          setStatus('success');
+          setStatus("success");
           formRef.current?.reset();
         },
-        () => setStatus('error')
+        () => setStatus("error")
       );
   };
 
@@ -47,16 +49,20 @@ export default function LookSection() {
             Looking for a professional space to grow your practice?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Our clinic offers flexible room rental services for medical consultants, including doctors,
-            therapists, and specialists. Each room is fully equipped with modern amenities to ensure
-            comfort and privacy for both you and your patients. With convenient booking options and a prime
-            location, you can focus on what matters most—delivering exceptional care.
+            Our clinic offers flexible room rental services for medical
+            consultants, including doctors, therapists, and specialists. Each
+            room is fully equipped with modern amenities to ensure comfort and
+            privacy for both you and your patients. With convenient booking
+            options and a prime location, you can focus on what matters
+            most—delivering exceptional care.
           </p>
 
           <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">First Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  First Name
+                </label>
                 <input
                   type="text"
                   name="first_name"
@@ -66,7 +72,9 @@ export default function LookSection() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Last Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Last Name
+                </label>
                 <input
                   type="text"
                   name="last_name"
@@ -78,7 +86,9 @@ export default function LookSection() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email Address</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="user_email"
@@ -89,7 +99,9 @@ export default function LookSection() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Message
+              </label>
               <textarea
                 name="message"
                 required
@@ -101,18 +113,18 @@ export default function LookSection() {
 
             <button
               type="submit"
-              disabled={status === 'sending'}
+              disabled={status === "sending"}
               className={`w-full bg-green-700 text-white uppercase font-medium px-6 py-3 rounded hover:bg-green-800 transition ${
-                status === 'sending' ? 'opacity-50 cursor-not-allowed' : ''
+                status === "sending" ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
-              {status === 'sending'
-                ? 'Sending...'
-                : status === 'success'
-                ? 'Sent!'
-                : status === 'error'
-                ? 'Error'
-                : 'Submit'}
+              {status === "sending"
+                ? "Sending..."
+                : status === "success"
+                ? "Sent!"
+                : status === "error"
+                ? "Error"
+                : "Submit"}
             </button>
           </form>
         </div>

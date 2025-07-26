@@ -1,12 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-const videos = [
-  '/videos/1.mp4',
-  '/videos/2.mp4',
-  '/videos/3.mp4',
-];
+const videos = ["/videos/1.mp4", "/videos/2.mp4", "/videos/3.mp4"];
 
 const Hero: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -47,7 +43,7 @@ const Hero: React.FC = () => {
             preload="auto"
             className={
               `absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ` +
-              (idx === current ? 'opacity-100' : 'opacity-0')
+              (idx === current ? "opacity-100" : "opacity-0")
             }
           />
         ))}
@@ -59,7 +55,8 @@ const Hero: React.FC = () => {
           London&apos;s Finest Aesthetics and Wellness Clinic
         </h1>
         <p className="mt-4 text-base md:text-lg text-white">
-          Unrivalled aesthetics clinic in London for Anti-Wrinkle Injections, Dermal Fillers, and Laser Treatments
+          Unrivalled aesthetics clinic in London for Anti-Wrinkle Injections,
+          Dermal Fillers, and Laser Treatments
         </p>
       </div>
     </section>

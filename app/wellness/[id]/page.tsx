@@ -9,15 +9,11 @@ import FaqSection from "../components/FaqSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import PopularTreatment from "../components/PopularTreatment";
 
-
 interface Concern {
   id: string;
   title: string;
   description: string;
   image: string;
-  //  head: string;
-  // text: string;
-  // links: string;
 }
 
 const CONCERNS: Concern[] = [
@@ -27,9 +23,6 @@ const CONCERNS: Concern[] = [
     description:
       "Treat acne effectively with our specialised solutions. Achieve clearer skin through personalised care and advanced treatments at Facey Clinic.",
     image: "/concerns/1.jpg",
-    //  head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Vitamin",
@@ -37,9 +30,6 @@ const CONCERNS: Concern[] = [
     description:
       "Give your body the essential vitamins and nutrients it needs with our Vitamin Injections at Face Weybridge",
     image: "/concerns/2.jpg",
-    //  head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Body",
@@ -47,9 +37,6 @@ const CONCERNS: Concern[] = [
     description:
       "Experience the ultimate relaxation and rejuvenation with our expert Body Massage treatments at Face Weybridge.",
     image: "/concerns/3.jpg",
-    //  head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Intimate",
@@ -57,9 +44,6 @@ const CONCERNS: Concern[] = [
     description:
       "At Face Weybridge, we understand that women’s intimate wellness is essential for overall health, confidence, and well-being.",
     image: "/concerns/4.jpg",
-    //  head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
   {
     id: "Forma",
@@ -67,21 +51,15 @@ const CONCERNS: Concern[] = [
     description:
       "Forma V is a cutting-edge non-surgical vaginal rejuvenation treatment designed to restore intimate health, enhance comfort, and improve confidence.",
     image: "/concerns/5.jpg",
-    //  head: "Book Your Appointment",
-    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    // links: "Book Now",
   },
 ];
 
 type ConcernDetails = {
   intro: string;
   understanding: string;
-  // popularTreatments: { title: string; image: string; href: string }[];
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
-    // faq: {question: string; answer: string}[];
-  // testimonials: {name: string; role?: string; rating: number; text: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
@@ -90,68 +68,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "IV drip therapy delivers fluids, electrolytes, medications or nutrition directly into the bloodstream via a sterile catheter—requiring precise flow rates, aseptic technique and regular site checks to ensure safe, effective hydration, drug delivery, nutrition support or transfusion.",
     understanding:
       "IV drips can be classified into five main types: crystalloids (e.g., normal saline, lactated Ringer’s) for rapid volume and electrolyte replacement; colloids (e.g., albumin) to expand plasma volume more sustainably; blood products (e.g., packed red cells, plasma, platelets) for anemia or coagulopathy; total parenteral nutrition (TPN) providing complete macronutrients and micronutrients when enteral feeding isn’t possible; and medication infusions (e.g., antibiotics, chemotherapy, vasopressors) administered at controlled rates for targeted therapy.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Hydrafacial Full Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "IV drips are initiated whenever a patient cannot meet fluid, electrolyte or medication needs by mouth—most commonly due to dehydration from vomiting or diarrhea, acute blood loss or shock, severe burns, sepsis, or profound hypotension—and to administer therapies (antibiotics, chemotherapy, vasopressors) or nutrition (TPN) when enteral routes are unavailable or impractical.",
     types: [
@@ -176,68 +93,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "Vitamin injections (IM or IV) deliver water-soluble (B-complex, C) or fat-soluble (A, D, E, K) vitamins directly into muscle or bloodstream to rapidly correct deficiencies when oral absorption is impaired. Proper aseptic technique, accurate dosing, site rotation, and monitoring for injection-site reactions or allergic responses are essential for safe, effective therapy.",
     understanding:
       "Vitamin injections are delivered via three main routes—intramuscular (IM) for reliable depot storage of water- and fat-soluble vitamins (e.g., B₁₂, D), intravenous (IV) for rapid high-dose correction or complex multivitamin infusions (as in TPN), and subcutaneous (SC), which is less common but useful for slow, steady release in small-volume preparations. Each route is chosen based on the urgency of repletion, patient tolerance, and absorption considerations.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Vitamin injections are indicated when rapid or reliable repletion is needed and oral absorption is inadequate—most commonly for vitamin B₁₂ in pernicious anemia or malabsorptive disorders, vitamin D in severe deficiency or osteomalacia, and vitamin K prophylaxis in newborns or coagulopathic patients; they’re also used in chronic alcoholism, post-bariatric surgery, inflammatory bowel disease, or any condition impairing GI uptake to ensure prompt, sufficient correction.",
     types: [
@@ -262,68 +118,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, body-massage treatments are delivered by licensed therapists within our physical-therapy and pain-management services, and include Swedish massage to enhance relaxation and circulation, deep-tissue work to release chronic muscle tension, sports massage for injury prevention and recovery, myofascial-release techniques to improve soft-tissue mobility, and manual lymphatic drainage to reduce swelling and support healing.",
     understanding:
       "Body massage encompasses a range of techniques tailored to different goals: Swedish massage uses long, gliding strokes and kneading for general relaxation and improved circulation; deep-tissue massage applies firmer pressure to release chronic muscle tension; sports massage combines stretching and targeted work to prevent or treat athletic injuries; myofascial release focuses on easing connective-tissue restrictions for better mobility; manual lymphatic drainage employs light, rhythmic strokes to reduce swelling and detoxify; and hot-stone massage integrates warmed stones to relax tight muscles and enhance therapeutic warmth.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Body massage is most often sought to relieve muscle tension and pain (from overuse, poor posture, or injury), reduce stress and anxiety by lowering cortisol and boosting relaxation, improve circulation and lymphatic flow for faster recovery and toxin clearance, enhance flexibility and joint mobility, and support overall well-being by promoting endorphin release and better sleep.",
     types: [
@@ -348,68 +143,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, intimate female rejuvenation combines both surgical and non-surgical options—ranging from fractional CO₂ laser and radiofrequency vaginal tightening to platelet-rich plasma (PRP) injections for collagen stimulation and labiaplasty for labial reshaping—all delivered in a discreet, supportive setting with personalized protocols and minimal downtime to restore function, comfort, and confidence.",
     understanding:
       "Intimate female rejuvenation methods include non-ablative and ablative laser therapies (e.g., fractional CO₂ or erbium lasers) and radiofrequency treatments to tighten vaginal tissues and improve mucosal health, injectable biologics such as platelet-rich plasma (PRP) or hyaluronic acid fillers to boost collagen and enhance vulvar fullness, and surgical procedures like labiaplasty, vaginoplasty, or clitoral hood reduction for permanent reshaping and functional restoration—each tailored to address personal goals around comfort, aesthetics, and sexual wellness.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Intimate female rejuvenation is most often sought to address vaginal laxity and pelvic floor weakness following childbirth or aging, manage stress urinary incontinence or vaginal dryness due to menopause or hormonal changes, relieve discomfort or pain during intercourse (dyspareunia), correct scarring from prior surgery or trauma, and improve aesthetic concerns or self-confidence in the genital area.",
     types: [
@@ -434,68 +168,7 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, Forma V treatments use a gentle, temperature-controlled radiofrequency applicator to heat and remodel vaginal and vulvar tissues, stimulating new collagen and elastin for tighter, more lubricated, and more responsive intimate anatomy; sessions are quick (about 20 minutes), virtually painless, require no anesthesia or downtime, and are typically delivered in a series of three to four weekly visits for optimal long-term results.",
     understanding:
       "Forma V is delivered via three protocols: the internal applicator, which heats the vaginal canal to boost collagen and moisture; the external applicator, which tightens and tones the vulvar and perineal skin; and the combined approach, using both devices in one session for comprehensive intravaginal and external tissue remodeling.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //    testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+
     causes:
       "Forma V is most often used to treat mild to moderate vaginal laxity and atrophy following childbirth or aging, vaginal dryness and discomfort due to menopause or hormonal changes, dyspareunia (pain during intercourse), mild stress urinary incontinence, and loss of external tissue tone in the vulvar and perineal regions.",
     types: [
@@ -517,32 +190,10 @@ const DETAILS: Record<string, ConcernDetails> = {
   },
 };
 
-// function StarRating({ count }: { count: number }) {
-//   return (
-//     <div className="flex space-x-1">
-//       {Array.from({ length: 5 }).map((_, i) => (
-//         <svg
-//           key={i}
-//           width="20" height="20"
-//           fill={i < count ? 'currentColor' : 'none'}
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           className="text-green-800"
-//           viewBox="0 0 24 24"
-//         >
-//           <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 9" />
-//         </svg>
-//       ))}
-//     </div>
-//   );
-// }
-
 export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
-      // const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
 
   const [search, setSearch] = useState("");
   const filtered = useMemo(
@@ -648,35 +299,7 @@ export default function ConcernDetailPage() {
           </div>
 
           <div>
-            {/* <h3 className="text-2xl font-serif text-green-800 mb-4">
-              Popular Treatments
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {detail.popularTreatments.map((t, i) => (
-                <a
-                  key={i}
-                  href={t.href}
-                  className="block overflow-hidden rounded-lg shadow hover:shadow-lg transition"
-                >
-                  <Image
-                    src={t.image}
-                    alt={t.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h4 className="font-medium text-green-800 mb-2">
-                      {t.title}
-                    </h4>
-                    <button className="bg-green-700 text-white text-xs uppercase px-3 py-1 rounded">
-                      Find Out More
-                    </button>
-                  </div>
-                </a>
-              ))}
-            </div> */}
-            <PopularTreatment/>
+            <PopularTreatment />
           </div>
 
           <div>
@@ -707,74 +330,11 @@ export default function ConcernDetailPage() {
           </div>
 
           <AppointmentSection />
-           {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-serif mb-4">
-        {selected.head}
-      </h2>
-      <p className="text-base md:text-lg mb-8 leading-relaxed">
-{selected.text}
-      </p>
-      <button className="inline-block border border-white px-8 py-3 uppercase font-medium hover:bg-white hover:text-green-700 transition"
-      >
-        {selected.links}
-      </button>
-    </div>
-  </div> */}
+
           <LogoSlider />
           <FaqSection />
-           {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
-        <ul className="space-y-4">
-          {detail.faq.map((qa, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <li key={idx} className="border-b border-green-500 pb-4">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex justify-between items-center text-left"
-                >
-                  <span className="text-lg font-medium">{qa.question}</span>
-                  <span className="text-2xl">{isOpen ? '−' : '+'}</span>
-                </button>
-                {isOpen && (
-                  <p className="mt-2 text-green-100">{qa.answer}</p>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div> */}
+
           <TestimonialsSection />
-               {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
-          What Our Customers Say
-        </h2>
-
-        <div className="flex md:hidden overflow-x-auto space-x-6 pb-4">
-          {detail.testimonials.map((t, i) => (
-            <div key={i} className="flex-shrink-0 w-80 p-4 border rounded-lg shadow">
-              <StarRating count={t.rating} />
-              <p className="mt-4 text-gray-700">{t.text}</p>
-              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="hidden md:grid grid-cols-3 gap-8">
-          {detail.testimonials.map((t, i) => (
-            <div key={i} className="p-6 border rounded-lg shadow-lg flex flex-col">
-              <StarRating count={t.rating} />
-              <p className="mt-4 text-gray-700 flex-1">{t.text}</p>
-              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div> */}
         </div>
       </div>
     </section>

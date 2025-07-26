@@ -159,8 +159,8 @@ type ConcernDetails = {
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
-    // testimonials: {name: string; role?: string; rating: number; text: string}[];
-    // faq: {question: string; answer: string}[];
+  // testimonials: {name: string; role?: string; rating: number; text: string}[];
+  // faq: {question: string; answer: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
@@ -169,68 +169,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, facial skin analysis begins with a comprehensive digital imaging assessment (e.g., VISIA®) that maps pores, pigmentation, wrinkles, UV damage, and texture. Based on your individual profile, we customize treatments such as targeted chemical peels to renew skin layers, microneedling with PRP for collagen stimulation, IPL or fractional laser for pigment and vascular concerns, and tailored home-care regimens (medical-grade cleansers, serums, and sun protection) to address your specific needs and optimize long-term skin health.",
     understanding:
       "Facial skin analysis combines several advanced techniques into a comprehensive assessment: high-resolution digital imaging (e.g., VISIA®) and Wood’s-lamp examination to map pores, pigmentation, UV damage and porphyrins; instrumental biophysical measurements (sebumetry, corneometry, TEWL) to quantify oiliness, hydration and barrier integrity; dermatoscopic inspection for microtextural and vascular detail; 3D profilometry for wrinkle depth and surface roughness; and AI-driven apps or handheld devices for real-time analysis of tone, texture and fine lines.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Hydrafacial Full Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Hydrafacial Full Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Facial skin analysis is typically undertaken when patients notice uneven tone or texture, persistent acne or congestion, premature lines or wrinkles, sun-induced pigmentation, unexplained dryness or sensitivity, or when they want an objective baseline to guide prevention and tailor skincare regimens—helping clinicians pinpoint issues early, customize treatments, and monitor progress for healthier, more resilient skin.",
     types: [
@@ -255,67 +255,67 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, Botox® treatments are performed by our skilled aesthetic physicians who assess your facial anatomy and customize dosing of onabotulinumtoxinA to target dynamic muscles—commonly in the glabella, forehead, and crow’s-feet—to smooth wrinkles and lines. In just a 10–20 minute session using fine-gauge needles, micro-droplet injections create a natural relaxation of overactive muscles, with results appearing in 3–7 days and lasting about 3–4 months. The procedure is minimally invasive, requires no downtime, and can also be adapted for therapeutic uses such as hyperhidrosis or bruxism.",
     understanding:
       "Botulinum-toxin injectables include onabotulinumtoxinA (Botox®), the original formulation with accessory proteins approved for glabellar, forehead, and crow’s-feet lines; abobotulinumtoxinA (Dysport®), which has a broader diffusion and slightly quicker onset ideal for larger areas like the forehead; and incobotulinumtoxinA (Xeomin®), a “naked” toxin free of complexing proteins that lowers the risk of antibody formation and is preferred for patients with prior resistance or concerns about immunogenicity.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Botulinum-toxin injections are most commonly used to soften dynamic facial lines—such as glabellar “frown” lines, forehead creases, and crow’s-feet—arising from repetitive muscle contractions; to treat hyperhidrosis (excessive sweating) by blocking sweat-gland activity; to manage bruxism (teeth grinding) through masseter muscle relaxation; and in therapeutic contexts like chronic migraine prevention or focal muscle spasticity by reducing overactive neuromuscular signaling.",
     types: [
@@ -340,68 +340,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, dermal-filler treatments are performed by our expert injectors using premium hyaluronic-acid and collagen-stimulating formulations tailored to each patient’s anatomy and goals—whether it’s restoring midface volume, smoothing nasolabial folds, enhancing lips, or contouring the jawline. In a 20–30-minute session, micro-boluses are precisely placed with fine cannulas or needles under topical anesthesia for comfort, delivering immediate lift and hydration with subtle, natural-looking results that last 6–18 months depending on the product and treatment area.",
     understanding:
       "Dermal fillers broadly fall into three categories: hyaluronic acid gels (e.g., Juvederm, Restylane) that deliver immediate hydration and soft-tissue volume lasting 6–12 months; calcium hydroxylapatite (Radiesse) which provides structural lift and stimulates collagen for 12–18 months; and poly-l-lactic acid (Sculptra), a biostimulatory agent that gradually induces collagen over several sessions for long-lasting rejuvenation.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Dermal fillers are most often used to address age-related volume loss—replenishing fullness in the cheeks, temples, and midface—as well as to smooth static wrinkles and folds (like nasolabial and marionette lines), enhance lip volume and definition, correct under-eye hollows (tear-troughs), contour features such as the jawline and chin, and soften atrophic scars or depressions for a more youthful, balanced appearance.",
     types: [
@@ -426,68 +426,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, Dermaforce RF (Morpheus8) is delivered as a fractional microneedling-RF treatment using adjustable, gold-plated needles to safely convey radiofrequency energy into the dermis, stimulating neocollagenesis and elastin remodeling. In each 30–45 minute session—typically performed in a series of three spaced 4–6 weeks apart—patients experience tighter, smoother skin with improved texture, minimized pores, and reduction of fine lines; recovery is swift, with only mild redness or swelling that subsides within 24–48 hours.",
     understanding:
       "Dermaforce RF (Morpheus8) treatments can be tailored using the face handpiece, with a 12-pin, 0.5–3.5 mm microneedle array for fine‐line smoothing and pore refinement; the body handpiece, featuring a 24-pin, up to 8 mm depth array for firming larger areas and reducing cellulite; or a multi-depth hybrid protocol, which sequentially combines shallow and deep passes in one session to deliver both surface resurfacing and volumetric dermal tightening.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Dermaforce RF (Morpheus8) is most often used to address skin laxity and mild to moderate sagging; fine lines and deeper wrinkles; uneven texture and enlarged pores; acne scarring and stretch marks; and cellulite or crepey skin on the body—leveraging fractional RF energy at variable depths to remodel collagen and elastin for firmer, smoother, more even skin.",
     types: [
@@ -512,68 +512,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, the Hydrafacial “Ultimate Skin Refresh” is a 30-minute, four-step treatment that uses gentle vortex-fusion technology to deeply cleanse and exfoliate, painlessly extract impurities, infuse potent antioxidant and hyaluronic-acid serums, and deliver tailored boosters for concerns like pigmentation or fine lines—all with no downtime, immediate plumping hydration, and a glowing, refreshed complexion that lasts for weeks.",
     understanding:
       "HydraFacial “The Ultimate Skin Refresh” is offered in three tiers: the Signature, a 30-minute vortex-fusion treatment that cleanses, exfoliates, extracts, and infuses antioxidant serums; the Deluxe, which adds a personalized booster (brightening, firming, or clarifying) plus LED light therapy for targeted concerns; and the Platinum, our most comprehensive package featuring a pre-treatment lymphatic drainage massage before the Signature steps, followed by booster infusions and LED to maximize detoxification, circulation, and radiance.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "HydraFacial “Ultimate Skin Refresh” is most often chosen to combat dull, dehydrated skin; clear clogged pores and reduce enlarged pores; smooth fine lines and wrinkles; even out tone, texture, and hyperpigmentation; and calm redness or sensitivity—delivering deep cleansing, gentle exfoliation, painless extractions, and infusion of hydrating, antioxidant-rich serums for an instant boost in radiance and long-term skin health.",
     types: [
@@ -598,68 +598,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, polynucleotide therapy uses ultra-pure DNA fragments delivered via superfine micro-injections in a microdroplet “mesotherapy” technique—typically in a series of 3–4 treatments spaced 2–3 weeks apart—to jump-start fibroblast activity, boost hydration, and remodel collagen and elastin. Sessions are performed under topical anesthesia, require virtually no downtime, and yield progressive improvements in skin firmness, texture, and radiance over subsequent weeks.",
     understanding:
       "Polynucleotide skin regeneration comes in three main formats: pure mesotherapy, which uses ultra-pure DNA fragments to directly stimulate fibroblasts and collagen/elastin synthesis; polynucleotide–hyaluronic acid hybrids, combining DNA strands with HA for both immediate hydration and regenerative remodeling; and cross-linked polynucleotide fillers, where stabilized DNA networks remain in the dermis longer for sustained nucleotide release, prolonged fibroblast activation, and gentle volumization.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Polynucleotide therapy is most often chosen to counteract age-related and photoaging changes—such as loss of skin elasticity and firmness—by stimulating fibroblast activity; to smooth fine lines, wrinkles, and surface texture irregularities; to improve hydration and barrier function in chronically dry or sensitive skin; to remodel atrophic scars and stretch marks; and to accelerate healing and tissue regeneration following laser, peel, or microneedling procedures.",
     types: [
@@ -684,68 +684,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, Profhilo® treatments employ a patented “Bio Aesthetic Point” (BAP) injection technique, placing five micro-boluses of ultra-pure, high- and low-molecular-weight hyaluronic acid at five key points per side of the face (10 total). Delivered in two 30-minute sessions spaced four weeks apart, Profhilo® intensely hydrates, stimulates collagen and elastin remodeling, and improves skin firmness and luminosity with virtually no downtime—visible tightening and glow emerge within weeks, with optimal results maintained by a single “top-up” every 6–9 months.",
     understanding:
       "Profhilo® treatments are tailored to different areas: Profhilo® Face uses the 10-point Bio Aesthetic Point technique to deliver dual-weight hyaluronic acid for intense facial hydration and collagen/elastin stimulation; Profhilo® Body applies larger HA boluses at standardized sites on arms, abdomen, or knees to tighten and rejuvenate lax skin; and Profhilo® Neck & Décolletage targets micro-bolus injections along neck and chest lines to smooth crepiness, boost moisture, and improve firmness in these delicate zones.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Profhilo® is most often chosen to combat chronic skin dehydration and loss of elasticity—addressing dull, crepey or thin skin on the face, neck, and décolletage—by smoothing fine lines and superficial wrinkles, restoring firmness and plumpness, and boosting overall radiance and tissue hydration in patients experiencing age- or photo-aging-related dryness and laxity.",
     types: [
@@ -770,66 +770,66 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, facial skin rejuvenation combines advanced in-office and at-home therapies personalized to your skin’s needs—ranging from targeted chemical peels (glycolic, salicylic or TCA) and fractional laser or IPL resurfacing for tone and texture; microneedling with or without PRP to boost collagen and firmness; LED phototherapy to calm inflammation and stimulate healing; to bespoke medical-grade topical regimens (retinoids, antioxidants, hydrating serums) for ongoing barrier support and age-defying maintenance—all orchestrated into a cohesive plan for smoother, brighter, and more youthful-looking skin.",
     understanding:
       "Facial skin rejuvenation spans three core approaches: chemical exfoliation (glycolic, salicylic or TCA peels) to slough off damaged epidermal layers and even pigmentation; energy-based resurfacing (ablative/non-ablative lasers, IPL) for deeper wrinkle reduction, pigment and vascular correction; and collagen-induction therapies (microneedling, radiofrequency microneedling, focused ultrasound) that create controlled micro-injuries or thermal zones to stimulate fibroblasts, tighten skin, and boost firmness—often complemented by LED phototherapy and customized topical regimens to optimize healing and long-term skin health.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },], faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ], testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },], faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Facial skin rejuvenation is most often pursued to counteract age- and environment-related changes—such as fine lines and wrinkles from repeated expression and collagen decline, sun-induced hyperpigmentation and rough texture, acne or surgical scarring that leaves uneven relief, chronic dryness and dullness from barrier dysfunction, and loss of firmness or elasticity due to natural collagen and elastin degradation—helping restore a smoother, more even, and radiant complexion.",
     types: [
@@ -854,67 +854,67 @@ const DETAILS: Record<string, ConcernDetails> = {
       "Facial mesotherapy at Facey Clinic uses a customized cocktail of vitamins, minerals, amino acids, and hyaluronic acid delivered via superfine, micro-droplet injections (often with a meso-pen) into the superficial dermis. In a series of 3–6 treatments spaced 1–2 weeks apart, this approach nourishes and hydrates skin from within, stimulates collagen and elastin production, improves texture and tone, and reduces fine lines with virtually no downtime—leaving the complexion visibly plumper, brighter, and more youthful.",
     understanding:
       "Facial mesotherapy techniques range from manual microinjection, where fine needles deliver bespoke serums of vitamins, minerals, and hyaluronic acid into the superficial dermis; automated meso-pen or meso-gun delivery, which uses electronic control of depth and pressure for uniform, rapid micro-droplet injections; to needle-free methods like electroporation or ultrasound, which temporarily open cell membranes to drive bioactive molecules into the skin without puncturing—each offering targeted nourishment, hydration, and collagen stimulation with minimal downtime.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Facial mesotherapy is most often chosen to combat superficial dehydration and dullness by delivering hydrating actives directly into the dermis; to smooth fine lines and improve skin texture by stimulating collagen and elastin production; to even out tone and reduce mild hyperpigmentation or post-inflammatory marks; and to restore firmness and plumpness in skin weakened by age, environmental stress, or barrier dysfunction.",
     types: [
@@ -939,67 +939,67 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Facey Clinic, eye rejuvenation blends surgical and non-surgical approaches: upper and lower blepharoplasty to remove excess skin and fat and restore clean eyelid contours; tear-trough HA filler to refill under-eye hollows and soften dark circles; PRP or polynucleotide injections to kick-start collagen and improve skin texture; and energy-based therapies (fractional CO₂ laser or Morpheus8 RF microneedling) to tighten delicate periorbital skin and smooth fine lines—all customized to your anatomy, performed under local or topical anesthesia, and designed for minimal downtime and natural-looking results.",
     understanding:
       "Eye rejuvenation spans three core approaches: surgical blepharoplasty, which removes or repositions excess eyelid skin and fat for lasting contour improvement; injectable therapies—including hyaluronic-acid tear-trough fillers, neuromodulators like Botox® for crow’s-feet, and PRP or polynucleotides to boost collagen and smooth texture; and energy-based treatments such as fractional CO₂ laser, RF microneedling (Morpheus8), or Ultherapy to tighten delicate periorbital skin and soften fine lines with minimal downtime.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Eye rejuvenation is most often sought to correct age-related and structural changes around the eyes—such as upper-lid hooding and excess skin that droops with collagen loss; under-eye bags and tear-trough hollows from fat herniation or volume depletion; fine lines and crow’s-feet caused by repetitive muscle movement and sun damage; dark circles from thin, translucent skin or hyperpigmentation; and general periorbital skin laxity and crepiness that contribute to a tired, aged appearance.",
     types: [
@@ -1024,66 +1024,66 @@ const DETAILS: Record<string, ConcernDetails> = {
       "Using medical-grade formulas, our expertly performed peels remove dead skin cells, promote cell renewal, and leave your skin looking radiant, fresh, and revitalised. Whether you’re looking for a mild refresh or a more intensive resurfacing, we have the perfect peel for your skin type.",
     understanding:
       "Advanced chemical peels range from the superficial Jessner’s peel, which layers salicylic acid, lactic acid, and resorcinol to gently exfoliate, brighten pigmentation, and clear mild acne; to medium-depth TCA peels (20–35%), which reach the papillary dermis for smoothing fine lines, evening skin tone, and improving moderate scarring; up to deep phenol peels, which remove the full epidermis and upper dermis for dramatic correction of deep wrinkles and severe photo-damage, albeit with longer recovery and anesthesia requirements.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ], faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },], testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
     causes:
       "Advanced chemical peels are most often chosen to address stubborn photo-aging (deep wrinkles, leathery texture, and sun spots), moderate to severe acne scarring, melasma and other refractory hyperpigmentation, rough or uneven skin tone, and precancerous actinic keratoses—offering graduated depths of exfoliation to resurface and renew skin when milder treatments fall short.",
     types: [
@@ -1108,68 +1108,68 @@ const DETAILS: Record<string, ConcernDetails> = {
       "Designed to go beyond traditional facials, our cutting-edge skin therapies use medical-grade technology and professional techniques to address a wide range of skin concerns, from ageing and pigmentation to acne and dehydration. Whether you’re looking for collagen stimulation, deep skin resurfacing, or intensive hydration, our expert treatments deliver visible, long-lasting results with minimal downtime.",
     understanding:
       "Advanced skin rejuvenation encompasses advanced peels (medium- to deep-depth TCA, Jessner’s, or phenol) for dermal resurfacing and scar remodeling; energy-based therapies (fractional CO₂/erbium lasers, RF microneedling, IPL, Ultherapy) that deliver controlled thermal or ablative micro-injuries to tighten skin and stimulate collagen; and regenerative biologics & injectables (PRP, polynucleotides, Profhilo®, mesotherapy cocktails) that infuse growth factors, DNA fragments, and hyaluronic acid to boost hydration, fibroblast activity, and long-term tissue regeneration.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ],
-  //   testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ],
+    //   testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "Advanced skin treatments are most often pursued when more superficial therapies fall short—such as for stubborn photo-aging with deep wrinkles and leathery texture, moderate to severe acne or surgical scarring, significant skin laxity or crepiness, refractory hyperpigmentation (melasma, sun spots), and precancerous lesions like actinic keratoses—offering dermal resurfacing, collagen remodeling, and targeted renewal when milder approaches can’t fully restore tone, texture, or firmness.",
     types: [
@@ -1194,67 +1194,67 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we offer a holistic approach to skincare, combining relaxation with expert massage techniques to improve your skin’s health and appearance. Our highly trained therapists use specialised movements designed to stimulate circulation, relieve stress, and enhance your natural glow. In a serene, spa-like environment, we ensure that every facial massage is tailored to your needs, helping you look and feel your best.",
     understanding:
       "Facial massage techniques range from lymphatic drainage, which uses gentle, rhythmic strokes to reduce puffiness and promote detoxification; deep-tissue facial massage, applying firmer pressure and targeted kneading to release tension in muscles and improve circulation; and Gua Sha or facial cupping, which use smooth-edged tools or suction cups to stimulate blood flow, sculpt contours, and enhance skin firmness—all tailored to boost relaxation, lymphatic flow, and collagen health.",
-  //   popularTreatments: [
-  //     {
-  //       title: "Microneedling",
-  //       image: "/concerns/a.webp",
-  //       href: "/treatment/microneedling",
-  //     },
-  //     {
-  //       title: "Neogen Plasma",
-  //       image: "/concerns/b.webp",
-  //       href: "/treatment/neogen-plasma",
-  //     },
-  //     {
-  //       title: "Obagi Blue Radiance",
-  //       image: "/concerns/c.webp",
-  //       href: "/treatment/obagi-blue-radiance",
-  //     },
-  //     {
-  //       title: "Mesotherapy",
-  //       image: "/concerns/d.webp",
-  //       href: "/treatment/mesotherapy",
-  //     },
-  //     {
-  //       title: "Hydrafacial Back",
-  //       image: "/concerns/e.webp",
-  //       href: "/treatment/hydrafacial-full-back",
-  //     },
-  //   ], testimonials: [{
-  //   name: 'Nas A',
-  //   rating: 5,
-  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  // },
-  // {
-  //   name: 'Mariam C',
-  //   rating: 5,
-  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  // },
-  // {
-  //   name: 'Clariana T. M',
-  //   rating: 5,
-  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  // },],
-  //    faq: [{
-  //   question: 'Do I need a consultation first?',
-  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  // },
-  // {
-  //   question: 'Will I need to book time off work?',
-  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  // },
-  // {
-  //   question: 'Are your aesthetic treatments painful?',
-  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  // },
-  // {
-  //   question: 'How do I book an appointment?',
-  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  // },
-  // {
-  //   question: 'How do I know what treatment is best for me?',
-  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  // },],
+    //   popularTreatments: [
+    //     {
+    //       title: "Microneedling",
+    //       image: "/concerns/a.webp",
+    //       href: "/treatment/microneedling",
+    //     },
+    //     {
+    //       title: "Neogen Plasma",
+    //       image: "/concerns/b.webp",
+    //       href: "/treatment/neogen-plasma",
+    //     },
+    //     {
+    //       title: "Obagi Blue Radiance",
+    //       image: "/concerns/c.webp",
+    //       href: "/treatment/obagi-blue-radiance",
+    //     },
+    //     {
+    //       title: "Mesotherapy",
+    //       image: "/concerns/d.webp",
+    //       href: "/treatment/mesotherapy",
+    //     },
+    //     {
+    //       title: "Hydrafacial Back",
+    //       image: "/concerns/e.webp",
+    //       href: "/treatment/hydrafacial-full-back",
+    //     },
+    //   ], testimonials: [{
+    //   name: 'Nas A',
+    //   rating: 5,
+    //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+    // },
+    // {
+    //   name: 'Mariam C',
+    //   rating: 5,
+    //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+    // },
+    // {
+    //   name: 'Clariana T. M',
+    //   rating: 5,
+    //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+    // },],
+    //    faq: [{
+    //   question: 'Do I need a consultation first?',
+    //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+    // },
+    // {
+    //   question: 'Will I need to book time off work?',
+    //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+    // },
+    // {
+    //   question: 'Are your aesthetic treatments painful?',
+    //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+    // },
+    // {
+    //   question: 'How do I book an appointment?',
+    //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+    // },
+    // {
+    //   question: 'How do I know what treatment is best for me?',
+    //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+    // },],
     causes:
       "or TMJ tightness), stimulate sluggish circulation for a brighter, more even complexion, encourage lymphatic drainage to reduce puffiness and detoxify, enhance absorption of serums and oils for better skincare results, and promote collagen and elastin synthesis to improve firmness and counteract early signs of aging.",
     types: [
@@ -1300,8 +1300,7 @@ export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
-      // const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
+  // const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const [search, setSearch] = useState("");
   const filtered = useMemo(
@@ -1407,7 +1406,7 @@ export default function ConcernDetailPage() {
           </div>
 
           <div>
-            <PopularTreatment/>
+            <PopularTreatment />
           </div>
 
           <div>
@@ -1438,7 +1437,7 @@ export default function ConcernDetailPage() {
           </div>
 
           <AppointmentSection />
-            {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
+          {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-serif mb-4">
         {selected.head}
@@ -1455,7 +1454,7 @@ export default function ConcernDetailPage() {
 
           <LogoSlider />
           <FaqSection />
-                {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
+          {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
         <ul className="space-y-4">
@@ -1482,7 +1481,7 @@ export default function ConcernDetailPage() {
      
     </div> */}
           <TestimonialsSection />
-           {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+          {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
           What Our Customers Say

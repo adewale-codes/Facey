@@ -1,24 +1,32 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useCart } from '@/app/context/CartContext';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/app/context/CartContext";
 const PRODUCTS = [
-  { id: 'hair-supplements', title: 'Hair Supplements', price: 90, image: '/products/a.webp' },
-  { id: 'cellular-defence-spf50', title: 'Cellular Defence SPF50', price: 80, image: '/products/b.webp' },
+  {
+    id: "hair-supplements",
+    title: "Hair Supplements",
+    price: 90,
+    image: "/products/a.webp",
+  },
+  {
+    id: "cellular-defence-spf50",
+    title: "Cellular Defence SPF50",
+    price: 80,
+    image: "/products/b.webp",
+  },
 ];
 
 export default function CartPage() {
   const { cart, addToCart, removeFromCart, clearCart } = useCart();
 
-  const items = PRODUCTS
-    .filter((p) => cart[p.id])
-    .map((p) => ({
-      ...p,
-      quantity: cart[p.id],
-      lineTotal: p.price * cart[p.id],
-    }));
+  const items = PRODUCTS.filter((p) => cart[p.id]).map((p) => ({
+    ...p,
+    quantity: cart[p.id],
+    lineTotal: p.price * cart[p.id],
+  }));
 
   const subtotal = items.reduce((sum, i) => sum + i.lineTotal, 0);
 
@@ -29,14 +37,20 @@ export default function CartPage() {
       {items.length === 0 ? (
         <div className="text-center space-y-4">
           <p>Your cart is empty. Let’s change that!</p>
-          <Link href="/shop" className="inline-block bg-green-700 text-white px-6 py-2 rounded">
+          <Link
+            href="/shop"
+            className="inline-block bg-green-700 text-white px-6 py-2 rounded"
+          >
             Back to Shop
           </Link>
         </div>
       ) : (
         <div className="space-y-8">
           {items.map((item) => (
-            <div key={item.id} className="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <div
+              key={item.id}
+              className="flex flex-col md:flex-row items-center md:items-start gap-6"
+            >
               <div className="w-full md:w-1/4 overflow-hidden rounded-lg">
                 <Image
                   src={item.image}

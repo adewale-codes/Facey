@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface Card {
   name: string;
@@ -8,9 +8,9 @@ interface Card {
 }
 
 const cards: Card[] = [
-  { name: 'Face', href: '/treatment/face', image: '/images/1.jpg' },
-  { name: 'Body', href: '/treatment/body', image: '/images/2.jpg' },
-  { name: 'Hair', href: '/treatment/hair', image: '/images/3.jpg' },
+  { name: "Face", href: "/treatment/face", image: "/images/1.jpg" },
+  { name: "Body", href: "/treatment/body", image: "/images/2.jpg" },
+  { name: "Hair", href: "/treatment/hair", image: "/images/3.jpg" },
 ];
 
 const TreatmentSection: React.FC = () => (

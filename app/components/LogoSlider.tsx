@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const logos = [
-  '/logos/1.png',
-  '/logos/2.png',
-  '/logos/3.webp',
-  '/logos/4.webp',
-  '/logos/5.png',
-  '/logos/6.png',
-  '/logos/7.png',
-  '/logos/8.png',
+  "/logos/1.png",
+  "/logos/2.png",
+  "/logos/3.webp",
+  "/logos/4.webp",
+  "/logos/5.png",
+  "/logos/6.png",
+  "/logos/7.png",
+  "/logos/8.png",
 ];
 
 const LogoSlider: React.FC = () => (
