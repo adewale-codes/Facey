@@ -8,64 +8,74 @@ import LogoSlider from "@/app/components/LogoSlider";
 // import FaqSection from "../components/FaqSection";
 // import TestimonialsSection from "../components/TestimonialsSection";
 
-interface Concern {
+interface Concerns {
   id: string;
   title: string;
   description: string;
   image: string;
-   head: string;
+  head: string;
   text: string;
   links: string;
 }
 
-const CONCERNS: Concern[] = [
+const CONCERNS: Concerns[] = [
   {
-    id: "Iv",
-    title: "Iv Drip",
+    id: "PRP",
+    title: "PRP",
     description:
-      "Treat acne effectively with our specialised solutions. Achieve clearer skin through personalised care and advanced treatments at Facey Clinic.",
-    image: "/concerns/1.jpg",
-     head: "Book Your Appointment",
+      "Restore thicker, healthier, and stronger hair with PRP (Platelet-Rich Plasma) Hair Restoration at Face Weybridge. This innovative, non-surgical treatment uses your body’s own natural growth factors to stimulate hair follicles, promoting hair regrowth, improved thickness, and reduced hair shedding. Whether you’re experiencing thinning hair, hair loss, or weakened follicles, PRP therapy provides a safe, natural, and effective solution to rejuvenate your scalp and restore hair health.",
+    image: "/face/16.jpg",
+    head: "Book Your Appointment",
     text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     links: "Book Now",
   },
   {
-    id: "Vitamin",
-    title: "Vitamin Injections",
+    id: "Hair",
+    title: "Hair Polynucleotides",
     description:
-      "Give your body the essential vitamins and nutrients it needs with our Vitamin Injections at Face Weybridge",
-    image: "/concerns/2.jpg",
-     head: "Book Your Appointment",
+      "Revitalise and restore stronger, thicker, and healthier hair with Polynucleotide Therapy, the latest breakthrough in hair regeneration. This scientifically advanced treatment works by stimulating cellular repair, increasing blood flow, and nourishing the scalp to revive weakened hair follicles and promote natural hair growth. At Face Weybridge, we offer Hair Polynucleotide Therapy as a powerful, non-surgical solution for individuals experiencing hair thinning, excessive shedding, or early-stage hair loss.",
+    image: "/face/16.jpg",
+    head: "Book Your Appointment",
     text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     links: "Book Now",
   },
   {
-    id: "Body",
-    title: "Body Massage",
+    id: "Hydrafacial",
+    title: "Hydrafacial Keravive",
     description:
-      "Experience the ultimate relaxation and rejuvenation with our expert Body Massage treatments at Face Weybridge.",
-    image: "/concerns/3.jpg",
-     head: "Book Your Appointment",
+      "Just like your skin, your scalp needs proper care to maintain healthy, strong, and beautiful hair. Hydrafacial Keravive is a revolutionary scalp treatment designed to deeply cleanse, hydrate, and nourish your scalp, creating the perfect environment for thicker, fuller, and healthier hair growth. At Face Weybridge, we offer Hydrafacial Keravive to address dryness, clogged follicles, poor circulation, and weak hair strands, ensuring your hair gets the best possible foundation to grow.",
+    image: "/face/17.jpg",
+    head: "Book Your Appointment",
     text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     links: "Book Now",
   },
   {
-    id: "Intimate",
-    title: "Intimate Female Rejuvination",
+    id: "Exosomes",
+    title: "Hair Exosomes",
     description:
-      "At Face Weybridge, we understand that women’s intimate wellness is essential for overall health, confidence, and well-being.",
-    image: "/concerns/4.jpg",
-     head: "Book Your Appointment",
+      "Revolutionise your hair growth journey with Hair Exosome Therapy, the latest breakthrough in hair restoration and scalp rejuvenation. This cutting-edge treatment uses exosomes—powerful cellular messengers derived from stem cells—to stimulate hair follicle regeneration, increase hair density, and reduce hair loss. At Face Weybridge, we offer Hair Exosome Therapy to promote stronger, thicker, and healthier hair without surgery or downtime.",
+    image: "/face/18.jpg",
+    head: "Book Your Appointment",
     text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     links: "Book Now",
   },
   {
-    id: "Forma",
-    title: "Forma V",
+    id: "Mesotherapy",
+    title: "Mesotherapy",
     description:
-      "Forma V is a cutting-edge non-surgical vaginal rejuvenation treatment designed to restore intimate health, enhance comfort, and improve confidence.",
-    image: "/concerns/5.jpg",
-     head: "Book Your Appointment",
+      "Give your hair the nourishment it needs with Mesotherapy for Hair, a powerful, non-surgical treatment designed to stimulate hair growth, strengthen follicles, and improve scalp health. This innovative procedure delivers a custom blend of vitamins, minerals, and growth factors directly into the scalp to revitalise weak hair, reduce hair loss, and promote thicker, healthier strands. At Face Weybridge, we offer expert Mesotherapy treatments tailored to your specific hair concerns, ensuring visible and long-lasting results.",
+    image: "/face/18.jpg",
+    head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
+  },
+  {
+    id: "Laser",
+    title: "Laser Hair Removal",
+    description:
+      "Say goodbye to the hassle of shaving, waxing, and plucking with Body Laser Hair Removal at Face Weybridge. Our advanced laser technology offers a long-lasting, safe, and effective solution for removing unwanted hair from various body areas. Whether you want to treat your legs, arms, underarms, back, or bikini area, our laser hair removal treatments provide permanent hair reduction, leaving your skin silky smooth and irritation-free.",
+    image: "/face/19.jpg",
+    head: "Book Your Appointment",
     text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     links: "Book Now",
   },
@@ -78,16 +88,16 @@ type ConcernDetails = {
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
-    faq: {question: string; answer: string}[];
-  testimonials: {name: string; role?: string; rating: number; text: string}[];
+  testimonials: {name: string; role?: string; rating: number; text: string}[]; 
+  faq: {question: string; answer: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
-  Iv: {
+  PRP: {
     intro:
-      "IV drip therapy delivers fluids, electrolytes, medications or nutrition directly into the bloodstream via a sterile catheter—requiring precise flow rates, aseptic technique and regular site checks to ensure safe, effective hydration, drug delivery, nutrition support or transfusion.",
+      "At Face Weybridge, we offer advanced PRP therapy tailored to your specific hair needs. Our skilled specialists use high-quality platelet concentration techniques to deliver maximum hair restoration benefits. With a personalised and results-driven approach, we ensure your treatment is safe, effective, and designed to help you regain thicker, healthier hair naturally.",
     understanding:
-      "IV drips can be classified into five main types: crystalloids (e.g., normal saline, lactated Ringer’s) for rapid volume and electrolyte replacement; colloids (e.g., albumin) to expand plasma volume more sustainably; blood products (e.g., packed red cells, plasma, platelets) for anemia or coagulopathy; total parenteral nutrition (TPN) providing complete macronutrients and micronutrients when enteral feeding isn’t possible; and medication infusions (e.g., antibiotics, chemotherapy, vasopressors) administered at controlled rates for targeted therapy.",
+      "PRP (Platelet-Rich Plasma) therapy is a regenerative treatment that uses a patient’s own blood components—mainly platelets—to promote healing in various medical and cosmetic conditions. There are different types of PRP depending on how the blood is processed and what it's used for. The main types are Pure Platelet-Rich Plasma, Pure Platelet-Rich Fibrin, Leukocyte- and Platelet-Rich Fibrin and many more.",
     popularTreatments: [
       {
         title: "Mesotherapy",
@@ -130,7 +140,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },],
-     faq: [{
+      faq: [{
     question: 'Do I need a consultation first?',
     answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   },
@@ -151,29 +161,33 @@ const DETAILS: Record<string, ConcernDetails> = {
     answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   },],
     causes:
-      "IV drips are initiated whenever a patient cannot meet fluid, electrolyte or medication needs by mouth—most commonly due to dehydration from vomiting or diarrhea, acute blood loss or shock, severe burns, sepsis, or profound hypotension—and to administer therapies (antibiotics, chemotherapy, vasopressors) or nutrition (TPN) when enteral routes are unavailable or impractical.",
+      "PRP (Platelet-Rich Plasma) is used as a treatment, not a disease. The main causes or conditions that lead people to seek PRP therapy include: Hair loss, Osteoarthritis, Aging skin, Delayed healing",
     types: [
       {
-        heading: "Crystalloids",
-        text: "Clear, water-based solutions (e.g., normal saline, lactated Ringer’s) used for rapid volume replacement and electrolyte balance.",
+        heading: "Pure PRP (P-PRP)",
+        text: "Low white blood cells, high platelets, used for hair restoration and skin rejuvenation.",
       },
       {
-        heading: "Colloids",
-        text: "Protein or starch-based solutions (e.g., albumin, hetastarch) that remain in the vascular space longer to expand plasma volume.",
+        heading: "Leukocyte-Rich PRP (L-PRP)",
+        text: "Contains white blood cells and platelets, used for joint and tendon injuries.",
       },
       {
-        heading: "Blood Products",
-        text: "Cellular or plasma components (e.g., packed red blood cells, plasma, platelets) administered to treat anemia, coagulopathy, or massive blood loss.",
+        heading: "Pure Platelet-Rich Fibrin (P-PRF)",
+        text: "Platelets in a fibrin matrix, no white cells Used in wound healing and dental procedures",
+      },
+        {
+        heading: "Leukocyte- and Platelet-Rich Fibrin (L-PRF)",
+        text: "Platelets and white blood cells in a fibrin gel, Helps in oral surgery and bone regeneration",
       },
     ],
     treatmentOptions:
-      "IV drip therapy can be used for: rapid fluid resuscitation (e.g., normal saline or lactated Ringer’s for dehydration or hypovolemia); colloid administration (e.g., albumin) to maintain oncotic pressure; targeted medication infusions (e.g., antibiotics, chemotherapeutics, vasopressors) at controlled rates; electrolyte replacement (e.g., potassium, magnesium) to correct imbalances; parenteral nutrition (TPN) when enteral feeding isn’t feasible; and blood or blood‐product transfusions (packed red cells, plasma, platelets) for anemia, coagulopathy, or acute blood loss.",
+      "At Facey Clinic, Platelet-Rich Plasma (PRP) therapy is used in several medical and cosmetic treatments. Here are the most common treatment options: Hair Restoration, Skin Rejuvenation (Vampire Facial), Joint and Tendon Repair, Wound Healing, Dental Application.",
   },
-  Vitamin: {
+  Hair: {
     intro:
-      "Vitamin injections (IM or IV) deliver water-soluble (B-complex, C) or fat-soluble (A, D, E, K) vitamins directly into muscle or bloodstream to rapidly correct deficiencies when oral absorption is impaired. Proper aseptic technique, accurate dosing, site rotation, and monitoring for injection-site reactions or allergic responses are essential for safe, effective therapy.",
+      "At Face Weybridge, we specialise in cutting-edge hair restoration treatments using the most advanced Polynucleotide Therapy for effective and long-lasting hair regrowth. Our highly skilled practitioners tailor each session to your specific hair needs, ensuring maximum follicle regeneration and hair health improvement. With a focus on scientific innovation and client satisfaction, we help you regain thicker, stronger, and healthier hair with confidence.",
     understanding:
-      "Vitamin injections are delivered via three main routes—intramuscular (IM) for reliable depot storage of water- and fat-soluble vitamins (e.g., B₁₂, D), intravenous (IV) for rapid high-dose correction or complex multivitamin infusions (as in TPN), and subcutaneous (SC), which is less common but useful for slow, steady release in small-volume preparations. Each route is chosen based on the urgency of repletion, patient tolerance, and absorption considerations.",
+      "Polynucleotides are DNA-derived molecules increasingly used in hair restoration treatments due to their regenerative and anti-inflammatory properties. Unlike PRP, which uses the patient’s blood, polynucleotides are often bioengineered from salmon DNA and work by stimulating cell repair, improving blood flow, and nourishing hair follicles.",
     popularTreatments: [
       {
         title: "Microneedling",
@@ -200,8 +214,7 @@ const DETAILS: Record<string, ConcernDetails> = {
         image: "/concerns/e.webp",
         href: "/treatment/hydrafacial-full-back",
       },
-    ],
-     testimonials: [{
+    ], testimonials: [{
     name: 'Nas A',
     rating: 5,
     text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
@@ -216,7 +229,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },],
-     faq: [{
+      faq: [{
     question: 'Do I need a consultation first?',
     answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   },
@@ -237,29 +250,28 @@ const DETAILS: Record<string, ConcernDetails> = {
     answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   },],
     causes:
-      "Vitamin injections are indicated when rapid or reliable repletion is needed and oral absorption is inadequate—most commonly for vitamin B₁₂ in pernicious anemia or malabsorptive disorders, vitamin D in severe deficiency or osteomalacia, and vitamin K prophylaxis in newborns or coagulopathic patients; they’re also used in chronic alcoholism, post-bariatric surgery, inflammatory bowel disease, or any condition impairing GI uptake to ensure prompt, sufficient correction.",
+      "Polynucleotides are used for hair to repair damaged follicles, stimulate new growth, and create a healthier scalp, especially for those experiencing thinning, balding, or post-treatment recovery.",
     types: [
       {
-        heading: "Intramuscular (IM)",
-        text: "Injections delivered into muscle tissue, creating a depot for slow, sustained vitamin release (commonly used for B₁₂ and D).",
+        heading: "Polynucleotide (PN)",
+        text: "Basic form of polynucleotides, typically extracted from salmon DNA, Supports cell regeneration, hydration, and scalp health, Used in early-stage hair thinning or for scalp revitalization."},
+      {
+        heading: "Polydeoxyribonucleotide (PDRN)",
+        text: "A more biologically active form of PN, Has anti-inflammatory and tissue-repairing properties, Improves blood flow, repairs scalp micro-damage, and promotes hair regrowth.",
       },
       {
-        heading: "Intravenous (IV)",
-        text: "Direct delivery into the bloodstream for immediate, high-dose repletion or complex multivitamin infusions (as in TPN).",
-      },
-      {
-        heading: "Subcutaneous (SC)",
-        text: "Small-volume injections under the skin for gradual absorption, useful when muscle or vein access is limited.",
+        heading: "Polynucleotide High Purification Technology (PN-HPT™)",
+        text: "Highly purified and concentrated form of PN, Offers deeper cellular regeneration and longer-lasting effects, Preferred in advanced hair therapies and combination treatments (with PRP or microneedling).",
       },
     ],
     treatmentOptions:
-      "Vitamin injections most commonly include B₁₂ (administered IM weekly or monthly for pernicious anemia or malabsorption), D (IM single high‐dose bolus for severe deficiency or osteomalacia), K (IM or slow IV for newborn prophylaxis or warfarin reversal), multivitamin infusions (IV admixture in TPN when enteral feeding is impossible), and C (IV high‐dose for scurvy or select critical‐care protocols), with route and dosing tailored to the urgency of repletion, patient tolerance, and underlying absorption issues.",
+      "Polynucleotides are used in non-surgical hair restoration therapies to repair damaged follicles, stimulate hair growth, and improve scalp health. Here are the main treatment options:  Scalp Injections, Microneedling + Polynucleotides, Combination Therapy with PRP or Exosomes and many more",
   },
-  Body: {
+  Hydrafacial: {
     intro:
-      "At Facey Clinic, body-massage treatments are delivered by licensed therapists within our physical-therapy and pain-management services, and include Swedish massage to enhance relaxation and circulation, deep-tissue work to release chronic muscle tension, sports massage for injury prevention and recovery, myofascial-release techniques to improve soft-tissue mobility, and manual lymphatic drainage to reduce swelling and support healing.",
+      "At Face Weybridge, we specialise in advanced hair and scalp treatments that promote stronger, healthier hair. Our Hydrafacial Keravive therapy is tailored to your individual scalp needs, ensuring maximum hydration, cleansing, and follicle activation. With our expert team and cutting-edge technology, we help you achieve a revitalised scalp and fuller-looking hair with long-lasting benefits.",
     understanding:
-      "Body massage encompasses a range of techniques tailored to different goals: Swedish massage uses long, gliding strokes and kneading for general relaxation and improved circulation; deep-tissue massage applies firmer pressure to release chronic muscle tension; sports massage combines stretching and targeted work to prevent or treat athletic injuries; myofascial release focuses on easing connective-tissue restrictions for better mobility; manual lymphatic drainage employs light, rhythmic strokes to reduce swelling and detoxify; and hot-stone massage integrates warmed stones to relax tight muscles and enhance therapeutic warmth.",
+      "HydraFacial Keravive is a specialized scalp treatment designed to cleanse, nourish, and hydrate the scalp—creating a healthier environment for natural hair growth. Unlike typical HydraFacial for skin, Keravive focuses entirely on scalp wellness. While there is only one standard Keravive protocol, it can be customized or paired with other treatments, creating different types or approaches depending on the individual’s needs. Though the core treatment is the same, HydraFacial Keravive can be tailored with PRP, microneedling, or used pre/post-transplant to suit individual scalp and hair restoration needs. It is non-invasive, relaxing, and safe for both men and women.",
     popularTreatments: [
       {
         title: "Microneedling",
@@ -286,8 +298,7 @@ const DETAILS: Record<string, ConcernDetails> = {
         image: "/concerns/e.webp",
         href: "/treatment/hydrafacial-full-back",
       },
-    ],
-     testimonials: [{
+    ], testimonials: [{
     name: 'Nas A',
     rating: 5,
     text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
@@ -302,7 +313,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },],
-     faq: [{
+      faq: [{
     question: 'Do I need a consultation first?',
     answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   },
@@ -323,29 +334,29 @@ const DETAILS: Record<string, ConcernDetails> = {
     answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   },],
     causes:
-      "Body massage is most often sought to relieve muscle tension and pain (from overuse, poor posture, or injury), reduce stress and anxiety by lowering cortisol and boosting relaxation, improve circulation and lymphatic flow for faster recovery and toxin clearance, enhance flexibility and joint mobility, and support overall well-being by promoting endorphin release and better sleep.",
+      "HydraFacial Keravive are most often used to address  the underlying causes by Dry or Flaky Scalp, Clogged Hair Follicles, Thinning Hair / Hair Loss, Poor Scalp Circulation and Postpartum / Post-Transplant.",
     types: [
       {
-        heading: "Swedish Massage (SM)",
-        text: "Uses long, gliding strokes, kneading, and circular movements to promote overall relaxation, improve circulation, and ease light muscle tension.",
+        heading: "Standard HydraFacial Keravive",
+        text: "Core 3-step treatment: cleanse, nourish, and hydrate the scalp.",
       },
       {
-        heading: "Deep-Tissue Massage (DTM)",
-        text: "Applies sustained, firm pressure and slow strokes to target deeper layers of muscle and connective tissue, ideal for releasing chronic knots and relieving severe tension.",
+        heading: "Keravive + PRP",
+        text: "Combines with Platelet-Rich Plasma to enhance hair regrowth.",
       },
       {
-        heading: "Sports Massage (SPM)",
-        text: "Combines targeted stretching, compression, and trigger-point techniques to enhance athletic performance, prevent injury, and speed recovery in active individuals.",
+        heading: "Keravive + Microneedling",
+        text: "Adds microneedling for deeper serum penetration and follicle stimulation.",
       },
     ],
     treatmentOptions:
-      "Body massage treatments range from Swedish massage, which uses long, flowing strokes and kneading to promote relaxation and boost circulation, to deep-tissue massage, applying firm, focused pressure to release chronic knots and alleviate persistent muscle pain, and hot-stone massage, where gently heated stones are placed on key areas and used to warm and relax tissues for enhanced flexibility and stress relief.",
+      "HydraFacial Keravive is a non-invasive scalp treatment designed to cleanse, nourish, and stimulate the scalp for healthier hair growth. Here are the main treatment options and how they are applied: In-Clinic HydraFacial Keravive, HydraFacial Keravive + PRP, HydraFacial Keravive + Microneedling, Pre/Post Hair Transplant Care, Peptide Spray.",
   },
-  Intimate: {
+  Exosomes: {
     intro:
-      "At Facey Clinic, intimate female rejuvenation combines both surgical and non-surgical options—ranging from fractional CO₂ laser and radiofrequency vaginal tightening to platelet-rich plasma (PRP) injections for collagen stimulation and labiaplasty for labial reshaping—all delivered in a discreet, supportive setting with personalized protocols and minimal downtime to restore function, comfort, and confidence.",
+      "At Face Weybridge, we are at the forefront of advanced hair restoration treatments, using the most innovative Exosome Therapy for maximum hair regrowth and follicle regeneration. Our skilled specialists tailor each treatment to your hair type and scalp needs, ensuring optimal, long-lasting results. With our commitment to scientific advancements and client satisfaction, we help you achieve fuller, thicker, and healthier hair with confidence.",
     understanding:
-      "Intimate female rejuvenation methods include non-ablative and ablative laser therapies (e.g., fractional CO₂ or erbium lasers) and radiofrequency treatments to tighten vaginal tissues and improve mucosal health, injectable biologics such as platelet-rich plasma (PRP) or hyaluronic acid fillers to boost collagen and enhance vulvar fullness, and surgical procedures like labiaplasty, vaginoplasty, or clitoral hood reduction for permanent reshaping and functional restoration—each tailored to address personal goals around comfort, aesthetics, and sexual wellness.",
+      "Exosomes are tiny extracellular vesicles (nano-sized messengers) released by cells that carry growth factors, proteins, and genetic material. In hair restoration, exosome therapy is an advanced, non-surgical treatment used to regenerate hair follicles, stimulate growth, and repair scalp damage—especially for people with thinning or early-stage hair loss. Different types of hair exosomes are defined by their cell source and formulation. The most effective are stem cell–derived, especially from umbilical cord or adipose tissue. They offer powerful, natural stimulation for hair regrowth and scalp repair, making them one of the most advanced options in modern hair restoration.",
     popularTreatments: [
       {
         title: "Microneedling",
@@ -372,8 +383,7 @@ const DETAILS: Record<string, ConcernDetails> = {
         image: "/concerns/e.webp",
         href: "/treatment/hydrafacial-full-back",
       },
-    ],
-     testimonials: [{
+    ], testimonials: [{
     name: 'Nas A',
     rating: 5,
     text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
@@ -388,7 +398,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },],
-     faq: [{
+      faq: [{
     question: 'Do I need a consultation first?',
     answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   },
@@ -409,29 +419,29 @@ const DETAILS: Record<string, ConcernDetails> = {
     answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   },],
     causes:
-      "Intimate female rejuvenation is most often sought to address vaginal laxity and pelvic floor weakness following childbirth or aging, manage stress urinary incontinence or vaginal dryness due to menopause or hormonal changes, relieve discomfort or pain during intercourse (dyspareunia), correct scarring from prior surgery or trauma, and improve aesthetic concerns or self-confidence in the genital area.",
+      "Hair exosomes are biological treatments  to address hair loss caused by genetics, inflammation, aging, stress, or medical conditions. Exosomes promote natural follicle regeneration, making them a powerful non-surgical option.",
     types: [
       {
-        heading: "Energy-Based Therapies",
-        text: "Non-invasive laser (e.g., fractional CO₂, erbium) and radiofrequency treatments that heat vaginal tissues to stimulate collagen, tighten the canal, and improve mucosal health.",
+        heading: "Mesenchymal Stem Cell–Derived Exosomes (MSC-Exosomes)",
+        text: "Bone marrow, adipose tissue, or umbilical cord.",
       },
       {
-        heading: "Injectable Biologics & Fillers",
-        text: "Autologous platelet-rich plasma (PRP) or hyaluronic acid fillers administered into the vaginal wall or labia to boost collagen, restore volume, enhance lubrication, and increase sensitivity.",
+        heading: " Adipose-Derived Stem Cell (ADSC) Exosomes",
+        text: "Fat tissue (usually from liposuction)",
       },
       {
-        heading: "Surgical Procedures",
-        text: "Operative interventions such as labiaplasty, vaginoplasty, clitoral hood reduction, or perineoplasty for permanent reshaping, tightening, and functional restoration of the female genital anatomy.",
+        heading: "Umbilical Cord-Derived Exosomes",
+        text: "Wharton’s jelly or cord blood stem cells",
       },
     ],
     treatmentOptions:
-      "Intimate female rejuvenation at Facey Clinic may include minimally invasive energy-based therapies—such as fractional CO₂ laser or radiofrequency vaginal tightening—to stimulate collagen, improve elasticity, and reduce dryness; injectable biologics like platelet-rich plasma or hyaluronic acid fillers to restore volume, enhance lubrication, and boost sensitivity; and, when indicated, surgical options such as labiaplasty or vaginoplasty for permanent reshaping and functional support—all personalized to each patient’s anatomy, goals, and recovery preferences.",
+      "Hair Exosomes treatments at Facey Clinic can be tailored with Exosome Scalp Injections ( Exosomes are injected directly into the scalp typically the areas of thinning or baldness), Usually performed by a dermatologist or trichologist, A topical numbing cream may be used, Injections are shallow and spread evenly across the scalp. Treatment Time: 30–60 minutes, Results: Visible within 3–6 months",
   },
-  Forma: {
+  Mesotherapy: {
     intro:
-      "At Facey Clinic, Forma V treatments use a gentle, temperature-controlled radiofrequency applicator to heat and remodel vaginal and vulvar tissues, stimulating new collagen and elastin for tighter, more lubricated, and more responsive intimate anatomy; sessions are quick (about 20 minutes), virtually painless, require no anesthesia or downtime, and are typically delivered in a series of three to four weekly visits for optimal long-term results.",
+      "At Face Weybridge, we are at the forefront of advanced hair restoration treatments, using the most innovative Exosome Therapy for maximum hair regrowth and follicle regeneration. Our skilled specialists tailor each treatment to your hair type and scalp needs, ensuring optimal, long-lasting results. With our commitment to scientific advancements and client satisfaction, we help you achieve fuller, thicker, and healthier hair with confidence.",
     understanding:
-      "Forma V is delivered via three protocols: the internal applicator, which heats the vaginal canal to boost collagen and moisture; the external applicator, which tightens and tones the vulvar and perineal skin; and the combined approach, using both devices in one session for comprehensive intravaginal and external tissue remodeling.",
+      "Mesotherapy is a non-surgical cosmetic procedure that involves injecting vitamins, enzymes, hormones, plant extracts, or medications into the mesoderm (middle layer of the skin). It's commonly used for hair restoration, skin rejuvenation, and fat reduction. The treatment type varies based on purpose and content of injection.",
     popularTreatments: [
       {
         title: "Microneedling",
@@ -458,8 +468,7 @@ const DETAILS: Record<string, ConcernDetails> = {
         image: "/concerns/e.webp",
         href: "/treatment/hydrafacial-full-back",
       },
-    ],
-     testimonials: [{
+    ], testimonials: [{
     name: 'Nas A',
     rating: 5,
     text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
@@ -474,7 +483,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     rating: 5,
     text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   },],
-     faq: [{
+      faq: [{
     question: 'Do I need a consultation first?',
     answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   },
@@ -495,23 +504,108 @@ const DETAILS: Record<string, ConcernDetails> = {
     answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   },],
     causes:
-      "Forma V is most often used to treat mild to moderate vaginal laxity and atrophy following childbirth or aging, vaginal dryness and discomfort due to menopause or hormonal changes, dyspareunia (pain during intercourse), mild stress urinary incontinence, and loss of external tissue tone in the vulvar and perineal regions.",
+      "Mesotherapy is a cosmetic procedure for specific health or aesthetic reasons. Common causes include: Hair loss, Skin rejuvenation, Fat reduction, Cellulite treatment, Pain management.",
     types: [
       {
-        heading: "Internal RF Therapy",
-        text: "Uses the Forma V intracavitary applicator to deliver controlled radiofrequency energy deep into the vaginal canal, stimulating collagen and elastin production for enhanced tightness, lubrication, and mucosal health.",
+        heading: "Hair Mesotherapy",
+        text: "Strengthens hair roots, improves blood flow, and stimulates regrowth.",
       },
       {
-        heading: "External RF Therapy",
-        text: "Employs the surface applicator over the vulvar and perineal skin to remodel superficial collagen, improve tissue tone, and smooth external contours.",
+        heading: "Facial or Skin Rejuvenation Mesotherapy (Mesolift)",
+        text: "Bright, firm, and youthful skin.",
       },
       {
-        heading: "Combined Protocol",
-        text: "Integrates both internal and external applicators in a single session for full-spectrum vaginal tightening and vulvar rejuvenation, maximizing collagen remodeling both intravaginally and externally.",
+        heading: "Body Contouring and Fat Reduction Mesotherapy",
+        text: "Breaks down fat cells and improves circulation.",
       },
     ],
     treatmentOptions:
-      "Forma V treatments at Facey Clinic are offered as three customizable protocols—internal RF, external RF, or a combined approach—delivered in a series of three to four weekly 20-minute sessions. Using the intracavitary applicator heats the vaginal canal to boost collagen and moisture, while the surface applicator gently remodels vulvar and perineal tissues for improved tone. Sessions require no anesthesia or downtime, with gradual tightening, enhanced lubrication, and restored tissue elasticity emerging over subsequent weeks.",
+      "Mesotherapy can be customized depending on your needs—whether it’s for hair loss, skin rejuvenation, fat reduction, or pigmentation. The main treatment options: Hair Mesotherapy, Facial Mesotherapy (Mesolift), Body Contouring Mesotherapy, Cellulite Treatment, Pain Management Mesotherapy.",
+  },
+  Laser: {
+    intro:
+      "At Face Weybridge, we use state-of-the-art laser technology to provide safe, effective, and personalised treatments for long-lasting hair reduction. Our highly trained specialists ensure precision and comfort in every session, tailoring treatments to your skin type and hair growth pattern. With our expert approach and advanced equipment, you can achieve smooth, silky skin with confidence.",
+    understanding:
+      "Laser hair removal uses light energy to target and destroy hair follicles, reducing hair growth over time. The type of laser used matters greatly—it affects how well it works for your skin tone, hair type, and treatment area. Here are the main types of laser hair removal systems: Alexandrite Laser (755 nm), Diode Laser (800–810 nm), Nd:YAG Laser (1064 nm), Ruby Laser (694 nm), IPL (Intense Pulsed Light). Each type has its own wavelength and mechanism, making it suitable for different skin tones and hair types.",
+    popularTreatments: [
+      {
+        title: "Microneedling",
+        image: "/concerns/a.webp",
+        href: "/treatment/microneedling",
+      },
+      {
+        title: "Neogen Plasma",
+        image: "/concerns/b.webp",
+        href: "/treatment/neogen-plasma",
+      },
+      {
+        title: "Obagi Blue Radiance",
+        image: "/concerns/c.webp",
+        href: "/treatment/obagi-blue-radiance",
+      },
+      {
+        title: "Mesotherapy",
+        image: "/concerns/d.webp",
+        href: "/treatment/mesotherapy",
+      },
+      {
+        title: "Hydrafacial Back",
+        image: "/concerns/e.webp",
+        href: "/treatment/hydrafacial-full-back",
+      },
+    ], testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+      faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
+    causes:
+      "Laser Hair Removal is used to address unwanted hair growth caused by various factors, including hormonal imbalances, genetics, and lifestyle. It provides a long-term solution for those seeking to reduce or eliminate hair in areas such as the legs, arms, underarms, back, and bikini line.",
+    types: [
+      {
+        heading: "Alexandrite Laser (755 nm)",
+        text: "Fair to light skin tones (Fitzpatrick I–III), fast treatment, effective for fine to medium hair.",
+      },
+      {
+        heading: "Diode Laser (800–810 nm)",
+        text: "Suitable for all skin types (Fitzpatrick I–VI), effective for coarse hair, deeper penetration.",
+      },
+      {
+        heading: "Ruby Laser (694 nm)",
+        text: "Best for light skin tones (Fitzpatrick I–II), effective for fine hair, slower treatment speed.",
+      },
+    ],
+    treatmentOptions:
+      "Laser hair removal has become one of the most effective and popular methods for long-term hair reduction. Treatment options vary depending on your skin tone, hair type, budget, and desired convenience. Here are the main options: Full Body Laser Hair Removal, Partial Body Laser Hair Removal, Facial Laser Hair Removal, Underarm Laser Hair Removal, Bikini Line Laser Hair Removal.",
   },
 };
 
@@ -539,6 +633,7 @@ export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
+
       const [openIndex, setOpenIndex] = useState<number | null>(null);
   
 
@@ -551,7 +646,7 @@ export default function ConcernDetailPage() {
     [search]
   );
 
-  const [selected, setSelected] = useState<Concern | null>(null);
+  const [selected, setSelected] = useState<Concerns | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -594,7 +689,7 @@ export default function ConcernDetailPage() {
                 <button
                   onClick={() => {
                     setSelected(c);
-                    router.push(`/wellness/${c.id}`);
+                    router.push(`/hair/${c.id}`);
                   }}
                   className={`w-full text-left px-2 py-1 rounded ${
                     c.id === selected.id
@@ -704,6 +799,7 @@ export default function ConcernDetailPage() {
           </div>
 
           {/* <AppointmentSection /> */}
+          
            <div className="bg-green-700 py-16 px-4 text-white text-center">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-serif mb-4">
@@ -720,7 +816,7 @@ export default function ConcernDetailPage() {
   </div>
           <LogoSlider />
           {/* <FaqSection /> */}
-           <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
+          <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
         <ul className="space-y-4">
@@ -743,9 +839,11 @@ export default function ConcernDetailPage() {
           })}
         </ul>
       </div>
+
+     
     </div>
           {/* <TestimonialsSection /> */}
-               <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+           <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
           What Our Customers Say

@@ -3,16 +3,19 @@
 import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
-import AppointmentSection from "@/app/components/Appointment";
+// import AppointmentSection from "@/app/components/Appointment";
 import LogoSlider from "@/app/components/LogoSlider";
-import FaqSection from "../components/FaqSection";
-import TestimonialsSection from "../components/TestimonialsSection";
+// import FaqSection from "../components/FaqSection";
+// import TestimonialsSection from "../components/TestimonialsSection";
 
 interface Concern {
   id: string;
   title: string;
   description: string;
   image: string;
+   head: string;
+  text: string;
+  links: string;
 }
 
 const CONCERNS: Concern[] = [
@@ -22,6 +25,9 @@ const CONCERNS: Concern[] = [
     description:
       "Unlock the secrets to your best skin with our Facial Skin Analysis.",
     image: "/face/1.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Botox",
@@ -29,6 +35,9 @@ const CONCERNS: Concern[] = [
     description:
       "Reveal your natural beauty with the power of Botox. At Face Weybridge, our Botox Injectable treatments are designed to reduce the appearance of fine lines and wrinkles, leaving you with a refreshed and youthful look.",
     image: "/face/2.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Dermal",
@@ -36,6 +45,9 @@ const CONCERNS: Concern[] = [
     description:
       "Rediscover your youthful appearance with Dermal Fillers, a non-surgical solution to restore volume, enhance contours, and smooth out fine lines and wrinkles.",
     image: "/face/3.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Dermaforce",
@@ -43,6 +55,9 @@ const CONCERNS: Concern[] = [
     description:
       "Achieve transformative results with Dermaforce RF (also known as Morpheus8), a groundbreaking skin rejuvenation treatment available at Face Weybridge.",
     image: "/face/5.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Hydrafacial",
@@ -50,6 +65,9 @@ const CONCERNS: Concern[] = [
     description:
       "Transform your skin with the Hydrafacial, an advanced multi-step facial designed to deeply cleanse, exfoliate, extract impurities, and hydrate all in one treatment.",
     image: "/face/6.png",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Polynucleotides",
@@ -57,6 +75,9 @@ const CONCERNS: Concern[] = [
     description:
       "Revitalise, repair, and rejuvenate your skin with Polynucleotides, the latest innovation in regenerative aesthetics.",
     image: "/face/7.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Profhilo",
@@ -64,6 +85,9 @@ const CONCERNS: Concern[] = [
     description:
       "Give your skin the ultimate hydration and anti-ageing boost with Profhilo, an advanced injectable skin treatment designed to stimulate collagen, improve skin elasticity, and deeply hydrate from within.",
     image: "/face/8.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Rejuvenation",
@@ -71,6 +95,9 @@ const CONCERNS: Concern[] = [
     description:
       "Restore your skin’s natural glow, elasticity, and vitality with our Facial Skin Rejuvenation treatments at Face Weybridge.",
     image: "/face/9.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Mesotherapy",
@@ -78,6 +105,9 @@ const CONCERNS: Concern[] = [
     description:
       "Revitalise and rejuvenate your skin with Facial Skin Mesotherapy, an advanced, non-surgical treatment that delivers intense hydration, essential nutrients, and skin-boosting ingredients directly into the skin.",
     image: "/face/10.webp",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Eye",
@@ -85,6 +115,9 @@ const CONCERNS: Concern[] = [
     description:
       "Restore a brighter, youthful, and refreshed appearance with our Eye Rejuvenation treatments at Face Weybridge. The delicate skin around the eyes is often the first to show signs of ageing, fatigue, and stress, leading to dark circles, fine lines, puffiness, and sagging.",
     image: "/face/11.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Advanced",
@@ -92,6 +125,9 @@ const CONCERNS: Concern[] = [
     description:
       "Reveal a brighter, smoother, and more youthful complexion with our Advanced Peels at Face Weybridge. Chemical peels are one of the most effective treatments for skin resurfacing, exfoliation, and rejuvenation, helping to target concerns such as fine lines, acne, pigmentation, and dull skin.",
     image: "/face/12.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Skin",
@@ -99,6 +135,9 @@ const CONCERNS: Concern[] = [
     description:
       "Unlock the full potential of your skin with our Advanced Skin Treatments at Face Weybridge.",
     image: "/face/13.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
   {
     id: "Massage",
@@ -106,14 +145,50 @@ const CONCERNS: Concern[] = [
     description:
       "Relax, rejuvenate, and restore your skin with a luxurious Facial Massage at Face Weybridge. Our expert facial massage treatments are designed to relieve tension, improve circulation, and promote a youthful, radiant complexion.",
     image: "/face/14.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
   },
-    {
+  {
+    id: "Waxing",
+    title: "Waxing",
+    description:
+      "Achieve silky-smooth, hair-free skin with our professional Face Waxing services at Face Weybridge. Whether you want to shape your brows, remove unwanted facial hair, or achieve a polished, flawless look, our expert waxing treatments provide long-lasting, smooth results with minimal discomfort. Unlike shaving, which can cause irritation and stubble, waxing removes hair from the root, ensuring a soft, hair-free finish that lasts for weeks.",
+    image: "/face/20.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
+  },
+  {
+    id: "SPMU",
+    title: "SPMU",
+    description:
+      "Wake up with effortlessly beautiful, perfectly defined features every day with Semi-Permanent Makeup (SPMU) at Face Weybridge. Whether you want to enhance your eyebrows, define your eyes, or achieve fuller-looking lips, our expert SPMU treatments offer a natural-looking, long-lasting solution. Using advanced micropigmentation techniques, we create subtle, flawless enhancements tailored to your facial features, ensuring stunning results with minimal maintenance.",
+    image: "/face/21.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
+  },
+  {
+    id: "Removal",
+    title: "Laser Hair Removal",
+    description:
+      "Say goodbye to unwanted facial hair with Laser Hair Removal at Face Weybridge. Our advanced laser technology provides a long-lasting, safe, and effective solution for removing hair from areas such as the upper lip, chin, jawline, and cheeks. Unlike traditional methods like waxing and shaving, laser hair removal reduces hair growth permanently, leaving your skin smooth, clear, and free from irritation.",
+    image: "/face/13.jpg",
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
+  },
+{
     id: "Brow",
     title: "Lash & Brow Treatments",
     description:
       "Enhance the natural beauty of your eyes with our Lash & Brow Treatments at Face Weybridge. Beautifully shaped brows and defined lashes can completely transform your look, giving you a youthful, polished, and effortlessly glamorous appearance. Whether you’re looking for fuller, well-defined brows or longer, lifted lashes, our expert treatments are designed to enhance your features while maintaining a natural, flattering result.",
     image: "/face/15.jpg",
-  },
+     head: "Book Your Appointment",
+    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    links: "Book Now",
+  },  
 ];
 
 type ConcernDetails = {
@@ -123,6 +198,8 @@ type ConcernDetails = {
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
+    faq: {question: string; answer: string}[];
+  testimonials: {name: string; role?: string; rating: number; text: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
@@ -158,6 +235,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Facial skin analysis is typically undertaken when patients notice uneven tone or texture, persistent acne or congestion, premature lines or wrinkles, sun-induced pigmentation, unexplained dryness or sensitivity, or when they want an objective baseline to guide prevention and tailor skincare regimens—helping clinicians pinpoint issues early, customize treatments, and monitor progress for healthier, more resilient skin.",
     types: [
@@ -209,6 +321,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Botulinum-toxin injections are most commonly used to soften dynamic facial lines—such as glabellar “frown” lines, forehead creases, and crow’s-feet—arising from repetitive muscle contractions; to treat hyperhidrosis (excessive sweating) by blocking sweat-gland activity; to manage bruxism (teeth grinding) through masseter muscle relaxation; and in therapeutic contexts like chronic migraine prevention or focal muscle spasticity by reducing overactive neuromuscular signaling.",
     types: [
@@ -260,6 +407,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Dermal fillers are most often used to address age-related volume loss—replenishing fullness in the cheeks, temples, and midface—as well as to smooth static wrinkles and folds (like nasolabial and marionette lines), enhance lip volume and definition, correct under-eye hollows (tear-troughs), contour features such as the jawline and chin, and soften atrophic scars or depressions for a more youthful, balanced appearance.",
     types: [
@@ -311,6 +493,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Dermaforce RF (Morpheus8) is most often used to address skin laxity and mild to moderate sagging; fine lines and deeper wrinkles; uneven texture and enlarged pores; acne scarring and stretch marks; and cellulite or crepey skin on the body—leveraging fractional RF energy at variable depths to remodel collagen and elastin for firmer, smoother, more even skin.",
     types: [
@@ -362,6 +579,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "HydraFacial “Ultimate Skin Refresh” is most often chosen to combat dull, dehydrated skin; clear clogged pores and reduce enlarged pores; smooth fine lines and wrinkles; even out tone, texture, and hyperpigmentation; and calm redness or sensitivity—delivering deep cleansing, gentle exfoliation, painless extractions, and infusion of hydrating, antioxidant-rich serums for an instant boost in radiance and long-term skin health.",
     types: [
@@ -413,6 +665,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Polynucleotide therapy is most often chosen to counteract age-related and photoaging changes—such as loss of skin elasticity and firmness—by stimulating fibroblast activity; to smooth fine lines, wrinkles, and surface texture irregularities; to improve hydration and barrier function in chronically dry or sensitive skin; to remodel atrophic scars and stretch marks; and to accelerate healing and tissue regeneration following laser, peel, or microneedling procedures.",
     types: [
@@ -464,6 +751,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Profhilo® is most often chosen to combat chronic skin dehydration and loss of elasticity—addressing dull, crepey or thin skin on the face, neck, and décolletage—by smoothing fine lines and superficial wrinkles, restoring firmness and plumpness, and boosting overall radiance and tissue hydration in patients experiencing age- or photo-aging-related dryness and laxity.",
     types: [
@@ -515,6 +837,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Facial skin rejuvenation is most often pursued to counteract age- and environment-related changes—such as fine lines and wrinkles from repeated expression and collagen decline, sun-induced hyperpigmentation and rough texture, acne or surgical scarring that leaves uneven relief, chronic dryness and dullness from barrier dysfunction, and loss of firmness or elasticity due to natural collagen and elastin degradation—helping restore a smoother, more even, and radiant complexion.",
     types: [
@@ -566,6 +923,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Facial mesotherapy is most often chosen to combat superficial dehydration and dullness by delivering hydrating actives directly into the dermis; to smooth fine lines and improve skin texture by stimulating collagen and elastin production; to even out tone and reduce mild hyperpigmentation or post-inflammatory marks; and to restore firmness and plumpness in skin weakened by age, environmental stress, or barrier dysfunction.",
     types: [
@@ -617,6 +1009,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Eye rejuvenation is most often sought to correct age-related and structural changes around the eyes—such as upper-lid hooding and excess skin that droops with collagen loss; under-eye bags and tear-trough hollows from fat herniation or volume depletion; fine lines and crow’s-feet caused by repetitive muscle movement and sun damage; dark circles from thin, translucent skin or hyperpigmentation; and general periorbital skin laxity and crepiness that contribute to a tired, aged appearance.",
     types: [
@@ -668,6 +1095,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Advanced chemical peels are most often chosen to address stubborn photo-aging (deep wrinkles, leathery texture, and sun spots), moderate to severe acne scarring, melasma and other refractory hyperpigmentation, rough or uneven skin tone, and precancerous actinic keratoses—offering graduated depths of exfoliation to resurface and renew skin when milder treatments fall short.",
     types: [
@@ -719,6 +1181,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Advanced skin treatments are most often pursued when more superficial therapies fall short—such as for stubborn photo-aging with deep wrinkles and leathery texture, moderate to severe acne or surgical scarring, significant skin laxity or crepiness, refractory hyperpigmentation (melasma, sun spots), and precancerous lesions like actinic keratoses—offering dermal resurfacing, collagen remodeling, and targeted renewal when milder approaches can’t fully restore tone, texture, or firmness.",
     types: [
@@ -770,6 +1267,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "or TMJ tightness), stimulate sluggish circulation for a brighter, more even complexion, encourage lymphatic drainage to reduce puffiness and detoxify, enhance absorption of serums and oils for better skincare results, and promote collagen and elastin synthesis to improve firmness and counteract early signs of aging.",
     types: [
@@ -789,7 +1321,7 @@ const DETAILS: Record<string, ConcernDetails> = {
     treatmentOptions:
       "At Facey Clinic, facial massage options include lymphatic drainage, using gentle, rhythmic strokes to de-puff and detoxify; deep-tissue sculpting, applying targeted kneading and acupressure to relieve muscle tension and sharpen contours; and Gua Sha or cupping, employing smooth-edged tools or silicone cups to stimulate circulation, boost collagen production, and enhance skin firmness—often paired with customized serums or LED therapy for amplified rejuvenation.",
   },
-    Brow: {
+   Brow: {
     intro:
       "At Face Weybridge, our lash and brow specialists are trained to create beautifully enhanced yet natural-looking results. Using high-quality products and precise techniques, we ensure each treatment is customised to suit your unique features and style. Whether you’re after bold, dramatic brows or a subtle, effortless lash lift, we provide expert care in a relaxing, professional environment. Your confidence is our priority, and we’re dedicated to giving you the perfect lash and brow look that complements your natural beauty.",
     understanding:
@@ -821,6 +1353,41 @@ const DETAILS: Record<string, ConcernDetails> = {
         href: "/treatment/hydrafacial-full-back",
       },
     ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
     causes:
       "Lash and brow treatments are often sought to enhance natural definition, correct uneven or sparse hair growth, create a fuller or more lifted appearance, and reduce the need for daily makeup application. They can also address thinning due to over-plucking, aging, or medical conditions, helping restore shape, color, and symmetry for a more youthful, expressive look.",
     types: [
@@ -840,12 +1407,291 @@ const DETAILS: Record<string, ConcernDetails> = {
     treatmentOptions:
       "At Facey Clinic, lash and brow treatments include tinting to enhance natural color and definition; lash lifts and brow laminations to shape and set hairs for a fuller, lifted appearance; and lash extensions or brow microblading for clients seeking long-lasting volume, symmetry, and structure—all tailored to your facial features for a polished, low-maintenance look.",
   },
+     Removal: {
+    intro:
+      "At Face Weybridge, we use state-of-the-art laser technology to provide safe, comfortable, and highly effective treatments. Our experienced practitioners ensure that each session is tailored to your skin type and hair growth pattern, maximising results while minimising discomfort. With our personalised approach, you can expect a professional and welcoming experience, achieving smooth, hair-free skin with confidence.",
+    understanding:
+      "Laser hair removal is a non-invasive procedure that uses concentrated light beams to target and destroy hair follicles, preventing future hair growth. The laser emits a specific wavelength of light that is absorbed by the pigment in the hair, damaging the follicle while leaving surrounding skin unharmed. This method is effective for various skin types and hair colors, with multiple sessions typically required for optimal results as hair grows in cycles.",
+    popularTreatments: [
+      {
+        title: "Microneedling",
+        image: "/concerns/a.webp",
+        href: "/treatment/microneedling",
+      },
+      {
+        title: "Neogen Plasma",
+        image: "/concerns/b.webp",
+        href: "/treatment/neogen-plasma",
+      },
+      {
+        title: "Obagi Blue Radiance",
+        image: "/concerns/c.webp",
+        href: "/treatment/obagi-blue-radiance",
+      },
+      {
+        title: "Mesotherapy",
+        image: "/concerns/d.webp",
+        href: "/treatment/mesotherapy",
+      },
+      {
+        title: "Hydrafacial Back",
+        image: "/concerns/e.webp",
+        href: "/treatment/hydrafacial-full-back",
+      },
+    ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
+    causes:
+      "Laser hair removal is often chosen to achieve long-term hair reduction in areas such as the face, underarms, bikini line, legs, and back. It is particularly beneficial for those with dark, coarse hair and lighter skin tones, as the contrast allows for more effective targeting of the hair follicles. Many clients prefer this method over traditional hair removal techniques like shaving or waxing due to its convenience and lasting results.",
+    types: [
+      {
+        heading: "Alexandrite Laser",
+        text: "Ideal for lighter skin tones, this laser uses a specific wavelength to target melanin in the hair, providing quick and effective hair removal with minimal discomfort.",
+      },
+      {
+        heading: "Diode Laser",
+        text: "Suitable for a wide range of skin types, this laser emits a longer wavelength that penetrates deeper into the skin, making it effective for both light and dark hair.",
+      },
+      {
+        heading: "Ruby Laser",
+        text: "Best for fine, light hair, this laser uses a shorter wavelength to target hair follicles with precision, offering effective results for those with lighter hair colors.",
+      },
+    ],
+    treatmentOptions:
+      "At Facey Clinic, we offer advanced laser hair removal options including Alexandrite laser for lighter skin tones, providing quick and effective results; Diode laser suitable for a wide range of skin types, effectively targeting both light and dark hair; and Ruby laser for fine, light hair, delivering precise follicle targeting. Each treatment is personalised to your skin type and hair growth pattern, ensuring optimal results with minimal discomfort in a professional and welcoming environment.",
+  },
+     SPMU: {
+    intro:
+      "At Face Weybridge, we specialise in delivering natural-looking semi-permanent makeup enhancements tailored to each individual. Our trained and experienced professionals use high-quality pigments and precision techniques to ensure flawless, long-lasting results. We prioritise safety, hygiene, and artistry to give you a personalised, confidence-boosting experience in our welcoming clinic. Whether you’re enhancing your brows, eyes, or lips, you can trust us to create a look that complements your natural beauty.",
+    understanding:
+      "Semi-Permanent Makeup (SPMU), is a cosmetic tattooing technique used to enhance facial features by implanting pigment into the skin. It mimics makeup but lasts much longer—typically 1 to 3 years depending on skin type, lifestyle, and pigment retention. SPMU can be applied to eyebrows (microblading or ombre shading), eyeliner (eyelash enhancement or winged liner), and lips (lip blush or full lip colour), providing a polished, low-maintenance look that reduces the need for daily makeup application.",
+    popularTreatments: [
+      {
+        title: "Microneedling",
+        image: "/concerns/a.webp",
+        href: "/treatment/microneedling",
+      },
+      {
+        title: "Neogen Plasma",
+        image: "/concerns/b.webp",
+        href: "/treatment/neogen-plasma",
+      },
+      {
+        title: "Obagi Blue Radiance",
+        image: "/concerns/c.webp",
+        href: "/treatment/obagi-blue-radiance",
+      },
+      {
+        title: "Mesotherapy",
+        image: "/concerns/d.webp",
+        href: "/treatment/mesotherapy",
+      },
+      {
+        title: "Hydrafacial Back",
+        image: "/concerns/e.webp",
+        href: "/treatment/hydrafacial-full-back",
+      },
+    ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
+    causes:
+      "SPMU is often chosen to enhance natural features, correct asymmetry, or fill in sparse areas without the daily effort of applying traditional makeup. It can also be beneficial for those with allergies to conventional cosmetics, busy lifestyles that make daily application impractical, or medical conditions that affect hair growth (like alopecia) or pigmentation (like vitiligo). SPMU provides a long-lasting solution for achieving defined, polished features effortlessly.",
+    types: [
+      {
+        heading: "Eyebrow Enhancements",
+        text: "Microblading or ombre shading techniques to create natural-looking, fuller brows by depositing pigment in hair-like strokes or soft gradients.",
+      },
+      {
+        heading: "Eyeliner Tattooing",
+        text: "Eyelash enhancement or winged liner techniques to define the eyes with long-lasting pigment, reducing the need for daily eyeliner application.",
+      },
+      {
+        heading: "Lip Enhancements",
+        text: "Lip blush or full lip colour techniques to add definition, shape, and a subtle tint to the lips, enhancing their natural colour and fullness.",
+      },
+    ],
+    treatmentOptions:
+      "At Facey Clinic, semi-permanent makeup options include eyebrow enhancements (microblading or ombre shading) for natural, fuller brows; eyeliner tattooing (eyelash enhancement or winged liner) to define the eyes with long-lasting pigment; and lip enhancements (lip blush or full lip colour) to add shape and a subtle tint to the lips—all performed by skilled professionals using high-quality pigments for a polished, low-maintenance look that complements your features.",
+  },
+  Waxing: {
+    intro:
+      "At Face Weybridge, we provide expert waxing treatments in a clean, professional, and relaxing environment. Our trained specialists use gentle yet effective waxing techniques to ensure a quick, comfortable experience with minimal irritation. We use high-quality, skin-friendly wax suitable for even the most sensitive skin, leaving you with perfectly smooth, radiant skin every time.",
+    understanding:
+      "Waxing is a popular method for temporary hair removal that pulls hair out from the root, leaving the skin smooth for 2–6 weeks. There are several types of waxing techniques and waxes, each suited for different skin types, hair textures, and body areas.",
+    popularTreatments: [
+      {
+        title: "Microneedling",
+        image: "/concerns/a.webp",
+        href: "/treatment/microneedling",
+      },
+      {
+        title: "Neogen Plasma",
+        image: "/concerns/b.webp",
+        href: "/treatment/neogen-plasma",
+      },
+      {
+        title: "Obagi Blue Radiance",
+        image: "/concerns/c.webp",
+        href: "/treatment/obagi-blue-radiance",
+      },
+      {
+        title: "Mesotherapy",
+        image: "/concerns/d.webp",
+        href: "/treatment/mesotherapy",
+      },
+      {
+        title: "Hydrafacial Back",
+        image: "/concerns/e.webp",
+        href: "/treatment/hydrafacial-full-back",
+      },
+    ],
+     testimonials: [{
+    name: 'Nas A',
+    rating: 5,
+    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  },
+  {
+    name: 'Mariam C',
+    rating: 5,
+    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  },
+  {
+    name: 'Clariana T. M',
+    rating: 5,
+    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  },],
+     faq: [{
+    question: 'Do I need a consultation first?',
+    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  },
+  {
+    question: 'Will I need to book time off work?',
+    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  },
+  {
+    question: 'Are your aesthetic treatments painful?',
+    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  },
+  {
+    question: 'How do I book an appointment?',
+    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  },
+  {
+    question: 'How do I know what treatment is best for me?',
+    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  },],
+    causes:
+      "Waing are done for several personal, aesthetic, and hygienic reasons: Smooth, Hair-Free Skin: Waxing removes hair from the root, leaving skin smooth and hair-free for weeks, which many find more aesthetically pleasing than shaving. Reduced Ingrown Hairs: Waxing can help reduce the occurrence of ingrown hairs compared to shaving, as it removes hair from the root rather than cutting it at the surface. Longer-Lasting Results: Waxing typically lasts longer than shaving, with results lasting 2–6 weeks depending on individual hair growth cycles. Exfoliation: Waxing also exfoliates the skin by removing dead skin cells along with hair, leaving the skin feeling softer and smoother.",
+    types: [
+      {
+        heading: "Soft Wax (Strip Wax)",
+        text: "A thin layer of warm wax is applied to the skin and removed with a cloth or paper strip, ideal for larger areas like legs and arms.",
+      },
+      {
+        heading: "Hard Wax (Stripless Wax)",
+        text: "A thicker layer of wax is applied and allowed to harden before being pulled off without strips, suitable for sensitive areas like the bikini line and underarms.",
+      },
+      {
+        heading: "Sugar Wax (Sugaring)",
+        text: "A natural paste made from sugar, lemon juice, and water is applied to the skin and removed by hand, providing a gentler option for sensitive skin.",
+      },
+    ],
+    treatmentOptions:
+      "At Facey Clinic, we offer a range of waxing options tailored to your needs, including soft wax for larger areas like legs and arms; hard wax for sensitive areas such as the bikini line and underarms; and sugar waxing for those with sensitive skin or who prefer natural ingredients. Our trained specialists ensure a comfortable, efficient experience with minimal irritation, leaving your skin smooth and radiant.",
+  },
 };
+
+function StarRating({ count }: { count: number }) {
+  return (
+    <div className="flex space-x-1">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          width="20" height="20"
+          fill={i < count ? 'currentColor' : 'none'}
+          stroke="currentColor"
+          strokeWidth="2"
+          className="text-green-800"
+          viewBox="0 0 24 24"
+        >
+          <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 9" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
+      const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const [search, setSearch] = useState("");
   const filtered = useMemo(
@@ -1008,10 +1854,75 @@ export default function ConcernDetailPage() {
             <p className="text-gray-700">{detail.treatmentOptions}</p>
           </div>
 
-          <AppointmentSection />
+          {/* <AppointmentSection /> */}
+           <div className="bg-green-700 py-16 px-4 text-white text-center">
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-4xl md:text-5xl font-serif mb-4">
+        {selected.head}
+      </h2>
+      <p className="text-base md:text-lg mb-8 leading-relaxed">
+{selected.text}
+      </p>
+      <button className="inline-block border border-white px-8 py-3 uppercase font-medium hover:bg-white hover:text-green-700 transition"
+      >
+        {selected.links}
+      </button>
+    </div>
+  </div>
           <LogoSlider />
-          <FaqSection />
-          <TestimonialsSection />
+          {/* <FaqSection /> */}
+           <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
+        <ul className="space-y-4">
+          {detail.faq.map((qa, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <li key={idx} className="border-b border-green-500 pb-4">
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full flex justify-between items-center text-left"
+                >
+                  <span className="text-lg font-medium">{qa.question}</span>
+                  <span className="text-2xl">{isOpen ? '−' : '+'}</span>
+                </button>
+                {isOpen && (
+                  <p className="mt-2 text-green-100">{qa.answer}</p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+          {/* <TestimonialsSection /> */}
+           <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
+          What Our Customers Say
+        </h2>
+
+        <div className="flex md:hidden overflow-x-auto space-x-6 pb-4">
+          {detail.testimonials.map((t, i) => (
+            <div key={i} className="flex-shrink-0 w-80 p-4 border rounded-lg shadow">
+              <StarRating count={t.rating} />
+              <p className="mt-4 text-gray-700">{t.text}</p>
+              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:grid grid-cols-3 gap-8">
+          {detail.testimonials.map((t, i) => (
+            <div key={i} className="p-6 border rounded-lg shadow-lg flex flex-col">
+              <StarRating count={t.rating} />
+              <p className="mt-4 text-gray-700 flex-1">{t.text}</p>
+              <p className="mt-4 font-semibold text-green-800">{t.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </section>
