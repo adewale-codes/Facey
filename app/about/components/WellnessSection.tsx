@@ -34,7 +34,7 @@ const WellnessSection: React.FC = () => (
         key={block.title}
         className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8"
       >
-        <div className="w-full md:w-1/2 h-1/2 overflow-hidden rounded-lg">
+        {/* <div className="w-full md:w-1/2 h-1/2 overflow-hidden rounded-lg">
           <img
             src={block.image}
             alt={block.alt}
@@ -58,7 +58,7 @@ const WellnessSection: React.FC = () => (
               {block.ctaText}
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
     ))}
   </section>

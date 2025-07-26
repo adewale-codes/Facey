@@ -9,64 +9,63 @@ import FaqSection from "../components/FaqSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import PopularTreatment from "../components/PopularTreatment";
 
-
-interface Concern {
+interface Concerns {
   id: string;
   title: string;
   description: string;
   image: string;
-  //  head: string;
+  // head: string;
   // text: string;
   // links: string;
 }
 
-const CONCERNS: Concern[] = [
+const CONCERNS: Concerns[] = [
   {
-    id: "Iv",
-    title: "Iv Drip",
+    id: "Profhilo",
+    title: "Profhilo",
     description:
-      "Treat acne effectively with our specialised solutions. Achieve clearer skin through personalised care and advanced treatments at Facey Clinic.",
-    image: "/concerns/1.jpg",
+      "Give your skin the ultimate hydration and anti-ageing boost with Profhilo, an advanced injectable skin treatment designed to stimulate collagen, improve skin elasticity, and deeply hydrate from within. Unlike traditional dermal fillers, Profhilo is a unique bio-remodelling treatment that works by spreading beneath the skin, enhancing hydration, firmness, and overall skin quality. At Face Weybridge, we offer this revolutionary, non-surgical solution to restore youthful radiance and smooth out fine lines, leaving your skin naturally plump and refreshed.",
+    image: "/face/8.jpg",
     //  head: "Book Your Appointment",
     // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     // links: "Book Now",
   },
   {
-    id: "Vitamin",
-    title: "Vitamin Injections",
+    id: "Delux",
+    title: "Delux Rejuvenation",
     description:
-      "Give your body the essential vitamins and nutrients it needs with our Vitamin Injections at Face Weybridge",
-    image: "/concerns/2.jpg",
+      "Indulge in the ultimate rejuvenation experience with our Deluxe Rejuvenation treatment at Face Weybridge. This luxurious, all-in-one treatment is designed to revive, restore, and enhance your skin and body using advanced skincare, deep hydration, and cutting-edge technology. Whether you’re looking to refresh your complexion, tighten and firm your skin, or enhance your overall well-being, our Deluxe Rejuvenation package is the perfect solution for achieving radiant, youthful, and revitalised results.",
+    image: "/face/22.jpg",
     //  head: "Book Your Appointment",
     // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     // links: "Book Now",
   },
   {
-    id: "Body",
-    title: "Body Massage",
+    id: "Dermaforce",
+    title: "Dermaforce RF (aka Morpheus8)",
     description:
-      "Experience the ultimate relaxation and rejuvenation with our expert Body Massage treatments at Face Weybridge.",
-    image: "/concerns/3.jpg",
+      "Achieve transformative results with Dermaforce RF (also known as Morpheus8), a groundbreaking skin rejuvenation treatment available at Face Weybridge. Combining microneedling with advanced radiofrequency (RF) technology, this non-surgical procedure stimulates collagen production, tightens skin, and enhances overall texture and tone. Whether you’re looking to combat signs of ageing, improve skin elasticity, or reduce scars and pigmentation, Dermaforce RF delivers remarkable results with minimal downtime.",
+    image: "/face/5.jpg",
     //  head: "Book Your Appointment",
     // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     // links: "Book Now",
   },
   {
-    id: "Intimate",
-    title: "Intimate Female Rejuvination",
+    id: "Laser",
+    title: "Laser Skin Rejuvenation",
     description:
-      "At Face Weybridge, we understand that women’s intimate wellness is essential for overall health, confidence, and well-being.",
-    image: "/concerns/4.jpg",
+      "Experience the power of advanced laser technology with our Laser Treatments at Face Weybridge. Designed to target a wide range of skin and body concerns, our laser therapies help with hair removal, skin tightening, pigmentation correction, and overall skin rejuvenation. Whether you’re looking for a permanent hair reduction solution, skin resurfacing, or collagen stimulation, our cutting-edge laser treatments provide safe, effective, and long-lasting results with minimal downtime.",
+    image: "/face/19.jpg",
     //  head: "Book Your Appointment",
     // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     // links: "Book Now",
   },
   {
-    id: "Forma",
-    title: "Forma V",
+    id: "PRP",
+    title: "PRP",
     description:
-      "Forma V is a cutting-edge non-surgical vaginal rejuvenation treatment designed to restore intimate health, enhance comfort, and improve confidence.",
-    image: "/concerns/5.jpg",
+      "Restore thicker, healthier, and stronger hair with PRP (Platelet-Rich Plasma) Hair Restoration at Face Weybridge. This innovative, non-surgical treatment uses your body’s own natural growth factors to stimulate hair follicles, promoting hair regrowth, improved thickness, and reduced hair shedding. Whether you’re experiencing thinning hair, hair loss, or weakened follicles, PRP therapy provides a safe, natural, and effective solution to rejuvenate your scalp and restore hair health.",
+    image: "/face/16.jpg",
     //  head: "Book Your Appointment",
     // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
     // links: "Book Now",
@@ -80,16 +79,16 @@ type ConcernDetails = {
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
+    // testimonials: {name: string; role?: string; rating: number; text: string}[];
     // faq: {question: string; answer: string}[];
-  // testimonials: {name: string; role?: string; rating: number; text: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
-  Iv: {
+  Profhilo: {
     intro:
-      "IV drip therapy delivers fluids, electrolytes, medications or nutrition directly into the bloodstream via a sterile catheter—requiring precise flow rates, aseptic technique and regular site checks to ensure safe, effective hydration, drug delivery, nutrition support or transfusion.",
+      "At Face Weybridge, we specialise in advanced aesthetic treatments, ensuring safe, effective, and natural-looking results. Our experienced practitioners use precise injection techniques to ensure Profhilo is administered with expert care and precision. We take a personalised approach to each client, helping you achieve a radiant, youthful complexion with long-lasting hydration and skin rejuvenation.",
     understanding:
-      "IV drips can be classified into five main types: crystalloids (e.g., normal saline, lactated Ringer’s) for rapid volume and electrolyte replacement; colloids (e.g., albumin) to expand plasma volume more sustainably; blood products (e.g., packed red cells, plasma, platelets) for anemia or coagulopathy; total parenteral nutrition (TPN) providing complete macronutrients and micronutrients when enteral feeding isn’t possible; and medication infusions (e.g., antibiotics, chemotherapy, vasopressors) administered at controlled rates for targeted therapy.",
+      "Profhilo is an innovative injectable treatment that uses a unique formulation of hyaluronic acid to deeply hydrate and rejuvenate the skin. Unlike traditional dermal fillers, Profhilo works by stimulating collagen and elastin production, improving skin elasticity, and enhancing overall skin quality. It is suitable for all skin types and can be used on the face, neck, and other areas of the body.",
   //   popularTreatments: [
   //     {
   //       title: "Mesotherapy",
@@ -132,7 +131,7 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   rating: 5,
   //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   // },],
-  //    faq: [{
+  //     faq: [{
   //   question: 'Do I need a consultation first?',
   //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   // },
@@ -153,29 +152,30 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   // },],
     causes:
-      "IV drips are initiated whenever a patient cannot meet fluid, electrolyte or medication needs by mouth—most commonly due to dehydration from vomiting or diarrhea, acute blood loss or shock, severe burns, sepsis, or profound hypotension—and to administer therapies (antibiotics, chemotherapy, vasopressors) or nutrition (TPN) when enteral routes are unavailable or impractical.",
+      "Profhilo is used to address various skin concerns, including: Loss of skin elasticity, Fine lines and wrinkles, Dry or dehydrated skin, Sagging skin, Dull or uneven skin tone. It is particularly effective for individuals looking to improve overall skin quality and achieve a more youthful appearance.",
     types: [
       {
-        heading: "Crystalloids",
-        text: "Clear, water-based solutions (e.g., normal saline, lactated Ringer’s) used for rapid volume replacement and electrolyte balance.",
+        heading: "Original Profhilo (Body & Face)",
+        text: "The standard formulation for facial and body rejuvenation, Contains high concentrations of hyaluronic acid, Improves skin hydration, elasticity, and firmness.",
       },
       {
-        heading: "Colloids",
-        text: "Protein or starch-based solutions (e.g., albumin, hetastarch) that remain in the vascular space longer to expand plasma volume.",
+        heading: "Profhilo Body",
+        text: "Specifically designed for body areas, Contains a higher concentration of hyaluronic acid, Targets larger skin areas like arms, abdomen, and thighs, Improves skin laxity and hydration.",
       },
       {
-        heading: "Blood Products",
-        text: "Cellular or plasma components (e.g., packed red blood cells, plasma, platelets) administered to treat anemia, coagulopathy, or massive blood loss.",
+        heading: " Profhilo Structura (Upcoming/Alternate Variant)",
+        text: "A new variant designed for deeper tissue hydration and skin structure, Contains additional peptides for enhanced collagen stimulation, Aims to improve skin texture and firmness in specific areas.",
       },
+        
     ],
     treatmentOptions:
-      "IV drip therapy can be used for: rapid fluid resuscitation (e.g., normal saline or lactated Ringer’s for dehydration or hypovolemia); colloid administration (e.g., albumin) to maintain oncotic pressure; targeted medication infusions (e.g., antibiotics, chemotherapeutics, vasopressors) at controlled rates; electrolyte replacement (e.g., potassium, magnesium) to correct imbalances; parenteral nutrition (TPN) when enteral feeding isn’t feasible; and blood or blood‐product transfusions (packed red cells, plasma, platelets) for anemia, coagulopathy, or acute blood loss.",
+      "Profhilo is a versatile treatment that can be customised based on your specific skin concerns and desired outcomes. Here are the main treatment options: Full Face Profhilo, Neck and Décolletage Profhilo, Body Profhilo, Combination Treatments (with other injectables or skin treatments), Maintenance Treatments (every 6–12 months). Each option is tailored to address different areas and skin conditions, ensuring optimal results.",
   },
-  Vitamin: {
+  Delux: {
     intro:
-      "Vitamin injections (IM or IV) deliver water-soluble (B-complex, C) or fat-soluble (A, D, E, K) vitamins directly into muscle or bloodstream to rapidly correct deficiencies when oral absorption is impaired. Proper aseptic technique, accurate dosing, site rotation, and monitoring for injection-site reactions or allergic responses are essential for safe, effective therapy.",
+      "At Face Weybridge, we offer an exclusive Deluxe Rejuvenation treatment, combining the latest skincare and body-enhancing technologies for a truly luxurious and results-driven experience. Our highly trained specialists provide tailored treatments to restore radiance, firmness, and hydration, ensuring you look and feel your absolute best.",
     understanding:
-      "Vitamin injections are delivered via three main routes—intramuscular (IM) for reliable depot storage of water- and fat-soluble vitamins (e.g., B₁₂, D), intravenous (IV) for rapid high-dose correction or complex multivitamin infusions (as in TPN), and subcutaneous (SC), which is less common but useful for slow, steady release in small-volume preparations. Each route is chosen based on the urgency of repletion, patient tolerance, and absorption considerations.",
+      "Deluxe Rejuvenation is a comprehensive, all-in-one treatment designed to rejuvenate the skin and body using advanced skincare techniques and technologies. It typically includes a combination of facial treatments, body contouring, and skin tightening procedures to achieve a youthful, radiant appearance. The treatment can be customised based on individual needs and may include options like chemical peels, microdermabrasion, radiofrequency therapy, and more.",
   //   popularTreatments: [
   //     {
   //       title: "Microneedling",
@@ -218,7 +218,7 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   rating: 5,
   //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   // },],
-  //    faq: [{
+  //     faq: [{
   //   question: 'Do I need a consultation first?',
   //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   // },
@@ -239,29 +239,28 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   // },],
     causes:
-      "Vitamin injections are indicated when rapid or reliable repletion is needed and oral absorption is inadequate—most commonly for vitamin B₁₂ in pernicious anemia or malabsorptive disorders, vitamin D in severe deficiency or osteomalacia, and vitamin K prophylaxis in newborns or coagulopathic patients; they’re also used in chronic alcoholism, post-bariatric surgery, inflammatory bowel disease, or any condition impairing GI uptake to ensure prompt, sufficient correction.",
+      "Deluxe Rejuvenation is used to address various skin and body concerns, including: Signs of ageing (fine lines, wrinkles, sagging), Dull or uneven skin tone, Loss of skin elasticity, Dry or dehydrated skin, Body contouring and tightening needs. It is ideal for individuals looking to enhance their overall appearance and achieve a more youthful, revitalised look.",
     types: [
       {
-        heading: "Intramuscular (IM)",
-        text: "Injections delivered into muscle tissue, creating a depot for slow, sustained vitamin release (commonly used for B₁₂ and D).",
+        heading: " Deluxe HydraFacial Rejuvenation",
+        text: "Combines HydraFacial with advanced serums and boosters for deep hydration and skin rejuvenation, Targets fine lines, uneven texture, and dullness.",},
+      {
+        heading: "Deluxe Microneedling Rejuvenation",
+        text: "Incorporates microneedling with PRP or growth factors for enhanced skin regeneration, Improves skin texture, firmness, and reduces scars.",
       },
       {
-        heading: "Intravenous (IV)",
-        text: "Direct delivery into the bloodstream for immediate, high-dose repletion or complex multivitamin infusions (as in TPN).",
-      },
-      {
-        heading: "Subcutaneous (SC)",
-        text: "Small-volume injections under the skin for gradual absorption, useful when muscle or vein access is limited.",
+        heading: "Deluxe Laser Rejuvenation",
+        text: "Combines laser treatments (like CO2 or Erbium) with skin resurfacing and tightening, Targets deeper skin concerns like wrinkles, pigmentation, and laxity.",
       },
     ],
     treatmentOptions:
-      "Vitamin injections most commonly include B₁₂ (administered IM weekly or monthly for pernicious anemia or malabsorption), D (IM single high‐dose bolus for severe deficiency or osteomalacia), K (IM or slow IV for newborn prophylaxis or warfarin reversal), multivitamin infusions (IV admixture in TPN when enteral feeding is impossible), and C (IV high‐dose for scurvy or select critical‐care protocols), with route and dosing tailored to the urgency of repletion, patient tolerance, and underlying absorption issues.",
+      "Deluxe Rejuvenation treatments at Face Weybridge can be customised based on your specific skin and body concerns. Here are the main treatment options: Full Face Deluxe Rejuvenation, Neck and Décolletage Deluxe Rejuvenation, Body Deluxe Rejuvenation, Combination Treatments (with injectables or other advanced therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive rejuvenation for a youthful, radiant appearance.",
   },
-  Body: {
+  Dermaforce: {
     intro:
-      "At Facey Clinic, body-massage treatments are delivered by licensed therapists within our physical-therapy and pain-management services, and include Swedish massage to enhance relaxation and circulation, deep-tissue work to release chronic muscle tension, sports massage for injury prevention and recovery, myofascial-release techniques to improve soft-tissue mobility, and manual lymphatic drainage to reduce swelling and support healing.",
+      "At Face Weybridge, we are dedicated to helping you achieve your aesthetic goals with the latest and most effective treatments. Our highly trained practitioners have extensive experience in performing Dermaforce RF treatments, ensuring precision and safety at every step. We personalise each session to suit your unique needs, using state-of-the-art technology to deliver natural, long-lasting results. Experience exceptional care in our welcoming and professional clinic, where your comfort and satisfaction are always our top priority.",
     understanding:
-      "Body massage encompasses a range of techniques tailored to different goals: Swedish massage uses long, gliding strokes and kneading for general relaxation and improved circulation; deep-tissue massage applies firmer pressure to release chronic muscle tension; sports massage combines stretching and targeted work to prevent or treat athletic injuries; myofascial release focuses on easing connective-tissue restrictions for better mobility; manual lymphatic drainage employs light, rhythmic strokes to reduce swelling and detoxify; and hot-stone massage integrates warmed stones to relax tight muscles and enhance therapeutic warmth.",
+      "Dermaforce RF, also known as Morpheus8, is a revolutionary skin rejuvenation treatment that combines microneedling with radiofrequency (RF) energy to stimulate collagen production and tighten the skin. This non-surgical procedure targets deeper layers of the skin, promoting skin elasticity, reducing wrinkles, and improving overall texture and tone. Dermaforce RF is suitable for various areas of the face and body, making it a versatile option for those seeking comprehensive skin rejuvenation.",
   //   popularTreatments: [
   //     {
   //       title: "Microneedling",
@@ -304,7 +303,7 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   rating: 5,
   //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   // },],
-  //    faq: [{
+  //     faq: [{
   //   question: 'Do I need a consultation first?',
   //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   // },
@@ -325,29 +324,29 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   // },],
     causes:
-      "Body massage is most often sought to relieve muscle tension and pain (from overuse, poor posture, or injury), reduce stress and anxiety by lowering cortisol and boosting relaxation, improve circulation and lymphatic flow for faster recovery and toxin clearance, enhance flexibility and joint mobility, and support overall well-being by promoting endorphin release and better sleep.",
+      "Dermaforce RF is used to address various skin concerns, including: Signs of ageing (fine lines, wrinkles, sagging), Loss of skin elasticity, Uneven skin texture and tone, Scarring (acne scars, surgical scars), Stretch marks. It is ideal for individuals looking to improve their skin’s overall appearance and achieve a more youthful, revitalised look.",
     types: [
       {
-        heading: "Swedish Massage (SM)",
-        text: "Uses long, gliding strokes, kneading, and circular movements to promote overall relaxation, improve circulation, and ease light muscle tension.",
+        heading: "Morpheus8 / Dermaforce RF for Face",
+        text: "Targets facial wrinkles, sagging skin, and uneven texture, Stimulates collagen production for a more youthful appearance.",
       },
       {
-        heading: "Deep-Tissue Massage (DTM)",
-        text: "Applies sustained, firm pressure and slow strokes to target deeper layers of muscle and connective tissue, ideal for releasing chronic knots and relieving severe tension.",
+        heading: "Morpheus8 / Dermaforce RF for Body",
+        text: "Targets larger body areas like abdomen, thighs, and arms, Improves skin laxity and tightens loose skin.",
       },
       {
-        heading: "Sports Massage (SPM)",
-        text: "Combines targeted stretching, compression, and trigger-point techniques to enhance athletic performance, prevent injury, and speed recovery in active individuals.",
+        heading: " Fractional RF with PRP or Exosomes",
+        text: "Combines RF microneedling with PRP or exosome therapy for enhanced skin rejuvenation, Promotes deeper skin regeneration and healing.",
       },
     ],
     treatmentOptions:
-      "Body massage treatments range from Swedish massage, which uses long, flowing strokes and kneading to promote relaxation and boost circulation, to deep-tissue massage, applying firm, focused pressure to release chronic knots and alleviate persistent muscle pain, and hot-stone massage, where gently heated stones are placed on key areas and used to warm and relax tissues for enhanced flexibility and stress relief.",
+      "Dermaforce RF treatments at Face Weybridge can be customised based on your specific skin concerns and desired outcomes. Here are the main treatment options: Full Face Dermaforce RF, Neck and Décolletage Dermaforce RF, Body Dermaforce RF, Combination Treatments (with PRP or exosome therapy), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive skin rejuvenation for a youthful, radiant appearance.",
   },
-  Intimate: {
+  Laser: {
     intro:
-      "At Facey Clinic, intimate female rejuvenation combines both surgical and non-surgical options—ranging from fractional CO₂ laser and radiofrequency vaginal tightening to platelet-rich plasma (PRP) injections for collagen stimulation and labiaplasty for labial reshaping—all delivered in a discreet, supportive setting with personalized protocols and minimal downtime to restore function, comfort, and confidence.",
+      "At Face Weybridge, we offer the latest in laser technology, providing highly effective, non-invasive treatments that are tailored to your individual skin and body concerns. Our trained specialists use precision techniques to deliver visible, long-lasting improvements, ensuring you achieve the best possible results with safety and comfort in mind.",
     understanding:
-      "Intimate female rejuvenation methods include non-ablative and ablative laser therapies (e.g., fractional CO₂ or erbium lasers) and radiofrequency treatments to tighten vaginal tissues and improve mucosal health, injectable biologics such as platelet-rich plasma (PRP) or hyaluronic acid fillers to boost collagen and enhance vulvar fullness, and surgical procedures like labiaplasty, vaginoplasty, or clitoral hood reduction for permanent reshaping and functional restoration—each tailored to address personal goals around comfort, aesthetics, and sexual wellness.",
+      "Laser skin rejuvenation uses focused light energy to target specific skin concerns, such as pigmentation, wrinkles, and uneven texture. The laser works by stimulating collagen production and promoting skin renewal, resulting in a smoother, more youthful appearance. Different types of lasers are used depending on the specific treatment goals, including ablative lasers (which remove the outer layer of skin) and non-ablative lasers (which penetrate deeper without damaging the surface).",
   //   popularTreatments: [
   //     {
   //       title: "Microneedling",
@@ -390,7 +389,7 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   rating: 5,
   //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   // },],
-  //    faq: [{
+  //     faq: [{
   //   question: 'Do I need a consultation first?',
   //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   // },
@@ -411,29 +410,29 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   // },],
     causes:
-      "Intimate female rejuvenation is most often sought to address vaginal laxity and pelvic floor weakness following childbirth or aging, manage stress urinary incontinence or vaginal dryness due to menopause or hormonal changes, relieve discomfort or pain during intercourse (dyspareunia), correct scarring from prior surgery or trauma, and improve aesthetic concerns or self-confidence in the genital area.",
+      "Laser skin rejuvenation is used to address various skin concerns, including: Sun damage and pigmentation, Fine lines and wrinkles, Uneven skin texture and tone, Acne scars and other scarring, Enlarged pores. It is ideal for individuals looking to improve their skin’s overall appearance and achieve a more youthful, revitalised look.",
     types: [
       {
-        heading: "Energy-Based Therapies",
-        text: "Non-invasive laser (e.g., fractional CO₂, erbium) and radiofrequency treatments that heat vaginal tissues to stimulate collagen, tighten the canal, and improve mucosal health.",
+        heading: "Ablative Laser Resurfacing",
+        text: "Removes the outer layer of skin to treat deeper wrinkles and scars, Stimulates collagen production for smoother skin.",
       },
       {
-        heading: "Injectable Biologics & Fillers",
-        text: "Autologous platelet-rich plasma (PRP) or hyaluronic acid fillers administered into the vaginal wall or labia to boost collagen, restore volume, enhance lubrication, and increase sensitivity.",
+        heading: "Non-Ablative Laser Rejuvenation",
+        text: "Penetrates deeper layers of skin without damaging the surface, Ideal for treating pigmentation, fine lines, and overall skin texture.",
       },
       {
-        heading: "Surgical Procedures",
-        text: "Operative interventions such as labiaplasty, vaginoplasty, clitoral hood reduction, or perineoplasty for permanent reshaping, tightening, and functional restoration of the female genital anatomy.",
+        heading: "Fractional Laser (Ablative or Non-Ablative)",
+        text: "Combines the benefits of both ablative and non-ablative lasers, Targets specific areas while leaving surrounding skin intact, Promotes faster healing and less downtime.",
       },
     ],
     treatmentOptions:
-      "Intimate female rejuvenation at Facey Clinic may include minimally invasive energy-based therapies—such as fractional CO₂ laser or radiofrequency vaginal tightening—to stimulate collagen, improve elasticity, and reduce dryness; injectable biologics like platelet-rich plasma or hyaluronic acid fillers to restore volume, enhance lubrication, and boost sensitivity; and, when indicated, surgical options such as labiaplasty or vaginoplasty for permanent reshaping and functional support—all personalized to each patient’s anatomy, goals, and recovery preferences.",
+      "Laser skin rejuvenation treatments at Face Weybridge can be customised based on your specific skin concerns and desired outcomes. Here are the main treatment options: Full Face Laser Rejuvenation, Neck and Décolletage Laser Rejuvenation, Body Laser Rejuvenation, Combination Treatments (with microneedling or PRP), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive skin rejuvenation for a youthful, radiant appearance.",
   },
-  Forma: {
+  PRP: {
     intro:
-      "At Facey Clinic, Forma V treatments use a gentle, temperature-controlled radiofrequency applicator to heat and remodel vaginal and vulvar tissues, stimulating new collagen and elastin for tighter, more lubricated, and more responsive intimate anatomy; sessions are quick (about 20 minutes), virtually painless, require no anesthesia or downtime, and are typically delivered in a series of three to four weekly visits for optimal long-term results.",
+      "At Face Weybridge, we offer advanced PRP therapy tailored to your specific hair needs. Our skilled specialists use high-quality platelet concentration techniques to deliver maximum hair restoration benefits. With a personalised and results-driven approach, we ensure your treatment is safe, effective, and designed to help you regain thicker, healthier hair naturally.",
     understanding:
-      "Forma V is delivered via three protocols: the internal applicator, which heats the vaginal canal to boost collagen and moisture; the external applicator, which tightens and tones the vulvar and perineal skin; and the combined approach, using both devices in one session for comprehensive intravaginal and external tissue remodeling.",
+      "PRP (Platelet-Rich Plasma) therapy is a non-surgical treatment that uses your body’s own natural growth factors to stimulate hair follicles and promote hair regrowth. The procedure involves drawing a small amount of your blood, processing it to concentrate the platelets, and then injecting this platelet-rich plasma into the scalp. PRP therapy is effective for various types of hair loss, including androgenetic",
   //   popularTreatments: [
   //     {
   //       title: "Microneedling",
@@ -476,7 +475,7 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   rating: 5,
   //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
   // },],
-  //    faq: [{
+  //     faq: [{
   //   question: 'Do I need a consultation first?',
   //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
   // },
@@ -497,23 +496,23 @@ const DETAILS: Record<string, ConcernDetails> = {
   //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
   // },],
     causes:
-      "Forma V is most often used to treat mild to moderate vaginal laxity and atrophy following childbirth or aging, vaginal dryness and discomfort due to menopause or hormonal changes, dyspareunia (pain during intercourse), mild stress urinary incontinence, and loss of external tissue tone in the vulvar and perineal regions.",
+      "PRP therapy is used to address various hair loss concerns, including: Androgen",
     types: [
       {
-        heading: "Internal RF Therapy",
-        text: "Uses the Forma V intracavitary applicator to deliver controlled radiofrequency energy deep into the vaginal canal, stimulating collagen and elastin production for enhanced tightness, lubrication, and mucosal health.",
+        heading: "Pure PRP (P-PRP)",
+        text: "Contains a high concentration of platelets, Ideal for stimulating hair follicles and promoting regrowth, Used for general hair thinning and loss.",
       },
       {
-        heading: "External RF Therapy",
-        text: "Employs the surface applicator over the vulvar and perineal skin to remodel superficial collagen, improve tissue tone, and smooth external contours.",
+        heading: " Leukocyte-Rich PRP (L-PRP)",
+        text: "Contains additional white blood cells, Enhances the healing and regeneration process, Suitable for more advanced hair loss or scalp conditions.",
       },
       {
-        heading: "Combined Protocol",
-        text: "Integrates both internal and external applicators in a single session for full-spectrum vaginal tightening and vulvar rejuvenation, maximizing collagen remodeling both intravaginally and externally.",
+        heading: "Platelet-Rich Fibrin (PRF)",
+        text: "A newer variant that contains a higher concentration of growth factors, Provides longer-lasting results, Ideal for individuals seeking enhanced hair restoration effects.",
       },
     ],
     treatmentOptions:
-      "Forma V treatments at Facey Clinic are offered as three customizable protocols—internal RF, external RF, or a combined approach—delivered in a series of three to four weekly 20-minute sessions. Using the intracavitary applicator heats the vaginal canal to boost collagen and moisture, while the surface applicator gently remodels vulvar and perineal tissues for improved tone. Sessions require no anesthesia or downtime, with gradual tightening, enhanced lubrication, and restored tissue elasticity emerging over subsequent weeks.",
+      "PRP therapy at Face Weybridge can be customised based on your specific hair loss concerns and desired outcomes. Here are the main treatment options: Full Scalp PRP Treatment, Targeted PRP Injections for Thinning Areas, Combination Treatments (with microneedling or mesotherapy), Maintenance Treatments (every 3–6 months). Each option is designed to provide comprehensive hair restoration for thicker, healthier hair.",
   },
 };
 
@@ -553,7 +552,7 @@ export default function ConcernDetailPage() {
     [search]
   );
 
-  const [selected, setSelected] = useState<Concern | null>(null);
+  const [selected, setSelected] = useState<Concerns | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -596,7 +595,7 @@ export default function ConcernDetailPage() {
                 <button
                   onClick={() => {
                     setSelected(c);
-                    router.push(`/wellness/${c.id}`);
+                    router.push(`/hand/${c.id}`);
                   }}
                   className={`w-full text-left px-2 py-1 rounded ${
                     c.id === selected.id
@@ -706,8 +705,9 @@ export default function ConcernDetailPage() {
             <p className="text-gray-700">{detail.treatmentOptions}</p>
           </div>
 
-          <AppointmentSection />
-           {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
+<AppointmentSection />
+
+          {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-serif mb-4">
         {selected.head}
@@ -721,8 +721,9 @@ export default function ConcernDetailPage() {
       </button>
     </div>
   </div> */}
+
           <LogoSlider />
-          <FaqSection />
+                    <FaqSection />
            {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
@@ -747,8 +748,8 @@ export default function ConcernDetailPage() {
         </ul>
       </div>
     </div> */}
-          <TestimonialsSection />
-               {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+                <TestimonialsSection />
+     {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
           What Our Customers Say
