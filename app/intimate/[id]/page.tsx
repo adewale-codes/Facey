@@ -4,15 +4,19 @@ import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
 import LogoSlider from "@/app/components/LogoSlider";
+import AppointmentSection from "@/app/components/Appointment";
+import FaqSection from "../components/FaqSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import PopularTreatment from "../components/PopularTreatment";
 
 interface Concerns {
   id: string;
   title: string;
   description: string;
   image: string;
-  head: string;
-  text: string;
-  links: string;
+  // head: string;
+  // text: string;
+  // links: string;
 }
 
 // interface FaqItem {
@@ -27,9 +31,9 @@ interface Concerns {
     description:
       "EmpowerRF is a cutting-edge, non-surgical platform developed by InMode that uses radiofrequency (RF) and electrical muscle stimulation (EMS) technologies for women’s wellness, aesthetic rejuvenation, and pelvic health. It’s especially popular in gynecology and cosmetic clinics for its ability to treat a variety of feminine concerns with little to no downtime.",
     image: "/face/16.jpg",
-    head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    // head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "Forma",
@@ -37,9 +41,9 @@ interface Concerns {
     description:
       "Forma V is a cutting-edge non-surgical vaginal rejuvenation treatment designed to restore intimate health, enhance comfort, and improve confidence. Using radiofrequency (RF) energy, this innovative procedure stimulates collagen production, improves elasticity, and increases circulation, helping women address vaginal laxity, dryness, and overall intimate wellness. At Face Weybridge, we offer Forma V as a safe, effective, and minimally invasive solution to help you feel rejuvenated and confident in your body.",
     image: "/face/23.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "Intimate",
@@ -47,9 +51,9 @@ interface Concerns {
     description:
       "Intimate fillers are a revolutionary non-surgical treatment designed to enhance the appearance and comfort of the intimate area. At Face Weybridge, we use advanced dermal fillers to restore volume, improve contour, and rejuvenate the vulvar region. This procedure can help address concerns such as labial asymmetry, loss of volume due to ageing or childbirth, and overall aesthetic enhancement. With our expert team, you can achieve a more youthful and confident appearance in your intimate area.",
     image: "/face/23.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "Intimates",
@@ -57,9 +61,9 @@ interface Concerns {
     description:
       "Intimate Polynucleotides are specialized injectable treatments derived from purified DNA fragments (often salmon DNA) used to regenerate and rejuvenate delicate skin in intimate areas. They are part of the biostimulation and regenerative aesthetic medicine field and are gaining popularity for non-invasive vaginal and penile rejuvenation.",
     image: "/face/19.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "IntimatePRP",
@@ -67,9 +71,9 @@ interface Concerns {
     description:
       "Intimate PRP (Platelet-Rich Plasma) refers to a non-surgical, regenerative treatment that uses a patient’s own blood to rejuvenate and improve the health of intimate areas. It is widely used in aesthetic gynecology and sexual wellness for both men and women.",
     image: "/face/19.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "IntimateWhitening",
@@ -77,9 +81,9 @@ interface Concerns {
     description:
       "Intimate whitening is a cosmetic procedure designed to lighten the skin in the intimate areas, such as the vulva and perianal region. This treatment is often sought by individuals looking to enhance their confidence and improve the appearance of their intimate areas. At Face Weybridge, we offer safe and effective intimate whitening solutions tailored to your specific needs.",
     image: "/face/19.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "Morpheus",
@@ -87,9 +91,9 @@ interface Concerns {
     description:
       "Morpheus V is a non-surgical treatment that combines microneedling with radiofrequency energy to rejuvenate and tighten vaginal tissue. It is designed to improve vaginal laxity, dryness, and overall intimate wellness by stimulating collagen production and enhancing skin elasticity. This innovative procedure is minimally invasive, with little to no downtime, making it a popular",
     image: "/face/19.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "OShot",
@@ -97,9 +101,9 @@ interface Concerns {
     description:
       "The O-Shot, or Orgasm Shot, is a non-surgical treatment that uses Platelet-Rich Plasma (PRP) to enhance sexual pleasure and orgasm intensity. It involves injecting PRP into the vaginal area to improve blood flow, sensitivity, and overall sexual function. This innovative procedure is designed to rejuvenate the vaginal tissue, increase lubrication, and enhance sexual satisfaction.",
     image: "/face/23.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
   {
     id: "VTone",
@@ -107,9 +111,9 @@ interface Concerns {
     description:
       "VTone is a non-surgical treatment under the EmpowerRF platform by InMode, designed to strengthen the pelvic floor muscles and restore vaginal tone using electrical muscle stimulation (EMS). It is particularly",
     image: "/face/23.jpg",
-        head: "Book Your Appointment",
-    text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
-    links: "Book Now",
+    //     head: "Book Your Appointment",
+    // text: "Before your transformation begins, a crucial step awaits &ndash; your consultation. At Facey Clinic, our expert practitioners and doctors conduct a comprehensive skin assessment, dedicated to crafting a bespoke treatment plan exclusively for you. Book today to unleash your beauty&apos;s true potential and discover the art of aesthetics in the heart of Weybridge, London.",
+    // links: "Book Now",
   },
 ];
 
@@ -139,12 +143,12 @@ interface Concerns {
 type ConcernDetails = {
   intro: string;
   understanding: string;
-  faq: {question: string; answer: string}[];
-  popularTreatments: { title: string; image: string; href: string }[];
+  // faq: {question: string; answer: string}[];
+  // popularTreatments: { title: string; image: string; href: string }[];
   causes: string;
   types: { heading: string; text: string }[];
   treatmentOptions: string;
-  testimonials: {name: string; role?: string; rating: number; text: string}[];
+  // testimonials: {name: string; role?: string; rating: number; text: string}[];
 };
 
 const DETAILS: Record<string, ConcernDetails> = {
@@ -153,48 +157,48 @@ const DETAILS: Record<string, ConcernDetails> = {
       "At Face Weybridge, we offer the latest Empower RF treatments, designed to enhance your wellness and aesthetic goals. Our experienced practitioners utilise this advanced technology to provide personalised care, ensuring you receive the best possible results in a comfortable and professional environment.",
     understanding:
       "Empower RF is a state-of-the-art, non-surgical platform that combines radiofrequency (RF) and electrical muscle stimulation (EMS) technologies. It is specifically designed for women’s wellness, aesthetic rejuvenation, and pelvic health. Empower RF treatments are particularly effective for addressing concerns such as vaginal laxity, urinary incontinence, and overall pelvic floor health. The procedure is minimally invasive, with little to no downtime, making it a popular",
-    popularTreatments: [
-      {
-        title: "Mesotherapy",
-        image: "/concerns/a.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Microneedling",
-        image: "/concerns/c.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/d.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Hydrafacial Full Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-    testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+    // popularTreatments: [
+    //   {
+    //     title: "Mesotherapy",
+    //     image: "/concerns/a.webp",
+    //     href: "/treatment/mesotherapy",
+    //   },
+    //   {
+    //     title: "Neogen Plasma",
+    //     image: "/concerns/b.webp",
+    //     href: "/treatment/neogen-plasma",
+    //   },
+    //   {
+    //     title: "Microneedling",
+    //     image: "/concerns/c.webp",
+    //     href: "/treatment/microneedling",
+    //   },
+    //   {
+    //     title: "Obagi Blue Radiance",
+    //     image: "/concerns/d.webp",
+    //     href: "/treatment/obagi-blue-radiance",
+    //   },
+    //   {
+    //     title: "Hydrafacial Full Back",
+    //     image: "/concerns/e.webp",
+    //     href: "/treatment/hydrafacial-full-back",
+    //   },
+    // ],
+  //   testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Empower RF is used to address various concerns, including: Vaginal laxity and dryness, Urinary incontinence, Pelvic floor dysfunction, Sexual wellness and satisfaction, Body contouring and skin tightening. It",
     types: [
@@ -212,26 +216,26 @@ const DETAILS: Record<string, ConcernDetails> = {
       },
         
     ],
-    faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //   faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Empower RF treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Empower RF Treatment, Targeted Empower RF for Vaginal Rejuvenation, Empower RF for Pelvic Floor Strengthening, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive wellness and rejuvenation for optimal results.",
   },
@@ -241,48 +245,48 @@ Forma: {
       "At Face Weybridge, we prioritise comfort, discretion, and expert care, ensuring every Forma V treatment is tailored to your unique needs. Our highly trained professionals use the latest RF technology to provide a safe, effective, and painless solution for intimate wellness. With our welcoming and confidential environment, you can feel empowered, confident, and rejuvenated.",
     understanding:
       "Forma V is a non-surgical vaginal rejuvenation treatment that uses radiofrequency (RF) energy to stimulate collagen production, improve tissue elasticity, and enhance overall vaginal health. This innovative procedure is designed to address concerns such as vaginal laxity, dryness, and discomfort, providing",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+    // popularTreatments: [
+    //   {
+    //     title: "Microneedling",
+    //     image: "/concerns/a.webp",
+    //     href: "/treatment/microneedling",
+    //   },
+    //   {
+    //     title: "Neogen Plasma",
+    //     image: "/concerns/b.webp",
+    //     href: "/treatment/neogen-plasma",
+    //   },
+    //   {
+    //     title: "Obagi Blue Radiance",
+    //     image: "/concerns/c.webp",
+    //     href: "/treatment/obagi-blue-radiance",
+    //   },
+    //   {
+    //     title: "Mesotherapy",
+    //     image: "/concerns/d.webp",
+    //     href: "/treatment/mesotherapy",
+    //   },
+    //   {
+    //     title: "Hydrafacial Back",
+    //     image: "/concerns/e.webp",
+    //     href: "/treatment/hydrafacial-full-back",
+    //   },
+    // ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Forma V is used to address various intimate health concerns, including: Vaginal laxity and dryness, Decreased sexual satisfaction, Urinary incontinence, Pelvic floor dysfunction, Overall vaginal health and wellness",
     types: [
@@ -298,26 +302,26 @@ Forma: {
         text: "Targets the external vaginal area to improve skin texture and appearance, Reduces pigmentation and enhances overall vulvar health.",
       },
     ],
-      faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //     faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Forma V treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Forma V Treatment, Targeted Forma V for Vaginal Rejuvenation, Forma V for Pelvic Floor Strengthening, Combination Treatments (with other EmpowerRF modalities), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate wellness and rejuvenation for optimal results.",
   },
@@ -326,48 +330,48 @@ Forma: {
       "At Face Weybridge, we offer advanced Intimate Fillers designed to enhance the appearance and comfort of the intimate area. Our expert team uses high-quality dermal fillers to restore volume, improve contour, and rejuvenate the vulvar region, helping you achieve a more youthful and confident appearance in your intimate area.",
     understanding:
       "Intimate fillers are a non-surgical treatment that uses advanced dermal fillers to enhance the appearance of the vulvar region. This procedure can help address concerns such as labial asymmetry, loss of volume due to ageing or childbirth, and overall aesthetic enhancement. The fillers are injected into specific areas to restore volume, improve contour, and rejuvenate the intimate area, providing a more youthful and confident appearance.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Intimate fillers are used to address various concerns, including: Labial asymmetry, Loss of volume due to ageing or childbirth, Desire for aesthetic enhancement, Improvement of overall vulvar appearance, Restoration of confidence and comfort in intimate areas.",
     types: [
@@ -384,26 +388,26 @@ Forma: {
         text: "Uses your body’s own growth factors to rejuvenate the intimate area, Enhances skin texture and elasticity, Ideal for individuals looking for a natural approach to intimate rejuvenation.",
       },
     ],
-      faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //     faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Intimate filler treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Vulvar Rejuvenation, Targeted Labial Enhancement, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate rejuvenation for a youthful, confident appearance.",
   },
@@ -412,48 +416,48 @@ Forma: {
       "At Face Weybridge, we offer advanced Intimate Polynucleotides treatments designed to rejuvenate and regenerate delicate skin in intimate areas. Our expert team uses high-quality polynucleotide injections to enhance skin elasticity, hydration, and overall appearance, helping you achieve a more youthful and confident intimate area.",
     understanding:
       "Intimate Polynucleotides are specialized injectable treatments derived from purified DNA fragments (often salmon DNA) used to regenerate and rejuvenate delicate skin in intimate areas. These treatments are part of the biostimulation and regenerative aesthetic medicine field, gaining popularity for non-invasive vaginal and penile rejuvenation. The injections stimulate collagen production, improve skin elasticity, and enhance hydration, providing a more youthful and revitalised appearance.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Intimate Polynucleotides are used to address various concerns, including: Vaginal laxity and dryness, Decreased skin elasticity, Loss of hydration in intimate areas, Desire for aesthetic enhancement, Overall intimate rejuvenation and wellness.",
     types: [
@@ -470,26 +474,26 @@ Forma: {
         text: "Combines polynucleotides with hyaluronic acid for enhanced hydration, Provides a synergistic effect for improved skin texture and elasticity, Ideal for individuals seeking comprehensive intimate rejuvenation.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Intimate Polynucleotide treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Intimate Polynucleotide Treatment, Targeted Polynucleotide Injections for Specific Areas, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate rejuvenation for a youthful, confident appearance.",
   }, 
@@ -498,48 +502,48 @@ Forma: {
       "At Face Weybridge, we offer advanced Intimate PRP treatments designed to rejuvenate and regenerate delicate skin in intimate areas. Our expert team uses high-quality PRP injections to enhance skin elasticity, hydration, and overall appearance, helping you achieve a more youthful and confident intimate area.",
     understanding:
       "Intimate PRP (Platelet-Rich Plasma) is a non-surgical, regenerative treatment that uses a patient’s own blood to rejuvenate and improve the health of intimate areas. It is widely used in aesthetic gynecology and sexual wellness",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Intimate PRP is used to address various concerns, including: Vaginal laxity and dryness, Decreased skin elasticity, Loss of hydration in intimate areas, Desire for aesthetic enhancement, Overall intimate rejuvenation and wellness.",
     types: [
@@ -556,26 +560,26 @@ Forma: {
         text: "A non-surgical treatment that uses PRP to rejuvenate the labial area, Improves skin texture and hydration, Enhances overall vulvar health and appearance.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Intimate PRP treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Intimate PRP Treatment, Targeted PRP Injections for Specific Areas, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate rejuvenation for a youthful, confident appearance.",
   }, IntimateWhitening: {
@@ -583,48 +587,48 @@ Forma: {
       "At Face Weybridge, we offer advanced Intimate Whitening treatments designed to lighten and enhance the appearance of intimate areas. Our expert team uses safe and effective techniques to achieve a more uniform skin tone, helping you feel more confident and comfortable in your intimate area.",
     understanding:
       "Intimate whitening is a cosmetic procedure designed to lighten the skin in intimate areas, such as the vulva and perianal region. This treatment is often sought by individuals looking to enhance their confidence and improve the appearance of their intimate areas. At Face Weybridge, we offer safe and effective intimate whitening solutions tailored to your specific needs.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Intimate whitening is used to address various concerns, including: Darkened skin in intimate areas, Uneven skin tone, Desire for aesthetic enhancement, Overall intimate rejuvenation and wellness.",
     types: [
@@ -641,26 +645,26 @@ Forma: {
         text: "Uses laser technology to target and lighten darkened skin, Provides quick and effective results, Ideal for individuals looking for a more advanced solution.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Intimate whitening treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Intimate Whitening Treatment, Targeted Whitening for Specific Areas, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate rejuvenation for a youthful, confident appearance.",
   }, Morpheus: {
@@ -668,48 +672,48 @@ Forma: {
       "At Face Weybridge, we offer Morpheus V, a cutting-edge non-surgical treatment that combines microneedling with radiofrequency energy to rejuvenate and tighten vaginal tissue. This innovative procedure is designed to improve vaginal laxity, dryness, and overall intimate wellness by stimulating collagen production and enhancing skin elasticity. With little to no downtime, Morpheus V is a popular choice for those seeking effective and non-invasive intimate rejuvenation.",
     understanding:
       "Morpheus V is a non-surgical treatment that uses a combination of microneedling and radiofrequency (RF) energy to rejuvenate and tighten vaginal tissue. This innovative procedure is designed to improve vaginal laxity, dryness, and overall intimate wellness by stimulating collagen production and enhancing skin elasticity. Morpheus V is minimally invasive, with little to no downtime, making it a popular choice for those seeking effective and non-invasive intimate rejuvenation.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "Morpheus V is used to address various intimate health concerns, including: Vaginal laxity and dryness, Decreased sexual satisfaction, Urinary incontinence, Pelvic floor dysfunction, Overall vaginal health and wellness.",
     types: [
@@ -726,26 +730,26 @@ Forma: {
         text: "Combines internal and external treatments for comprehensive vaginal rejuvenation, Addresses multiple concerns simultaneously, Enhances overall intimate wellness and satisfaction.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "Morpheus V treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full Morpheus V Treatment, Targeted Morpheus V for Vaginal Rejuvenation, Combination Treatments (with other EmpowerRF modalities), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate wellness and rejuvenation for optimal results.",
   }, OShot: {
@@ -753,48 +757,48 @@ Forma: {
       "At Face Weybridge, we offer the O-Shot, a revolutionary non-surgical treatment designed to enhance sexual pleasure and orgasm intensity. Using Platelet-Rich Plasma (PRP), this innovative procedure rejuvenates the vaginal tissue, improves blood flow, and increases sensitivity, helping you achieve a more satisfying and fulfilling sexual experience.",
     understanding:
       "The O-Shot, or Orgasm Shot, is a non-surgical treatment that uses Platelet-Rich Plasma (PRP) to enhance sexual pleasure and orgasm intensity. It involves injecting PRP into the vaginal area to improve blood flow, sensitivity, and overall sexual function. This innovative procedure is designed to rejuvenate the vaginal tissue, increase lubrication, and enhance sexual satisfaction. The O-Shot is minimally invasive, with little to no downtime, making it a popular choice for those seeking effective and non-invasive intimate rejuvenation.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "The O-Shot is used to address various intimate health concerns, including: Decreased sexual satisfaction, Difficulty achieving orgasm, Vaginal dryness and discomfort, Loss of sensitivity in the vaginal area, Overall intimate rejuvenation and wellness.",
     types: [
@@ -811,26 +815,26 @@ Forma: {
         text: "Targets the clitoral area to enhance sensitivity and pleasure, Improves overall sexual function and satisfaction, Ideal for individuals seeking a more targeted approach to intimate rejuvenation.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "O-Shot treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full O-Shot Treatment, Targeted O-Shot for Specific Areas, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate rejuvenation for a youthful, confident appearance.",
   },
@@ -839,48 +843,48 @@ Forma: {
       "At Face Weybridge, we offer VTone, a non-surgical treatment designed to strengthen the pelvic floor muscles and restore vaginal tone using electrical muscle stimulation (EMS). This innovative procedure is particularly effective for addressing urinary incontinence and enhancing overall pelvic health, helping you regain confidence and comfort in your intimate wellness.",
     understanding:
       "VTone is a non-surgical treatment that uses electrical muscle stimulation (EMS) to strengthen the pelvic floor muscles and restore vaginal tone. It is particularly effective for addressing urinary incontinence, improving sexual function, and enhancing overall pelvic health. VTone treatments are painless, require no downtime, and can be customised to meet your specific needs and goals.",
-    popularTreatments: [
-      {
-        title: "Microneedling",
-        image: "/concerns/a.webp",
-        href: "/treatment/microneedling",
-      },
-      {
-        title: "Neogen Plasma",
-        image: "/concerns/b.webp",
-        href: "/treatment/neogen-plasma",
-      },
-      {
-        title: "Obagi Blue Radiance",
-        image: "/concerns/c.webp",
-        href: "/treatment/obagi-blue-radiance",
-      },
-      {
-        title: "Mesotherapy",
-        image: "/concerns/d.webp",
-        href: "/treatment/mesotherapy",
-      },
-      {
-        title: "Hydrafacial Back",
-        image: "/concerns/e.webp",
-        href: "/treatment/hydrafacial-full-back",
-      },
-    ],
-        testimonials: [{
-    name: 'Nas A',
-    rating: 5,
-    text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
-  },
-  {
-    name: 'Mariam C',
-    rating: 5,
-    text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
-  },
-  {
-    name: 'Clariana T. M',
-    rating: 5,
-    text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
-  },],
+  //   popularTreatments: [
+  //     {
+  //       title: "Microneedling",
+  //       image: "/concerns/a.webp",
+  //       href: "/treatment/microneedling",
+  //     },
+  //     {
+  //       title: "Neogen Plasma",
+  //       image: "/concerns/b.webp",
+  //       href: "/treatment/neogen-plasma",
+  //     },
+  //     {
+  //       title: "Obagi Blue Radiance",
+  //       image: "/concerns/c.webp",
+  //       href: "/treatment/obagi-blue-radiance",
+  //     },
+  //     {
+  //       title: "Mesotherapy",
+  //       image: "/concerns/d.webp",
+  //       href: "/treatment/mesotherapy",
+  //     },
+  //     {
+  //       title: "Hydrafacial Back",
+  //       image: "/concerns/e.webp",
+  //       href: "/treatment/hydrafacial-full-back",
+  //     },
+  //   ],
+  //       testimonials: [{
+  //   name: 'Nas A',
+  //   rating: 5,
+  //   text: `I visited Facey on Tuesday. Nice receptionists, very welcoming. Consultation - the consultation with Facey was very thorough and honest...`,
+  // },
+  // {
+  //   name: 'Mariam C',
+  //   rating: 5,
+  //   text: `Dr. Sara is by far the best practitioner I've ever met. She spots straight away the areas that require enhancement...`,
+  // },
+  // {
+  //   name: 'Clariana T. M',
+  //   rating: 5,
+  //   text: `I'm really satisfied with my treatment today. Facey is very kind and knows the most suitable procedures...`,
+  // },],
     causes:
       "VTone is used to address various intimate health concerns, including: Weak pelvic floor muscles, Urinary incontinence, Decreased sexual satisfaction, Pelvic floor dysfunction, Overall pelvic health and wellness.",
     types: [
@@ -897,56 +901,56 @@ Forma: {
         text: "Targets the pelvic floor muscles to improve urge control, Enhances bladder function and reduces urgency, Ideal for individuals seeking a non-surgical solution for urge incontinence.",
       },
     ],
-     faq: [{
-    question: 'Do I need a consultation first?',
-    answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
-  },
-  {
-    question: 'Will I need to book time off work?',
-    answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
-  },
-  {
-    question: 'Are your aesthetic treatments painful?',
-    answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
-  },
-  {
-    question: 'How do I book an appointment?',
-    answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
-  },
-  {
-    question: 'How do I know what treatment is best for me?',
-    answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
-  },],
+  //    faq: [{
+  //   question: 'Do I need a consultation first?',
+  //   answer: 'Yes — every first-time treatment starts with a detailed consultation to understand your goals and medical history.',
+  // },
+  // {
+  //   question: 'Will I need to book time off work?',
+  //   answer: 'Most treatments have minimal downtime, but we’ll advise you on any recovery time during your consultation.',
+  // },
+  // {
+  //   question: 'Are your aesthetic treatments painful?',
+  //   answer: 'We use numbing creams and gentle techniques to ensure your comfort. Sensations vary by treatment, but pain is typically mild.',
+  // },
+  // {
+  //   question: 'How do I book an appointment?',
+  //   answer: 'Click the “Book Now” button at the top of the page or call us directly on 0203 337 4410.',
+  // },
+  // {
+  //   question: 'How do I know what treatment is best for me?',
+  //   answer: 'We’ll recommend the optimal treatment plan during your consultation, tailored to your skin type and goals.',
+  // },],
     treatmentOptions:
       "VTone treatments at Face Weybridge can be customised based on your specific concerns and desired outcomes. Here are the main treatment options: Full VTone Treatment, Targeted VTone for Specific Areas, Combination Treatments (with other aesthetic therapies), Maintenance Treatments (every 6–12 months). Each option is designed to provide comprehensive intimate wellness and rejuvenation for optimal results.",
   },
 };
 
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex space-x-1">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          width="20" height="20"
-          fill={i < count ? 'currentColor' : 'none'}
-          stroke="currentColor"
-          strokeWidth="2"
-          className="text-green-800"
-          viewBox="0 0 24 24"
-        >
-          <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 9" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+// function StarRating({ count }: { count: number }) {
+//   return (
+//     <div className="flex space-x-1">
+//       {Array.from({ length: 5 }).map((_, i) => (
+//         <svg
+//           key={i}
+//           width="20" height="20"
+//           fill={i < count ? 'currentColor' : 'none'}
+//           stroke="currentColor"
+//           strokeWidth="2"
+//           className="text-green-800"
+//           viewBox="0 0 24 24"
+//         >
+//           <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 9" />
+//         </svg>
+//       ))}
+//     </div>
+//   );
+// }
 
 export default function ConcernDetailPage() {
   const params = useParams();
   const id = params?.id;
   const router = useRouter();
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    // const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const [search, setSearch] = useState("");
   const filtered = useMemo(
@@ -1053,7 +1057,7 @@ export default function ConcernDetailPage() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-serif text-green-800 mb-4">
+            {/* <h3 className="text-2xl font-serif text-green-800 mb-4">
               Popular Treatments
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -1080,7 +1084,8 @@ export default function ConcernDetailPage() {
                   </div>
                 </a>
               ))}
-            </div>
+            </div> */}
+            <PopularTreatment/>
           </div>
 
           <div>
@@ -1109,8 +1114,8 @@ export default function ConcernDetailPage() {
             </h3>
             <p className="text-gray-700">{detail.treatmentOptions}</p>
           </div>
-
-           <div className="bg-green-700 py-16 px-4 text-white text-center">
+<AppointmentSection />
+           {/* <div className="bg-green-700 py-16 px-4 text-white text-center">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-serif mb-4">
         {selected.head}
@@ -1123,10 +1128,11 @@ export default function ConcernDetailPage() {
         {selected.links}
       </button>
     </div>
-  </div>
+  </div> */}
 
           <LogoSlider />
-           <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
+          <FaqSection />
+           {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-green-800 text-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-serif mb-8 text-center">Frequently Asked Questions</h2>
         <ul className="space-y-4">
@@ -1151,8 +1157,9 @@ export default function ConcernDetailPage() {
       </div>
 
      
-    </div>
-     <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
+    </div> */}
+    <TestimonialsSection />
+     {/* <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-serif text-green-800 mb-8 text-center">
           What Our Customers Say
@@ -1178,7 +1185,7 @@ export default function ConcernDetailPage() {
           ))}
         </div>
       </div>
-    </div>
+    </div> */}
         </div>
       </div>
     </section>
