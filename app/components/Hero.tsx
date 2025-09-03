@@ -52,11 +52,10 @@ const Hero: React.FC = () => {
       {/* Text overlay */}
       <div className="relative z-10 flex h-[calc(100vh-4rem)] flex-col items-start justify-center max-w-2xl px-4 md:px-8 lg:pt-24 lg:px-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white">
-          London&apos;s Finest Aesthetics and Wellness Clinic
+          The Home of Mindful Aesthetics, Beauty &amp; Wellness.
         </h1>
         <p className="mt-4 text-base md:text-lg text-white">
-          Unrivalled aesthetics clinic in London for Anti-Wrinkle Injections,
-          Dermal Fillers, and Laser Treatments
+          Harmony. Radiance. Confidence.
         </p>
       </div>
     </section>
