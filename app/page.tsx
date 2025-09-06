@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Hero } from "./components/Hero";
 import TreatmentSection from "./components/Treatment";
-import LogoSlider from "./components/LogoSlider";
+// import LogoSlider from "./components/LogoSlider";
 import FindSection from "./components/FindSection";
 import WellnessSection from "./components/Wellness";
 import AppointmentSection from "./components/Appointment";
@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <Hero />
       <TreatmentSection />
-      <LogoSlider />
+      {/* <LogoSlider /> */}
       <FindSection />
       <WellnessSection />
       <AppointmentSection />

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
 import Tawk from "./components/Tawk";
+import LogoSlider from "./components/LogoSlider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         </CartProvider>
         <Tawk />
         <Footer />
+        <LogoSlider />
       </body>
     </html>
   );
