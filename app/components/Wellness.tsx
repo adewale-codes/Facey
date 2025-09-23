@@ -14,13 +14,18 @@ const WellnessSection: React.FC = () => (
       {/* Text */}
       <div className="w-full md:w-1/2">
         <h2 className="text-3xl md:text-4xl font-serif mb-4 text-gray-800">
-          The Home of Aesthetics and Wellness
+          Our Values
         </h2>
-        <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-          Welcome to Facey Clinic, the best aesthetics clinic in London based in
-          Weybridge. We are dedicated to seamlessly blending our profound
-          medical expertise with an artistic touch, making our clinic a leading
-          destination for non-surgical beauty treatments in London.
+        <p className="text-xm md:text-sm text-gray-700 mb-6 leading-relaxed">
+          Our values are rooted in delivering personalised care that celebrates
+          your individuality, guided by excellence and expertise in every
+          treatment. We believe true beauty begins within, which is why we focus
+          on creating inner and outer harmony—nurturing confidence, radiance,
+          and wellbeing together. Every detail of your journey is designed to
+          offer a luxury experience, blending comfort, artistry, and precision.
+          Built on trust and connection, our philosophy ensures that the results
+          we deliver are not only beautiful today, but also timeless for
+          tomorrow.
         </p>
       </div>
     </div>

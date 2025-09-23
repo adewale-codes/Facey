@@ -1,40 +1,74 @@
-import React from "react";
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-interface Card {
-  name: string;
-  href: string;
-  image: string;
-}
+// Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-const cards: Card[] = [
-  { name: "Face", href: "/treatment/face", image: "/images/1.jpg" },
-  { name: "Body", href: "/treatment/body", image: "/images/2.jpg" },
-  { name: "Hair", href: "/treatment/hair", image: "/images/3.jpg" },
+const TILES = [
+  { title: "Face", href: "/face", imgSrc: "/mega/1.webp" },
+  { title: "Body", href: "/body", imgSrc: "/mega/2.webp" },
+  { title: "Hair", href: "/hair", imgSrc: "/mega/3.webp" },
+  { title: "Skin", href: "/skin", imgSrc: "/mega/4.webp" },
+  { title: "Concerns", href: "/concerns", imgSrc: "/mega/5.jpg" },
+  { title: "Packages", href: "/packages", imgSrc: "/mega/6.webp" },
 ];
 
-const TreatmentSection: React.FC = () => (
-  <section id="treatment-section" className="py-16 px-4 md:px-8 lg:px-16">
-    <div className="max-w-7xl mx-auto">
-      {/* <h2 className="text-3xl font-serif mb-8">Our Treatments</h2> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {cards.map((card) => (
-          <Link key={card.name} href={card.href} className="block">
-            <div className="relative h-80 overflow-hidden rounded-lg">
-              <img
-                src={card.image}
-                alt={card.name}
-                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+export default function TreatmentSlider() {
+  return (
+    <div className="w-full md:p-2">
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        spaceBetween={16}
+        slidesPerView={1}
+        loop
+        speed={600}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        pagination={{ clickable: true }}
+        // navigation // uncomment if you want arrows
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="
+          !pb-8
+          [--swiper-theme-color:#C09A6B]
+          [--swiper-pagination-bullet-inactive-color:rgba(192,154,107,0.35)]
+          [--swiper-pagination-bullet-inactive-opacity:1]
+          [--swiper-pagination-bullet-size:10px]
+          [--swiper-pagination-bullet-horizontal-gap:6px]
+        "
+      >
+        {TILES.map((t) => (
+          <SwiperSlide key={t.href}>
+            <Link
+              href={t.href}
+              className="group relative block h-96 overflow-hidden"
+            >
+              <Image
+                src={t.imgSrc}
+                alt={t.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
               />
-              <span className="absolute bottom-4 left-4 text-2xl font-serif text-white">
-                {card.name}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent" />
+              <span className="absolute bottom-3 left-3 text-lg font-semibold text-white">
+                {t.title}
               </span>
-            </div>
-          </Link>
+            </Link>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
-  </section>
-);
-
-export default TreatmentSection;
+  );
+}

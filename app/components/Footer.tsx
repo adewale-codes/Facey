@@ -81,11 +81,11 @@ const Footer: React.FC = () => (
               <li>WHATSAPP: 07368309335</li>
               <li>EMAIL: info@faceweybridge.co.uk</li>
             </ul>
-            <img
+            {/* <img
               src="/logos/10.png"
               alt="Care Quality Commission"
               className="mt-4 h-10 w-auto"
-            />
+            /> */}
           </div>
 
           {/* Location */}
@@ -123,7 +123,7 @@ const Footer: React.FC = () => (
               Complaints Policy
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/safety" className="hover:text-green-700">
               Safety &amp; Quality
             </Link>
@@ -132,7 +132,7 @@ const Footer: React.FC = () => (
             <Link href="/shipping" className="hover:text-green-700">
               Shipping &amp; Returns
             </Link>
-          </li>
+          </li> */}
         </ul>
         <p className="text-gray-600">
           Copyright 2024 Facey Clinic. All Rights Reserved.
