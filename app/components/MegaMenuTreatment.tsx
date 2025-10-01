@@ -7,14 +7,14 @@ import Image from "next/image";
 type Tile = { title: string; href: string; imgSrc: string; alt?: string };
 
 const TILES: Tile[] = [
-  { title: "Wellnes", href: "/wellness", imgSrc: "/mega/1.webp" },
-  { title: "Face", href: "/face", imgSrc: "/mega/2.webp" },
+  { title: "Face", href: "/face", imgSrc: "/mega/1.webp" },
+  { title: "Body", href: "/body", imgSrc: "/mega/2.webp" },
   { title: "Hair", href: "/hair", imgSrc: "/mega/3.webp" },
-  { title: "Body", href: "/body", imgSrc: "/mega/4.webp" },
-  { title: "Hand", href: "/hand", imgSrc: "/mega/5.jpg" },
+  { title: "Hands", href: "/hands", imgSrc: "/mega/4.webp" },
+  { title: "Wellness", href: "/wellness", imgSrc: "/mega/5.jpg" },
   {
-    title: "Intimate Female Wellness",
-    href: "/intimate",
+    title: "Concerns",
+    href: "/concerns",
     imgSrc: "/mega/6.webp",
   },
 ];
