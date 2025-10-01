@@ -14,9 +14,9 @@ const TILES = [
   { title: "Face", href: "/face", imgSrc: "/mega/1.webp" },
   { title: "Body", href: "/body", imgSrc: "/mega/2.webp" },
   { title: "Hair", href: "/hair", imgSrc: "/mega/3.webp" },
-  { title: "Skin", href: "/skin", imgSrc: "/mega/4.webp" },
-  { title: "Concerns", href: "/concerns", imgSrc: "/mega/5.jpg" },
-  { title: "Packages", href: "/packages", imgSrc: "/mega/6.webp" },
+  { title: "Hands", href: "/skin", imgSrc: "/mega/4.webp" },
+  { title: "Wellness", href: "/wellness", imgSrc: "/mega/5.jpg" },
+  { title: "Concerns", href: "/concerns", imgSrc: "/mega/6.webp" },
 ];
 
 export default function TreatmentSlider() {
