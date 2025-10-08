@@ -30,9 +30,9 @@ const Footer: React.FC = () => (
             </h3>
             <hr className="border-gray-200 mb-4" />
             <p className="text-sm text-gray-600">
-              At Facey&apos;s Clinic in London, our most popular face treatment
-              is our anti-wrinkle injections which provide the ultimate solution
-              for achieving naturally smooth, youthful skin.
+              Be part of the Face Weybridge community &mdash; sign up to our
+              mailing list for the latest updates, expert advice, and exclusive
+              member-only offers..
             </p>
             <form className="mt-4 flex flex-col sm:flex-row gap-4">
               <label htmlFor="footer-email" className="sr-only">
