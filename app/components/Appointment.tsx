@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 const AppointmentSection: React.FC = () => (
-  <section className="bg-green-700 py-16 px-4 text-white text-center">
+  <section className="bg-[#303638] py-16 px-4 text-white text-center">
     <div className="max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-serif mb-4">
         Book Your Appointment
